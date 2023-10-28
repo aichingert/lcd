@@ -3,7 +3,7 @@
  */
 
 use crate::Solution;
-use lcd::is_palindrome;
+use crate::is_palindrome;
 
 impl Solution {
     pub fn longest_palindrome(s: String) -> String {
