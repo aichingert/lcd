@@ -1,9 +1,37 @@
 pub mod longest_palindromic_substring;
 pub mod find_the_original_array_of_prefix_xor;
+pub mod count_nodes_equal_to_average_of_subtree;
 
 #[cfg(test)]
 mod test {
+    use std::rc::Rc;
+    use std::cell::RefCell;
+
+    use crate::TreeNode;
     use crate::Solution;
+
+    #[test]
+    fn nr_2265_count_nodes_equal_to_average_of_subtree_ex_01() {
+        let root = Some(Rc::new(RefCell::new(TreeNode {
+            val: 4,
+            left: Some(Rc::new(RefCell::new(TreeNode {
+                val: 8,
+                left: Some(Rc::new(RefCell::new(TreeNode::new(0)))),
+                right: Some(Rc::new(RefCell::new(TreeNode::new(1)))),
+            }))),
+            right: Some(Rc::new(RefCell::new(TreeNode {
+                val: 5,
+                left: None,
+                right: Some(Rc::new(RefCell::new(TreeNode::new(6)))),
+            }))),
+        })));
+        assert_eq!(5, Solution::average_of_subtree(root));
+    }
+    #[test]
+    fn nr_2265_count_nodes_equal_to_average_of_subtree_ex_02() {
+        let root = Some(Rc::new(RefCell::new(TreeNode::new(0))));
+        assert_eq!(1, Solution::average_of_subtree(root));
+    }
 
     #[test]
     fn nr_2433_find_the_original_array_of_prefix_xor_ex_01() {
