@@ -3,6 +3,7 @@ pub mod find_the_original_array_of_prefix_xor;
 pub mod count_nodes_equal_to_average_of_subtree;
 pub mod build_an_array_with_stack_operations;
 pub mod last_moment_before_all_ants_fall_out_of_a_plank;
+pub mod find_the_winner_of_an_array_game;
 
 #[cfg(test)]
 mod test {
@@ -11,6 +12,16 @@ mod test {
 
     use crate::TreeNode;
     use crate::Solution;
+
+    #[test]
+    fn nr_1535_find_the_winner_of_an_array_game_ex_01() {
+        assert_eq!(5, Solution::get_winner(vec![2,1,3,5,4,6,7], 2));
+    }
+
+    #[test]
+    fn nr_1535_find_the_winner_of_an_array_game_ex_02() {
+        assert_eq!(3, Solution::get_winner(vec![3,2,1], 10));
+    }
 
     #[test]
     fn nr_1503_last_moment_before_all_ants_fall_out_of_a_plank_ex_01() {
