@@ -2,6 +2,7 @@ pub mod longest_palindromic_substring;
 pub mod find_the_original_array_of_prefix_xor;
 pub mod count_nodes_equal_to_average_of_subtree;
 pub mod build_an_array_with_stack_operations;
+pub mod last_moment_before_all_ants_fall_out_of_a_plank;
 
 #[cfg(test)]
 mod test {
@@ -10,6 +11,21 @@ mod test {
 
     use crate::TreeNode;
     use crate::Solution;
+
+    #[test]
+    fn nr_1503_last_moment_before_all_ants_fall_out_of_a_plank_ex_01() {
+        assert_eq!(4, Solution::get_last_moment(4, vec![4, 3], vec![0,1]));
+    }
+
+    #[test]
+    fn nr_1503_last_moment_before_all_ants_fall_out_of_a_plank_ex_02() {
+        assert_eq!(7, Solution::get_last_moment(7, vec![], vec![0,1,2,3,4,5,6,7]));
+    }
+
+    #[test]
+    fn nr_1503_last_moment_before_all_ants_fall_out_of_a_plank_ex_03() {
+        assert_eq!(7, Solution::get_last_moment(7, vec![0,1,2,3,4,5,6,7], vec![]));
+    }
 
     #[test]
     fn nr_1441_build_an_array_with_stack_operations_ex_01() {
