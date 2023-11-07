@@ -4,6 +4,7 @@ pub mod count_nodes_equal_to_average_of_subtree;
 pub mod build_an_array_with_stack_operations;
 pub mod last_moment_before_all_ants_fall_out_of_a_plank;
 pub mod find_the_winner_of_an_array_game;
+pub mod eliminate_maximum_number_of_monsters;
 
 #[cfg(test)]
 mod test {
@@ -12,6 +13,22 @@ mod test {
 
     use crate::TreeNode;
     use crate::Solution;
+
+
+    #[test]
+    fn nr_1921_eliminate_maximum_number_of_monsters_ex_01() {
+        assert_eq!(3, Solution::eliminate_maximum(vec![1,3,4], vec![1,1,1]));
+    }
+
+    #[test]
+    fn nr_1921_eliminate_maximum_number_of_monsters_ex_02() {
+        assert_eq!(1, Solution::eliminate_maximum(vec![1,1,2,3], vec![1,1,1,1]));
+    }
+
+    #[test]
+    fn nr_1921_eliminate_maximum_number_of_monsters_ex_03() {
+        assert_eq!(1, Solution::eliminate_maximum(vec![3,2,4], vec![5,3,2]));
+    }
 
     #[test]
     fn nr_1535_find_the_winner_of_an_array_game_ex_01() {
