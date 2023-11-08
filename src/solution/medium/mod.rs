@@ -5,6 +5,7 @@ pub mod build_an_array_with_stack_operations;
 pub mod last_moment_before_all_ants_fall_out_of_a_plank;
 pub mod find_the_winner_of_an_array_game;
 pub mod eliminate_maximum_number_of_monsters;
+pub mod determine_if_a_cell_is_reachable_at_a_given_time;
 
 #[cfg(test)]
 mod test {
@@ -14,10 +15,14 @@ mod test {
     use crate::TreeNode;
     use crate::Solution;
 
+    #[test]
+    fn nr_2849_determine_if_a_cell_is_reachable_at_a_given_time_ex_01() {
+        assert!(Solution::is_reachable_at_time(2, 4, 7, 7, 6));
+    }
 
     #[test]
-    fn nr_1921_eliminate_maximum_number_of_monsters_ex_01() {
-        assert_eq!(3, Solution::eliminate_maximum(vec![1,3,4], vec![1,1,1]));
+    fn nr_2849_determine_if_a_cell_is_reachable_at_a_given_time_ex_02() {
+        assert!(!Solution::is_reachable_at_time(3, 1, 7, 3, 3));
     }
 
     #[test]
