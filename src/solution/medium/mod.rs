@@ -6,6 +6,7 @@ pub mod last_moment_before_all_ants_fall_out_of_a_plank;
 pub mod find_the_winner_of_an_array_game;
 pub mod eliminate_maximum_number_of_monsters;
 pub mod determine_if_a_cell_is_reachable_at_a_given_time;
+pub mod count_number_of_homogenous_substrings;
 
 #[cfg(test)]
 mod test {
@@ -14,6 +15,21 @@ mod test {
 
     use crate::TreeNode;
     use crate::Solution;
+
+    #[test]
+    fn nr_1759_count_number_of_homogenous_substrings_ex_01() {
+        assert_eq!(13, Solution::count_homogenous(String::from("abbcccaa")));
+    }
+
+    #[test]
+    fn nr_1759_count_number_of_homogenous_substrings_ex_02() {
+        assert_eq!(2, Solution::count_homogenous(String::from("xy")));
+    }
+
+    #[test]
+    fn nr_1759_count_number_of_homogenous_substrings_ex_03() {
+        assert_eq!(15, Solution::count_homogenous(String::from("zzzzz")));
+    }
 
     #[test]
     fn nr_2849_determine_if_a_cell_is_reachable_at_a_given_time_ex_01() {
