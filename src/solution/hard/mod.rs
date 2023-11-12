@@ -1,11 +1,22 @@
 pub mod count_vowels_permutation;
 pub mod poor_pigs;
 pub mod design_graph_with_shortest_path_calculator;
+pub mod bus_routes;
 
 #[cfg(test)]
 mod test {
     use crate::Solution;
     use crate::solution::hard::design_graph_with_shortest_path_calculator::Graph;
+
+    #[test]
+    fn nr_815_bus_routes_ex_01() {
+        assert_eq!(2, Solution::num_buses_to_destination(vec![vec![1,2,7],vec![3,6,7]], 1, 6));
+    }
+
+    #[test]
+    fn nr_815_bus_routes_ex_02() {
+        assert_eq!(-1, Solution::num_buses_to_destination(vec![vec![7,12],vec![4,5,15],vec![6],vec![15,19],vec![9,12,13]], 15, 12));
+    }
 
     #[test]
     fn nr_2642_design_graph_with_shortest_path_calculator_ex_01() {
