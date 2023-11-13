@@ -7,6 +7,7 @@ pub mod find_the_winner_of_an_array_game;
 pub mod eliminate_maximum_number_of_monsters;
 pub mod determine_if_a_cell_is_reachable_at_a_given_time;
 pub mod count_number_of_homogenous_substrings;
+pub mod sort_vowels_in_a_string;
 
 #[cfg(test)]
 mod test {
@@ -15,6 +16,16 @@ mod test {
 
     use crate::TreeNode;
     use crate::Solution;
+
+    #[test]
+    fn nr_2785_sort_vowels_in_a_string_01() {
+        assert_eq!("lEOtcede", &Solution::sort_vowels(String::from("lEetcOde")));
+    }
+
+    #[test]
+    fn nr_2785_sort_vowels_in_a_string_02() {
+        assert_eq!("lYmpH", &Solution::sort_vowels(String::from("lYmpH")));
+    }
 
     #[test]
     fn nr_1759_count_number_of_homogenous_substrings_ex_01() {

@@ -35,3 +35,7 @@ pub fn is_palindrome(s: &[char]) -> bool  {
 
     true
 }
+
+pub fn is_vowel(ch: char) -> bool {
+    matches!(ch, 'a' | 'A' | 'e' | 'E' | 'i' | 'I' | 'o' | 'O' | 'u' | 'U')
+}
