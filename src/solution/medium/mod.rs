@@ -9,6 +9,7 @@ pub mod determine_if_a_cell_is_reachable_at_a_given_time;
 pub mod count_number_of_homogenous_substrings;
 pub mod sort_vowels_in_a_string;
 pub mod maximum_element_after_decreasing_and_rearranging;
+pub mod unique_length3_palindromic_subsequences;
 
 #[cfg(test)]
 mod test {
@@ -26,11 +27,26 @@ mod test {
     #[test]
     fn nr_1846_maximum_element_after_decreasing_and_rearranging_ex_02() {
         assert_eq!(3, Solution::maximum_element_after_decrementing_and_rearranging(vec![1,100,1000]));
-    }
+    } 
 
     #[test]
     fn nr_1846_maximum_element_after_decreasing_and_rearranging_ex_03() {
         assert_eq!(5, Solution::maximum_element_after_decrementing_and_rearranging(vec![1,2,3,4,5]));
+    }
+
+    #[test]
+    fn nr_1930_unique_length3_palindromic_subsequences_ex_01() {
+        assert_eq!(3, Solution::count_palindromic_subsequence(String::from("aabca")));
+    }
+
+    #[test]
+    fn nr_1930_unique_length3_palindromic_subsequences_ex_02() {
+        assert_eq!(0, Solution::count_palindromic_subsequence(String::from("adc")));
+    }
+
+    #[test]
+    fn nr_1930_unique_length3_palindromic_subsequences_ex_03() {
+        assert_eq!(4, Solution::count_palindromic_subsequence(String::from("bbcbaba")));
     }
 
     #[test]
