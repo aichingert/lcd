@@ -10,6 +10,7 @@ pub mod count_number_of_homogenous_substrings;
 pub mod sort_vowels_in_a_string;
 pub mod maximum_element_after_decreasing_and_rearranging;
 pub mod unique_length3_palindromic_subsequences;
+pub mod find_unique_binary_string;
 
 #[cfg(test)]
 mod test {
@@ -18,6 +19,21 @@ mod test {
 
     use crate::TreeNode;
     use crate::Solution;
+
+    #[test]
+    fn nr_1980_find_unique_binary_string_ex_01() {
+        assert_eq!("11", &Solution::find_different_binary_string(vec![String::from("01"),String::from("10")]));
+    }
+
+    #[test]
+    fn nr_1980_find_unique_binary_string_ex_02() {
+        assert_eq!("10", &Solution::find_different_binary_string(vec![String::from("00"),String::from("01")]));
+    }
+
+    #[test]
+    fn nr_1980_find_unique_binary_string_ex_03() {
+        assert_eq!("000", &Solution::find_different_binary_string(vec![String::from("111"),String::from("011"),String::from("001")]));
+    }
 
     #[test]
     fn nr_1846_maximum_element_after_decreasing_and_rearranging_ex_01() {
