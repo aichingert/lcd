@@ -11,6 +11,7 @@ pub mod sort_vowels_in_a_string;
 pub mod maximum_element_after_decreasing_and_rearranging;
 pub mod unique_length3_palindromic_subsequences;
 pub mod find_unique_binary_string;
+pub mod minimize_maximum_pair_sum_in_array;
 
 #[cfg(test)]
 mod test {
@@ -19,6 +20,16 @@ mod test {
 
     use crate::TreeNode;
     use crate::Solution;
+
+    #[test]
+    fn nr_1877_minimize_maximum_pair_sum_in_array_ex_01() {
+        assert_eq!(7, Solution::min_pair_sum(vec![3,5,2,3]));
+    }
+
+    #[test]
+    fn nr_1877_minimize_maximum_pair_sum_in_array_ex_02() {
+        assert_eq!(8, Solution::min_pair_sum(vec![3,5,4,2,4,6]));
+    }
 
     #[test]
     fn nr_1980_find_unique_binary_string_ex_01() {
@@ -33,7 +44,7 @@ mod test {
     #[test]
     fn nr_1980_find_unique_binary_string_ex_03() {
         assert_eq!("000", &Solution::find_different_binary_string(vec![String::from("111"),String::from("011"),String::from("001")]));
-    }
+    } 
 
     #[test]
     fn nr_1846_maximum_element_after_decreasing_and_rearranging_ex_01() {
