@@ -12,6 +12,7 @@ pub mod maximum_element_after_decreasing_and_rearranging;
 pub mod unique_length3_palindromic_subsequences;
 pub mod find_unique_binary_string;
 pub mod minimize_maximum_pair_sum_in_array;
+pub mod reduction_operations_to_make_the_array_elements_equal;
 
 #[cfg(test)]
 mod test {
@@ -20,6 +21,21 @@ mod test {
 
     use crate::TreeNode;
     use crate::Solution;
+
+    #[test]
+    fn nr_1887_reduction_operations_to_make_the_array_elements_equal_ex_01() {
+        assert_eq!(3, Solution::reduction_operations(vec![5,1,3]));
+    }
+
+    #[test]
+    fn nr_1887_reduction_operations_to_make_the_array_elements_equal_ex_02() {
+        assert_eq!(0, Solution::reduction_operations(vec![1,1,1]));
+    }
+
+    #[test]
+    fn nr_1887_reduction_operations_to_make_the_array_elements_equal_ex_03() {
+        assert_eq!(4, Solution::reduction_operations(vec![1,1,2,2,3]));
+    }
 
     #[test]
     fn nr_1877_minimize_maximum_pair_sum_in_array_ex_01() {
