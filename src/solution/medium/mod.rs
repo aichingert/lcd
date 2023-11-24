@@ -11,6 +11,7 @@ pub mod sort_vowels_in_a_string;
 pub mod maximum_element_after_decreasing_and_rearranging;
 pub mod unique_length3_palindromic_subsequences;
 pub mod find_unique_binary_string;
+pub mod maximum_number_of_coins_you_can_get;
 
 #[cfg(test)]
 mod test {
@@ -19,6 +20,21 @@ mod test {
 
     use crate::TreeNode;
     use crate::Solution;
+
+    #[test]
+    fn nr_1561_maximum_number_of_coins_you_can_get_ex_01() {
+        assert_eq!(9, Solution::max_coins(vec![2,4,1,2,7,8]));
+    }
+
+    #[test]
+    fn nr_1561_maximum_number_of_coins_you_can_get_ex_02() {
+        assert_eq!(4, Solution::max_coins(vec![2,4,5]));
+    }
+
+    #[test]
+    fn nr_1561_maximum_number_of_coins_you_can_get_ex_03() {
+        assert_eq!(18, Solution::max_coins(vec![9,8,7,6,5,1,2,3,4]));
+    }
 
     #[test]
     fn nr_1980_find_unique_binary_string_ex_01() {
