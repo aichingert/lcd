@@ -12,6 +12,8 @@ pub mod maximum_element_after_decreasing_and_rearranging;
 pub mod unique_length3_palindromic_subsequences;
 pub mod find_unique_binary_string;
 pub mod maximum_number_of_coins_you_can_get;
+pub mod minimize_maximum_pair_sum_in_array;
+pub mod reduction_operations_to_make_the_array_elements_equal;
 
 #[cfg(test)]
 mod test {
@@ -36,6 +38,30 @@ mod test {
         assert_eq!(18, Solution::max_coins(vec![9,8,7,6,5,1,2,3,4]));
     }
 
+    fn nr_1887_reduction_operations_to_make_the_array_elements_equal_ex_01() {
+        assert_eq!(3, Solution::reduction_operations(vec![5,1,3]));
+    }
+
+    #[test]
+    fn nr_1887_reduction_operations_to_make_the_array_elements_equal_ex_02() {
+        assert_eq!(0, Solution::reduction_operations(vec![1,1,1]));
+    }
+
+    #[test]
+    fn nr_1887_reduction_operations_to_make_the_array_elements_equal_ex_03() {
+        assert_eq!(4, Solution::reduction_operations(vec![1,1,2,2,3]));
+    }
+
+    #[test]
+    fn nr_1877_minimize_maximum_pair_sum_in_array_ex_01() {
+        assert_eq!(7, Solution::min_pair_sum(vec![3,5,2,3]));
+    }
+
+    #[test]
+    fn nr_1877_minimize_maximum_pair_sum_in_array_ex_02() {
+        assert_eq!(8, Solution::min_pair_sum(vec![3,5,4,2,4,6]));
+    }
+
     #[test]
     fn nr_1980_find_unique_binary_string_ex_01() {
         assert_eq!("11", &Solution::find_different_binary_string(vec![String::from("01"),String::from("10")]));
@@ -49,7 +75,7 @@ mod test {
     #[test]
     fn nr_1980_find_unique_binary_string_ex_03() {
         assert_eq!("000", &Solution::find_different_binary_string(vec![String::from("111"),String::from("011"),String::from("001")]));
-    }
+    } 
 
     #[test]
     fn nr_1846_maximum_element_after_decreasing_and_rearranging_ex_01() {
