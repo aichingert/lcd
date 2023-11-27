@@ -15,6 +15,7 @@ pub mod maximum_number_of_coins_you_can_get;
 pub mod minimize_maximum_pair_sum_in_array;
 pub mod reduction_operations_to_make_the_array_elements_equal;
 pub mod largest_submatrix_with_rearrangements;
+pub mod knight_dialer;
 
 #[cfg(test)]
 mod test {
@@ -23,6 +24,21 @@ mod test {
 
     use crate::TreeNode;
     use crate::Solution;
+
+    #[test]
+    fn nr_935_knight_dialer_ex_01() {
+        assert_eq!(10, Solution::knight_dialer(1));
+    }
+
+    #[test]
+    fn nr_935_knight_dialer_ex_02() {
+        assert_eq!(20, Solution::knight_dialer(2));
+    }
+
+    #[test]
+    fn nr_935_knight_dialer_ex_03() {
+        assert_eq!(136006598, Solution::knight_dialer(3131));
+    }
 
     #[test]
     fn nr_1727_largest_submatrix_with_rearrangements_ex_01() {
