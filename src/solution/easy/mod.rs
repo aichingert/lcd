@@ -1,5 +1,6 @@
 pub mod sort_integers_by_the_number_of_1_bits;
 pub mod find_mode_in_binary_search_tree;
+pub mod number_of_1_bits;
 
 #[cfg(test)]
 mod test {
@@ -8,6 +9,21 @@ mod test {
 
     use crate::Solution;
     use crate::TreeNode;
+
+    #[test]
+    fn nr_191_number_of_1_bits_ex_01() {
+        assert_eq!(3, Solution::hamming_weight(0b01011));
+    }
+    
+    #[test]
+    fn nr_191_number_of_1_bits_ex_02() {
+        assert_eq!(1, Solution::hamming_weight(0b0000000010000000));
+    }
+    
+    #[test]
+    fn nr_191_number_of_1_bits_ex_03() {
+        assert_eq!(31, Solution::hamming_weight(0b11111111111111111111111111111101));
+    }
 
     #[test]
     fn nr_0501_find_mode_ex_01() {
