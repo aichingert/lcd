@@ -1,6 +1,7 @@
 pub mod sort_integers_by_the_number_of_1_bits;
 pub mod find_mode_in_binary_search_tree;
 pub mod number_of_1_bits;
+pub mod count_of_matches_in_tournament;
 
 #[cfg(test)]
 mod test {
@@ -9,6 +10,16 @@ mod test {
 
     use crate::Solution;
     use crate::TreeNode;
+
+    #[test]
+    fn nr_1688_count_of_matches_in_tournament_ex_01() {
+        assert_eq!(6, Solution::number_of_matches(7));
+    }
+
+    #[test]
+    fn nr_1688_count_of_matches_in_tournament_ex_02() {
+        assert_eq!(13, Solution::number_of_matches(14));
+    }
 
     #[test]
     fn nr_191_number_of_1_bits_ex_01() {
