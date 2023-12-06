@@ -2,6 +2,7 @@ pub mod sort_integers_by_the_number_of_1_bits;
 pub mod find_mode_in_binary_search_tree;
 pub mod number_of_1_bits;
 pub mod count_of_matches_in_tournament;
+pub mod calculate_money_in_leetcode_bank;
 
 #[cfg(test)]
 mod test {
@@ -10,6 +11,21 @@ mod test {
 
     use crate::Solution;
     use crate::TreeNode;
+
+    #[test]
+    fn nr_1716_calculate_money_in_leetcode_bank_ex_01() {
+        assert_eq!(10, Solution::total_money(4));
+    }
+
+    #[test]
+    fn nr_1716_calculate_money_in_leetcode_bank_ex_02() {
+        assert_eq!(37, Solution::total_money(10));
+    }
+
+    #[test]
+    fn nr_1716_calculate_money_in_leetcode_bank_ex_03() {
+        assert_eq!(96, Solution::total_money(20));
+    }
 
     #[test]
     fn nr_1688_count_of_matches_in_tournament_ex_01() {
