@@ -16,6 +16,7 @@ pub mod minimize_maximum_pair_sum_in_array;
 pub mod reduction_operations_to_make_the_array_elements_equal;
 pub mod largest_submatrix_with_rearrangements;
 pub mod knight_dialer;
+pub mod m2870;
 
 #[cfg(test)]
 mod test {
@@ -24,6 +25,16 @@ mod test {
 
     use crate::TreeNode;
     use crate::Solution;
+
+    #[test]
+    fn nr_2870_ex_01() {
+        assert_eq!(4, Solution::min_operations(vec![2,3,3,2,2,4,2,3,4]));
+    }
+
+    #[test]
+    fn nr_2870_ex_02() {
+        assert_eq!(-1, Solution::min_operations(vec![2,1,2,2,3,3]));
+    }
 
     #[test]
     fn nr_935_knight_dialer_ex_01() {
