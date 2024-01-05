@@ -17,6 +17,7 @@ pub mod reduction_operations_to_make_the_array_elements_equal;
 pub mod largest_submatrix_with_rearrangements;
 pub mod knight_dialer;
 pub mod m2870;
+pub mod l300;
 
 #[cfg(test)]
 mod test {
@@ -25,6 +26,21 @@ mod test {
 
     use crate::TreeNode;
     use crate::Solution;
+
+    #[test]
+    fn nr_300_ex_01() {
+        assert_eq!(4, Solution::length_of_lis(vec![10,9,2,5,3,7,101,18]));
+    }
+
+    #[test]
+    fn nr_300_ex_02() {
+        assert_eq!(4, Solution::length_of_lis(vec![0,1,0,3,2,3]));
+    }
+
+    #[test]
+    fn nr_300_ex_03() {
+        assert_eq!(1, Solution::length_of_lis(vec![7,7,7,7,7,7,7]));
+    }
 
     #[test]
     fn nr_2870_ex_01() {
