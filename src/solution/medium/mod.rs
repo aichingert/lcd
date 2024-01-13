@@ -18,6 +18,7 @@ pub mod largest_submatrix_with_rearrangements;
 pub mod knight_dialer;
 pub mod m2870;
 pub mod l300;
+pub mod m1347;
 
 #[cfg(test)]
 mod test {
@@ -26,6 +27,21 @@ mod test {
 
     use crate::TreeNode;
     use crate::Solution;
+
+    #[test]
+    fn nr_1347_ex_01() {
+        assert_eq!(1, Solution::min_steps("bab".to_string(), "aba".to_string()));
+    }
+
+    #[test]
+    fn nr_1347_ex_02() {
+        assert_eq!(5, Solution::min_steps("leetcode".to_string(), "practice".to_string()));
+    }
+
+    #[test]
+    fn nr_1347_ex_03() {
+        assert_eq!(0, Solution::min_steps("anagram".to_string(), "mangaar".to_string()));
+    }
 
     #[test]
     fn nr_300_ex_01() {
