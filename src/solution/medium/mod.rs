@@ -19,6 +19,7 @@ pub mod knight_dialer;
 pub mod m2870;
 pub mod l300;
 pub mod m1347;
+pub mod d1657;
 
 #[cfg(test)]
 mod test {
@@ -27,6 +28,21 @@ mod test {
 
     use crate::TreeNode;
     use crate::Solution;
+
+    #[test]
+    fn nr_1657_ex_01() {
+        assert_eq!(true, Solution::close_strings("abc".to_string(), "bca".to_string()));
+    }
+
+    #[test]
+    fn nr_1657_ex_02() {
+        assert_eq!(false, Solution::close_strings("a".to_string(), "aa".to_string()));
+    }
+
+    #[test]
+    fn nr_1657_ex_03() {
+        assert_eq!(true, Solution::close_strings("cabbba".to_string(), "abbccc".to_string()));
+    }
 
     #[test]
     fn nr_1347_ex_01() {
