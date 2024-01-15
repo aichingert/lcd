@@ -6,9 +6,9 @@ impl Solution {
     pub fn find_winners(matches: Vec<Vec<i32>>) -> Vec<Vec<i32>> {
         let mut loses = HashMap::new();
 
-        for i in 0..matches.len() {
-            loses.entry(matches[i][0]).and_modify(|a| *a += 0).or_insert(0);
-            loses.entry(matches[i][1]).and_modify(|n| *n += 1).or_insert(1);
+        for game in matches.into_iter() {
+            loses.entry(game[0]).and_modify(|a| *a += 0).or_insert(0);
+            loses.entry(game[1]).and_modify(|n| *n += 1).or_insert(1);
         }
 
         let (mut zero, mut one) = (Vec::new(), Vec::new());

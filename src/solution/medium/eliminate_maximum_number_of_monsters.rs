@@ -6,8 +6,8 @@ impl Solution {
         let mut arr = dist.iter().zip(speed).map(|(d, s)| (*d as f64 / s as f64).ceil() as i32).collect::<Vec<_>>();
         arr.sort_unstable();
 
-        for i in 0..n {
-            if arr[i] <= i as i32 {
+        for (i, val) in arr.iter().enumerate().take(n) {
+            if *val <= i as i32 {
                 return i as i32;
             }
         }
