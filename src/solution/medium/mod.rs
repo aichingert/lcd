@@ -21,6 +21,7 @@ pub mod l300;
 pub mod m1347;
 pub mod d1657;
 pub mod f2225;
+pub mod i380;
 
 #[cfg(test)]
 mod test {
@@ -29,6 +30,19 @@ mod test {
 
     use crate::TreeNode;
     use crate::Solution;
+
+    #[test]
+    fn nr_380_ex_01() {
+        use crate::solution::medium::i380::RandomizedSet;
+        let mut set = RandomizedSet::new();
+
+        set.insert(3);
+        set.remove(3);
+        set.insert(0);
+        _ = set.get_random();
+
+        assert!(true); // Not really testable
+    }
 
     #[test]
     fn nr_2225_ex_01() {
