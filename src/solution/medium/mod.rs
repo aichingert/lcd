@@ -22,6 +22,7 @@ pub mod m1347;
 pub mod d1657;
 pub mod f2225;
 pub mod i380;
+pub mod m931;
 
 #[cfg(test)]
 mod test {
@@ -30,6 +31,11 @@ mod test {
 
     use crate::TreeNode;
     use crate::Solution;
+
+    #[test]
+    fn nr_931_ex_01() {
+        assert_eq!(3, Solution::min_falling_path_sum(vec![vec![10,1,10],vec![1,10,10],vec![10,1,10]]));
+    }
 
     #[test]
     fn nr_380_ex_01() {
@@ -42,7 +48,7 @@ mod test {
         _ = set.get_random();
 
         assert!(true); // Not really testable
-    }
+    } 
 
     #[test]
     fn nr_2225_ex_01() {
