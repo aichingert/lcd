@@ -3,6 +3,7 @@ pub mod find_mode_in_binary_search_tree;
 pub mod number_of_1_bits;
 pub mod count_of_matches_in_tournament;
 pub mod calculate_money_in_leetcode_bank;
+pub mod c70;
 
 #[cfg(test)]
 mod test {
@@ -11,6 +12,16 @@ mod test {
 
     use crate::Solution;
     use crate::TreeNode;
+
+    #[test]
+    fn nr_70_ex_01() {
+        assert_eq!(2, Solution::climb_stairs(2));
+    }
+
+    #[test]
+    fn nr_70_ex_02() {
+        assert_eq!(3, Solution::climb_stairs(3));
+    }
 
     #[test]
     fn nr_1716_calculate_money_in_leetcode_bank_ex_01() {

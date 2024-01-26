@@ -10,12 +10,12 @@ impl Solution {
         let mut ans = String::new();
         let mut j = 0usize;
 
-        for i in 0..chs.len() {
-            ans.push(if is_vowel(chs[i]) {
+        for ch in chs.iter() {
+            ans.push(if is_vowel(*ch) {
                 j += 1;
                 *vowels[j - 1]
             } else {
-                chs[i]
+                *ch
             });
         }
 

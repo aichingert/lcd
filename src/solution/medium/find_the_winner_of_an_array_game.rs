@@ -4,9 +4,9 @@ impl Solution {
     pub fn get_winner(arr: Vec<i32>, k: i32) -> i32 {
         let (mut cur, mut wins) = (arr[0], 0);
 
-        for i in 1..arr.len() {
-            if arr[i] > cur {
-                cur = arr[i];
+        for item in arr.into_iter().skip(1) {
+            if item > cur {
+                cur = item;
                 wins = 0;
             }
 

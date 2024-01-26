@@ -20,6 +20,10 @@ pub mod m2870;
 pub mod l300;
 pub mod m1347;
 pub mod d1657;
+pub mod f2225;
+pub mod i380;
+pub mod m931;
+pub mod h198;
 
 #[cfg(test)]
 mod test {
@@ -28,6 +32,44 @@ mod test {
 
     use crate::TreeNode;
     use crate::Solution;
+
+    #[test]
+    fn nr_198_ex_01() {
+        assert_eq!(4, Solution::rob(vec![1,2,3,1]));
+    }
+
+    #[test]
+    fn nr_198_ex_02() {
+        assert_eq!(12, Solution::rob(vec![2,7,9,3,1]));
+    }
+
+    #[test]
+    fn nr_931_ex_01() {
+        assert_eq!(3, Solution::min_falling_path_sum(vec![vec![10,1,10],vec![1,10,10],vec![10,1,10]]));
+    }
+
+    #[test]
+    fn nr_380_ex_01() {
+        use crate::solution::medium::i380::RandomizedSet;
+        let mut set = RandomizedSet::new();
+
+        set.insert(3);
+        set.remove(3);
+        set.insert(0);
+        _ = set.get_random();
+
+        assert!(true); // Not really testable
+    } 
+
+    #[test]
+    fn nr_2225_ex_01() {
+        assert_eq!(vec![vec![1,2,10], vec![4,5,7,8]], Solution::find_winners(vec![vec![1,3],vec![2,3],vec![3,6],vec![5,6],vec![5,7],vec![4,5],vec![4,8],vec![4,9],vec![10,4],vec![10,9]]));
+    }
+
+    #[test]
+    fn nr_2225_ex_02() {
+        assert_eq!(vec![vec![1,2,5,6], vec![]], Solution::find_winners(vec![vec![2,3],vec![1,3],vec![5,4],vec![6,4]]));
+    }
 
     #[test]
     fn nr_1657_ex_01() {

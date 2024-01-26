@@ -4,17 +4,13 @@ pub struct Graph {
     map: HashMap<i32, Vec<(i32, i32)>>,
 }
 
-/** 
- * `&self` means the method takes an immutable reference.
- * If you need a mutable reference, change it to `&mut self` instead.
- */
 impl Graph {
     pub fn new(_n: i32, edges: Vec<Vec<i32>>) -> Self {
         let mut graph = Self { map: HashMap::new() };
 
-        for i in 0..edges.len() {
-            let edge = (edges[i][1], edges[i][2]);
-            graph.map.entry(edges[i][0]).and_modify(|v| v.push(edge)).or_insert(vec![edge]);
+        for item in edges.iter() {
+            let edge = (item[1], item[2]);
+            graph.map.entry(item[0]).and_modify(|v| v.push(edge)).or_insert(vec![edge]);
         }
 
         graph
@@ -39,18 +35,18 @@ impl Graph {
                 e
             } else{ continue; };
 
-            for i in 0..e.len() {
-                let new_dst = if let Some(new_dst) = d.get(&e[i].0).and_then(|cur_dst| Some(if *cur_dst > (e[i].1 + dst) { e[i].1 + dst } else { *cur_dst })) {
+            for e in e.iter() {
+                let new_dst = if let Some(new_dst) = d.get(&e.0).map(|cur_dst| if *cur_dst > (e.1 + dst) { e.1 + dst } else { *cur_dst }) {
                     new_dst
                 } else {
-                    e[i].1 + dst
+                    e.1 + dst
                 };
 
-                d.insert(e[i].0, new_dst);
+                d.insert(e.0, new_dst);
 
-                if !(s.contains_key(&e[i].0) && *s.get(&e[i].0).unwrap() <= new_dst) {
-                    s.insert(e[i].0, new_dst);
-                    q.push_back((e[i].0, new_dst));
+                if !(s.contains_key(&e.0) && *s.get(&e.0).unwrap() <= new_dst) {
+                    s.insert(e.0, new_dst);
+                    q.push_back((e.0, new_dst));
                 }
             }
         }
