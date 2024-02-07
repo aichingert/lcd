@@ -24,6 +24,7 @@ pub mod f2225;
 pub mod i380;
 pub mod m931;
 pub mod h198;
+pub mod s451;
 
 #[cfg(test)]
 mod test {
@@ -32,6 +33,22 @@ mod test {
 
     use crate::TreeNode;
     use crate::Solution;
+
+    #[test]
+    fn nr_451_ex_01() {
+        let (one, two) = (String::from("eert"), String::from("eetr"));
+        let res = Solution::frequency_sort(String::from("tree"));
+
+        assert!(res == one || res == two);
+    }
+
+    #[test]
+    fn nr_451_ex_02() {
+        let (one, two) = (String::from("bbAa"), String::from("bbaA"));
+        let res = Solution::frequency_sort(String::from("Aabb"));
+
+        assert!(one == res || two == res);
+    }
 
     #[test]
     fn nr_198_ex_01() {
