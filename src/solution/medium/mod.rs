@@ -25,6 +25,7 @@ pub mod i380;
 pub mod m931;
 pub mod h198;
 pub mod s451;
+pub mod p279;
 
 #[cfg(test)]
 mod test {
@@ -33,6 +34,17 @@ mod test {
 
     use crate::TreeNode;
     use crate::Solution;
+
+
+    #[test]
+    fn nr_279_ex_01() {
+        assert_eq!(3, Solution::num_squares(12));
+    }
+
+    #[test]
+    fn nr_279_ex_02() {
+        assert_eq!(2, Solution::num_squares(13));
+    }
 
     #[test]
     fn nr_451_ex_01() {
