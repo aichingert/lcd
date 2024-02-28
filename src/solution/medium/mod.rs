@@ -26,6 +26,7 @@ pub mod m931;
 pub mod h198;
 pub mod s451;
 pub mod p279;
+pub mod f513;
 
 #[cfg(test)]
 mod test {
@@ -35,6 +36,39 @@ mod test {
     use crate::TreeNode;
     use crate::Solution;
 
+    #[test]
+    fn nr_513_ex_01() {
+        let root = Some(Rc::new(RefCell::new(TreeNode {
+            val: 2,
+            left: Some(Rc::new(RefCell::new(TreeNode::new(1)))),
+            right: Some(Rc::new(RefCell::new(TreeNode::new(3)))),
+        })));
+
+        assert_eq!(1, Solution::find_bottom_left_value(root));
+    }
+
+    #[test]
+    fn nr_513_ex_02() {
+        let root = Some(Rc::new(RefCell::new(TreeNode {
+            val: 1,
+            left: Some(Rc::new(RefCell::new(TreeNode {
+                val: 2,
+                left: Some(Rc::new(RefCell::new(TreeNode::new(4)))),
+                right: None,
+            }))),
+            right: Some(Rc::new(RefCell::new(TreeNode {
+                val: 3,
+                left: Some(Rc::new(RefCell::new(TreeNode {
+                    val: 5,
+                    left: Some(Rc::new(RefCell::new(TreeNode::new(7)))),
+                    right: None,
+                }))),
+                right: Some(Rc::new(RefCell::new(TreeNode::new(6)))),
+            }))),
+        })));
+
+        assert_eq!(7, Solution::find_bottom_left_value(root));
+    }
 
     #[test]
     fn nr_279_ex_01() {
