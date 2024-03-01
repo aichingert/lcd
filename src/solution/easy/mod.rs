@@ -4,6 +4,7 @@ pub mod number_of_1_bits;
 pub mod count_of_matches_in_tournament;
 pub mod calculate_money_in_leetcode_bank;
 pub mod c70;
+pub mod m2864;
 
 #[cfg(test)]
 mod test {
@@ -12,6 +13,16 @@ mod test {
 
     use crate::Solution;
     use crate::TreeNode;
+
+    #[test]
+    fn nr_2864_ex_01() {
+        assert_eq!("001".to_string(), Solution::maximum_odd_binary_number("010".to_string()));
+    }
+
+    #[test]
+    fn nr_2864_ex_02() {
+        assert_eq!("1001".to_string(), Solution::maximum_odd_binary_number("0101".to_string()));
+    }
 
     #[test]
     fn nr_70_ex_01() {
