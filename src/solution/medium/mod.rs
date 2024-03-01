@@ -27,6 +27,7 @@ pub mod h198;
 pub mod s451;
 pub mod p279;
 pub mod f513;
+pub mod e1609;
 
 #[cfg(test)]
 mod test {
@@ -35,6 +36,75 @@ mod test {
 
     use crate::TreeNode;
     use crate::Solution;
+
+    #[test]
+    fn nr_1609_ex_01() {
+        let root = Some(Rc::new(RefCell::new(TreeNode {
+            val: 1,
+            left: Some(Rc::new(RefCell::new(TreeNode{
+                val: 10,
+                left: Some(Rc::new(RefCell::new(TreeNode {
+                    val: 3,
+                    left: Some(Rc::new(RefCell::new(TreeNode::new(12)))),
+                    right: Some(Rc::new(RefCell::new(TreeNode::new(8)))),
+                }))),
+                right: None,
+            }))),
+            right: Some(Rc::new(RefCell::new(TreeNode {
+                val: 4,
+                left: Some(Rc::new(RefCell::new(TreeNode {
+                    val: 7,
+                    left: Some(Rc::new(RefCell::new(TreeNode::new(6)))),
+                    right: None,
+                }))),
+                right: Some(Rc::new(RefCell::new(TreeNode {
+                    val: 9,
+                    left: None,
+                    right: Some(Rc::new(RefCell::new(TreeNode::new(2)))),
+                }))),
+            }))),
+        })));
+
+        assert_eq!(true, Solution::is_even_odd_tree(root));
+    }
+
+    #[test]
+    fn nr_1609_ex_02() {
+        let root = Some(Rc::new(RefCell::new(TreeNode {
+            val: 5,
+            left: Some(Rc::new(RefCell::new(TreeNode {
+                val: 4,
+                left: Some(Rc::new(RefCell::new(TreeNode::new(3)))),
+                right: Some(Rc::new(RefCell::new(TreeNode::new(3)))),
+            }))),
+            right: Some(Rc::new(RefCell::new(TreeNode {
+                val: 2,
+                left: Some(Rc::new(RefCell::new(TreeNode::new(7)))),
+                right: None,
+            }))),
+        })));
+
+        assert_eq!(false, Solution::is_even_odd_tree(root));
+    }
+
+    #[test]
+    fn nr_1609_ex_03() {
+        let root = Some(Rc::new(RefCell::new(TreeNode {
+            val: 5,
+            left: Some(Rc::new(RefCell::new(TreeNode {
+                val: 9,
+                left: Some(Rc::new(RefCell::new(TreeNode::new(3)))),
+                right: Some(Rc::new(RefCell::new(TreeNode::new(5)))),
+            }))),
+            right: Some(Rc::new(RefCell::new(TreeNode {
+                val: 1,
+                left: Some(Rc::new(RefCell::new(TreeNode::new(7)))),
+                right: None,
+            }))),
+        })));
+
+        assert_eq!(false, Solution::is_even_odd_tree(root));
+    }
 
     #[test]
     fn nr_513_ex_01() {
