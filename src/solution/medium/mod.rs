@@ -28,6 +28,7 @@ pub mod s451;
 pub mod p279;
 pub mod f513;
 pub mod e1609;
+pub mod m1750;
 
 #[cfg(test)]
 mod test {
@@ -36,6 +37,21 @@ mod test {
 
     use crate::TreeNode;
     use crate::Solution;
+
+    #[test]
+    fn nr_1750_ex_01() {
+        assert_eq!(2, Solution::minimum_length(String::from("ca")));
+    }
+
+    #[test]
+    fn nr_1750_ex_02() {
+        assert_eq!(0, Solution::minimum_length(String::from("cabaabac")));
+    }
+
+    #[test]
+    fn nr_1750_ex_03() {
+        assert_eq!(3, Solution::minimum_length(String::from("aabccabba")));
+    }
 
     #[test]
     fn nr_1609_ex_01() {
