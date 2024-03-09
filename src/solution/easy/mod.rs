@@ -5,6 +5,7 @@ pub mod count_of_matches_in_tournament;
 pub mod calculate_money_in_leetcode_bank;
 pub mod c70;
 pub mod m2864;
+pub mod c3005;
 
 #[cfg(test)]
 mod test {
@@ -13,6 +14,16 @@ mod test {
 
     use crate::Solution;
     use crate::TreeNode;
+
+    #[test]
+    fn nr_3005_ex_01() {
+        assert_eq!(4, Solution::max_frequency_elements(vec![1,2,2,3,1,4]));
+    }
+
+    #[test]
+    fn nr_3005_ex_02() {
+        assert_eq!(5, Solution::max_frequency_elements(vec![1,2,3,4,5]));
+    }
 
     #[test]
     fn nr_2864_ex_01() {
