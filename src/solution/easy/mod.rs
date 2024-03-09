@@ -6,6 +6,7 @@ pub mod calculate_money_in_leetcode_bank;
 pub mod c70;
 pub mod m2864;
 pub mod c3005;
+pub mod m2540;
 
 #[cfg(test)]
 mod test {
@@ -14,6 +15,16 @@ mod test {
 
     use crate::Solution;
     use crate::TreeNode;
+
+    #[test]
+    fn nr_2540_ex_01() {
+        assert_eq!(2, Solution::get_common(vec![1,2,3], vec![2,4]));
+    }
+
+    #[test]
+    fn nr_2540_ex_02() {
+        assert_eq!(2, Solution::get_common(vec![1,2,3,6], vec![2,3,4,5]));
+    }
 
     #[test]
     fn nr_3005_ex_01() {
