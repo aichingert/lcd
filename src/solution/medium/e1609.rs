@@ -21,10 +21,8 @@ impl Solution {
                     if v[i] >= v[i + 1] {
                         return false;
                     }
-                } else {
-                    if v[i] <= v[i + 1] {
-                        return false;
-                    }
+                } else if v[i] <= v[i + 1] {
+                    return false;
                 }
             }
         }

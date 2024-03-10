@@ -5,6 +5,12 @@ pub struct RandomizedSet {
     set: HashSet<i32>,
 }
 
+impl Default for RandomizedSet {
+    fn default() -> Self {
+        Self::new()
+    }
+}
+
 impl RandomizedSet {
     pub fn new() -> Self {
         RandomizedSet{set: HashSet::new()}
