@@ -7,6 +7,7 @@ pub mod c70;
 pub mod m2864;
 pub mod c3005;
 pub mod m2540;
+pub mod i349;
 
 #[cfg(test)]
 mod test {
@@ -15,6 +16,16 @@ mod test {
 
     use crate::Solution;
     use crate::TreeNode;
+    
+    #[test]
+    fn nr_349_ex_01() {
+        assert_eq!(vec![2], Solution::intersection(vec![1,2,2,1], vec![2,2]));
+    }
+
+    #[test]
+    fn nr_349_ex_02() {
+        assert_eq!(vec![9,4], Solution::intersection(vec![4,9,5], vec![9,4,9,8,4]));
+    }
 
     #[test]
     fn nr_2540_ex_01() {
