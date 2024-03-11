@@ -24,7 +24,10 @@ mod test {
 
     #[test]
     fn nr_349_ex_02() {
-        assert_eq!(vec![9,4], Solution::intersection(vec![4,9,5], vec![9,4,9,8,4]));
+        let mut ans = Solution::intersection(vec![4,9,5], vec![9,4,9,8,4]);
+        ans.sort_unstable();
+
+        assert_eq!(vec![4,9], ans);
     }
 
     #[test]

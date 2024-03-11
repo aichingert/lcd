@@ -29,6 +29,7 @@ pub mod p279;
 pub mod f513;
 pub mod e1609;
 pub mod m1750;
+pub mod c791;
 
 #[cfg(test)]
 mod test {
@@ -37,6 +38,16 @@ mod test {
 
     use crate::TreeNode;
     use crate::Solution;
+
+    #[test]
+    fn nr_791_ex_01() {
+        assert_eq!(format!("cbad"), Solution::custom_sort_string(format!("cba"), format!("abcd")));
+    }
+
+    #[test]
+    fn nr_791_ex_02() {
+        assert_eq!(format!("bcad"), Solution::custom_sort_string(format!("bcafg"), format!("abcd")));
+    }
 
     #[test]
     fn nr_1750_ex_01() {
