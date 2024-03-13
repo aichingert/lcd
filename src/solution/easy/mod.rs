@@ -8,6 +8,7 @@ pub mod m2864;
 pub mod c3005;
 pub mod m2540;
 pub mod i349;
+pub mod f2485;
 
 #[cfg(test)]
 mod test {
@@ -16,6 +17,21 @@ mod test {
 
     use crate::Solution;
     use crate::TreeNode;
+
+    #[test]
+    fn nr_2485_ex_01() {
+        assert_eq!(6, Solution::pivot_integer(8));
+    }
+
+    #[test]
+    fn nr_2485_ex_02() {
+        assert_eq!(1, Solution::pivot_integer(1));
+    }
+
+    #[test]
+    fn nr_2485_ex_03() {
+        assert_eq!(-1, Solution::pivot_integer(4));
+    }
     
     #[test]
     fn nr_349_ex_01() {
