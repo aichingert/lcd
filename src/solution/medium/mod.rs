@@ -30,6 +30,7 @@ pub mod f513;
 pub mod e1609;
 pub mod m1750;
 pub mod c791;
+pub mod b930;
 
 #[cfg(test)]
 mod test {
@@ -38,6 +39,16 @@ mod test {
 
     use crate::TreeNode;
     use crate::Solution;
+
+    #[test]
+    fn nr_930_ex_01() {
+        assert_eq!(4, Solution::num_subarrays_with_sum(vec![1,0,1,0,1], 2));
+    }
+
+    #[test]
+    fn nr_930_ex_02() {
+        assert_eq!(15, Solution::num_subarrays_with_sum(vec![0,0,0,0,0], 0));
+    }
 
     #[test]
     fn nr_791_ex_01() {
