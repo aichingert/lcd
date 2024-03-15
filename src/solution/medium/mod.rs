@@ -31,6 +31,7 @@ pub mod e1609;
 pub mod m1750;
 pub mod c791;
 pub mod b930;
+pub mod p238;
 
 #[cfg(test)]
 mod test {
@@ -39,6 +40,16 @@ mod test {
 
     use crate::TreeNode;
     use crate::Solution;
+
+    #[test]
+    fn nr_238_ex_01() {
+        assert_eq!(vec![24,12,8,6], Solution::product_except_self(vec![1,2,3,4]));
+    }
+
+    #[test]
+    fn nr_238_ex_02() {
+        assert_eq!(vec![0,0,9,0,0], Solution::product_except_self(vec![-1,1,0,-3,3]));
+    }
 
     #[test]
     fn nr_930_ex_01() {
