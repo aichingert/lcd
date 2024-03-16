@@ -32,6 +32,7 @@ pub mod m1750;
 pub mod c791;
 pub mod b930;
 pub mod p238;
+pub mod c525;
 
 #[cfg(test)]
 mod test {
@@ -40,6 +41,16 @@ mod test {
 
     use crate::TreeNode;
     use crate::Solution;
+
+    #[test]
+    fn nr_525_ex_01() {
+        assert_eq!(2, Solution::find_max_length(vec![0,1]));
+    }
+
+    #[test]
+    fn nr_525_ex_02() {
+        assert_eq!(2, Solution::find_max_length(vec![0,1,0]));
+    }
 
     #[test]
     fn nr_238_ex_01() {
