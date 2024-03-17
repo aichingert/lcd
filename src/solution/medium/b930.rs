@@ -9,8 +9,8 @@ impl Solution {
         for i in 0..nums.len() {
             let mut s = 0;
 
-            for j in i..nums.len() {
-                s += nums[j];
+            for n in nums.iter().skip(i) {
+                s += *n;
 
                 match s.cmp(&goal) {
                     Ordering::Less => (),

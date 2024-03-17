@@ -33,6 +33,7 @@ pub mod c791;
 pub mod b930;
 pub mod p238;
 pub mod c525;
+pub mod i57;
 
 #[cfg(test)]
 mod test {
@@ -41,6 +42,19 @@ mod test {
 
     use crate::TreeNode;
     use crate::Solution;
+
+    #[test]
+    fn nr_57_ex_01() {
+        assert_eq!(vec![vec![1,5], vec![6,9]], Solution::insert(vec![vec![1,3],vec![6,9]], vec![2,5]));
+    }
+
+    #[test]
+    fn nr_57_ex_02() {
+        assert_eq!(
+            vec![vec![1,2], vec![3,10], vec![12,16]], 
+            Solution::insert(vec![vec![1,2],vec![3,5],vec![6,7], vec![8,10],vec![12,16]], vec![4,8])
+        );
+    }
 
     #[test]
     fn nr_525_ex_01() {
