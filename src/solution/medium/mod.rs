@@ -34,6 +34,7 @@ pub mod b930;
 pub mod p238;
 pub mod c525;
 pub mod i57;
+pub mod m452;
 
 #[cfg(test)]
 mod test {
@@ -42,6 +43,21 @@ mod test {
 
     use crate::TreeNode;
     use crate::Solution;
+
+    #[test]
+    fn nr_452_ex_01() {
+        assert_eq!(2, Solution::find_min_arrow_shots(vec![vec![10,16],vec![2,8],vec![1,6],vec![7,12]]));
+    }
+
+    #[test]
+    fn nr_452_ex_02() {
+        assert_eq!(4, Solution::find_min_arrow_shots(vec![vec![1,2],vec![3,4],vec![5,6],vec![7,8]]));
+    }
+
+    #[test]
+    fn nr_452_ex_03() {
+        assert_eq!(2, Solution::find_min_arrow_shots(vec![vec![1,2],vec![2,3],vec![3,4],vec![4,5]]));
+    }
 
     #[test]
     fn nr_57_ex_01() {
