@@ -35,6 +35,7 @@ pub mod p238;
 pub mod c525;
 pub mod i57;
 pub mod m452;
+pub mod t621;
 
 #[cfg(test)]
 mod test {
@@ -43,6 +44,21 @@ mod test {
 
     use crate::TreeNode;
     use crate::Solution;
+
+    #[test]
+    fn nr_621_ex_01() {
+        assert_eq!(8, Solution::least_interval(vec!['A','A','A','B','B','B'], 2));
+    }
+
+    #[test]
+    fn nr_621_ex_02() {
+        assert_eq!(6, Solution::least_interval(vec!['A','C','A','B','D','B'], 1));
+    }
+
+    #[test]
+    fn nr_621_ex_03() {
+        assert_eq!(10, Solution::least_interval(vec!['A','A','A','B','B','B'], 3));
+    }
 
     #[test]
     fn nr_452_ex_01() {
