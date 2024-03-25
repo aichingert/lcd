@@ -37,6 +37,7 @@ pub mod i57;
 pub mod m452;
 pub mod t621;
 pub mod f287;
+pub mod f442;
 
 #[cfg(test)]
 mod test {
@@ -45,6 +46,21 @@ mod test {
 
     use crate::TreeNode;
     use crate::Solution;
+
+    #[test]
+    fn nr_442_ex_01() {
+        assert_eq!(vec![2,3], Solution::find_duplicates(vec![4,3,2,7,8,2,3,1]));
+    }
+
+    #[test]
+    fn nr_442_ex_02() {
+        assert_eq!(vec![1], Solution::find_duplicates(vec![1,1,2]));
+    }
+
+    #[test]
+    fn nr_442_ex_03() {
+        assert_eq!(Vec::<i32>::new(), Solution::find_duplicates(vec![1]));
+    }
 
     #[test]
     fn nr_287_ex_01() {
