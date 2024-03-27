@@ -38,6 +38,7 @@ pub mod m452;
 pub mod t621;
 pub mod f287;
 pub mod f442;
+pub mod s713;
 
 #[cfg(test)]
 mod test {
@@ -46,6 +47,16 @@ mod test {
 
     use crate::TreeNode;
     use crate::Solution;
+
+    #[test]
+    fn nr_713_ex_01() {
+        assert_eq!(8, Solution::num_subarray_product_less_than_k(vec![10,5,2,6], 100));
+    }
+
+    #[test]
+    fn nr_713_ex_02() {
+        assert_eq!(0, Solution::num_subarray_product_less_than_k(vec![1,2,3], 0));
+    }
 
     #[test]
     fn nr_442_ex_01() {
@@ -152,12 +163,12 @@ mod test {
 
     #[test]
     fn nr_791_ex_01() {
-        assert_eq!(format!("cbad"), Solution::custom_sort_string(format!("cba"), format!("abcd")));
+        assert_eq!(format!("cbad"), Solution::custom_sort_string("cba".to_string(), "abcd".to_string()));
     }
 
     #[test]
     fn nr_791_ex_02() {
-        assert_eq!(format!("bcad"), Solution::custom_sort_string(format!("bcafg"), format!("abcd")));
+        assert_eq!(format!("bcad"), Solution::custom_sort_string("bcafg".to_string(), "abcd".to_string()));
     }
 
     #[test]
@@ -203,7 +214,7 @@ mod test {
             }))),
         })));
 
-        assert_eq!(true, Solution::is_even_odd_tree(root));
+        assert!(Solution::is_even_odd_tree(root));
     }
 
     #[test]
@@ -222,7 +233,7 @@ mod test {
             }))),
         })));
 
-        assert_eq!(false, Solution::is_even_odd_tree(root));
+        assert!(!Solution::is_even_odd_tree(root));
     }
 
     #[test]
@@ -241,7 +252,7 @@ mod test {
             }))),
         })));
 
-        assert_eq!(false, Solution::is_even_odd_tree(root));
+        assert!(!Solution::is_even_odd_tree(root));
     }
 
     #[test]
@@ -344,17 +355,17 @@ mod test {
 
     #[test]
     fn nr_1657_ex_01() {
-        assert_eq!(true, Solution::close_strings("abc".to_string(), "bca".to_string()));
+        assert!(Solution::close_strings("abc".to_string(), "bca".to_string()));
     }
 
     #[test]
     fn nr_1657_ex_02() {
-        assert_eq!(false, Solution::close_strings("a".to_string(), "aa".to_string()));
+        assert!(!Solution::close_strings("a".to_string(), "aa".to_string()));
     }
 
     #[test]
     fn nr_1657_ex_03() {
-        assert_eq!(true, Solution::close_strings("cabbba".to_string(), "abbccc".to_string()));
+        assert!(Solution::close_strings("cabbba".to_string(), "abbccc".to_string()));
     }
 
     #[test]
@@ -584,13 +595,13 @@ mod test {
 
     #[test]
     fn nr_1441_build_an_array_with_stack_operations_ex_01() {
-        assert_eq!(vec!["Push","Push","Pop","Push"].iter().map(|s|s.to_string()).collect::<Vec<_>>(), 
+        assert_eq!(["Push","Push","Pop","Push"].iter().map(|s|s.to_string()).collect::<Vec<_>>(), 
                    Solution::build_array(vec![1,3], 3));
     }
 
     #[test]
     fn nr_1441_build_an_array_with_stack_operations_ex_02() {
-        assert_eq!(vec!["Push", "Push"].iter().map(|s| s.to_string()).collect::<Vec<_>>(), 
+        assert_eq!(["Push", "Push"].iter().map(|s| s.to_string()).collect::<Vec<_>>(), 
                    Solution::build_array(vec![1,2], 2));
     }
 
