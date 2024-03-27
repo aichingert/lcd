@@ -8,16 +8,14 @@ impl Solution {
             let mut x = nums[i];
 
             while x >= 1 && x <= n && x as usize != i + 1 && nums[x as usize - 1] != x {
-                let tmp = nums[x as usize - 1];
-                nums[x as usize - 1] = nums[i];
-                nums[i] = tmp;
+                nums.swap(x as usize - 1, i);
                 x = nums[i];
             }
         }
 
-        for i in 0..nums.len() {
+        for (i, num) in nums.iter().enumerate() {
             let x = (i + 1) as i32;
-            if nums[i] != x {
+            if *num != x {
                 return x;
             }
         }

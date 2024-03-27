@@ -15,7 +15,7 @@ impl Solution {
     }
 }
 
-fn merge(vec: &mut Vec<Vec<i32>>, ins: &Vec<i32>) -> bool {
+fn merge(vec: &mut [Vec<i32>], ins: &[i32]) -> bool {
     for rng in vec.iter_mut() {
         if rng[1] == ins[0] || rng[1] >= ins[0] && ins[1] >= rng[1] {
             rng[0] = rng[0].max(ins[0]);

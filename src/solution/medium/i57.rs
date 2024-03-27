@@ -11,8 +11,7 @@ impl Solution {
         let mut i = 0;
 
         while i < intervals.len() {
-            if intervals[i][0] >= new_interval[1] || intervals[i][0] >= new_interval[0]
-            || intervals[i][0] >= new_interval[0] && intervals[i][1] >= new_interval[1] {
+            if intervals[i][0] >= new_interval[1] || intervals[i][0] >= new_interval[0] {
                 intervals.insert(i, new_interval.clone());
                 break;
             } else if intervals[i][0] >= new_interval[0] {
