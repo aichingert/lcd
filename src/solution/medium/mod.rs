@@ -39,6 +39,7 @@ pub mod t621;
 pub mod f287;
 pub mod f442;
 pub mod s713;
+pub mod l2958;
 
 #[cfg(test)]
 mod test {
@@ -47,6 +48,21 @@ mod test {
 
     use crate::TreeNode;
     use crate::Solution;
+
+    #[test]
+    fn nr_2958_ex_01() {
+        assert_eq!(6, Solution::max_subarray_length(vec![1,2,3,1,2,3,1,2], 2));
+    }
+
+    #[test]
+    fn nr_2958_ex_02() {
+        assert_eq!(2, Solution::max_subarray_length(vec![1,2,1,2,1,2,1,2,1,2], 1));
+    }
+    
+    #[test]
+    fn nr_2958_ex_03() {
+        assert_eq!(4, Solution::max_subarray_length(vec![5,5,5,5,5,5], 4));
+    }
 
     #[test]
     fn nr_713_ex_01() {
