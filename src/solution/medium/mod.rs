@@ -40,6 +40,7 @@ pub mod f287;
 pub mod f442;
 pub mod s713;
 pub mod l2958;
+pub mod c2962;
 
 #[cfg(test)]
 mod test {
@@ -48,6 +49,16 @@ mod test {
 
     use crate::TreeNode;
     use crate::Solution;
+
+    #[test]
+    fn nr_2962_ex_01() {
+        assert_eq!(6, Solution::count_subarrays(vec![1,3,2,3,3], 2));
+    }
+
+    #[test]
+    fn nr_2962_ex_02() {
+        assert_eq!(0, Solution::count_subarrays(vec![1,4,2,1], 3));
+    }
 
     #[test]
     fn nr_2958_ex_01() {
