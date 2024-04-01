@@ -9,6 +9,7 @@ pub mod c3005;
 pub mod m2540;
 pub mod i349;
 pub mod f2485;
+pub mod l58;
 
 #[cfg(test)]
 mod test {
@@ -17,6 +18,21 @@ mod test {
 
     use crate::Solution;
     use crate::TreeNode;
+
+    #[test]
+    fn nr_58_ex_01() {
+        assert_eq!(5, Solution::length_of_last_word(String::from("Hello World")));
+    }
+
+    #[test]
+    fn nr_58_ex_02() {
+        assert_eq!(4, Solution::length_of_last_word(String::from("   fly me   to   the moon  ")));
+    }
+
+    #[test]
+    fn nr_58_ex_03() {
+        assert_eq!(6, Solution::length_of_last_word(String::from("luffy is still joyboy")));
+    }
 
     #[test]
     fn nr_2485_ex_01() {
