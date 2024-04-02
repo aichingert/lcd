@@ -10,6 +10,7 @@ pub mod m2540;
 pub mod i349;
 pub mod f2485;
 pub mod l58;
+pub mod i205;
 
 #[cfg(test)]
 mod test {
@@ -19,6 +20,21 @@ mod test {
     use crate::Solution;
     use crate::TreeNode;
 
+    #[test]
+    fn nr_205_ex_01() {
+        assert_eq!(true, Solution::is_isomorphic("egg".to_string(), "add".to_string()));
+    }
+
+    #[test]
+    fn nr_205_ex_02() {
+        assert_eq!(false, Solution::is_isomorphic("foo".to_string(), "bar".to_string()));
+    }
+
+    #[test]
+    fn nr_205_ex_03() {
+        assert_eq!(true, Solution::is_isomorphic("paper".to_string(), "title".to_string()));
+    }
+    
     #[test]
     fn nr_58_ex_01() {
         assert_eq!(5, Solution::length_of_last_word(String::from("Hello World")));
