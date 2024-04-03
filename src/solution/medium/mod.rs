@@ -41,6 +41,7 @@ pub mod f442;
 pub mod s713;
 pub mod l2958;
 pub mod c2962;
+pub mod w79;
 
 #[cfg(test)]
 mod test {
@@ -49,6 +50,21 @@ mod test {
 
     use crate::TreeNode;
     use crate::Solution;
+
+    #[test]
+    fn nr_79_ex_01() {
+        assert_eq!(true, Solution::exist(vec![vec!['A','B','C','E'],vec!['S','F','C','S'],vec!['A','D','E','E']], "ABCCED".to_string()));
+    }
+
+    #[test]
+    fn nr_79_ex_02() {
+        assert_eq!(true, Solution::exist(vec![vec!['A','B','C','E'],vec!['S','F','C','S'],vec!['A','D','E','E']], "SEE".to_string()));
+    }
+
+    #[test]
+    fn nr_79_ex_03() {
+        assert_eq!(false, Solution::exist(vec![vec!['A','B','C','E'],vec!['S','F','C','S'],vec!['A','D','E','E']], "ABCB".to_string()));
+    }
 
     #[test]
     fn nr_2962_ex_01() {
