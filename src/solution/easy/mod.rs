@@ -11,6 +11,7 @@ pub mod i349;
 pub mod f2485;
 pub mod l58;
 pub mod i205;
+pub mod m1614;
 
 #[cfg(test)]
 mod test {
@@ -19,6 +20,16 @@ mod test {
 
     use crate::Solution;
     use crate::TreeNode;
+
+    #[test]
+    fn nr_1614_ex_01() {
+        assert_eq!(3, Solution::max_depth("(1+(2*3)+((8)/4))+1".to_string()));
+    }
+
+    #[test]
+    fn nr_1614_ex_02() {
+        assert_eq!(3, Solution::max_depth("(1)+((2))+(((3)))".to_string()));
+    }
 
     #[test]
     fn nr_205_ex_01() {
