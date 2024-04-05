@@ -12,6 +12,7 @@ pub mod f2485;
 pub mod l58;
 pub mod i205;
 pub mod m1614;
+pub mod m1544;
 
 #[cfg(test)]
 mod test {
@@ -20,6 +21,30 @@ mod test {
 
     use crate::Solution;
     use crate::TreeNode;
+
+    #[test]
+    fn nr_1544_ex_01() {
+        assert_eq!(
+            "leetcode".to_string(), 
+            Solution::make_good("leEeetcode".to_string())
+        );
+    }
+
+    #[test]
+    fn nr_1544_ex_02() {
+        assert_eq!(
+            "".to_string(), 
+            Solution::make_good("abBAcC".to_string())
+        );
+    }
+
+    #[test]
+    fn nr_1544_ex_03() {
+        assert_eq!(
+            "s".to_string(), 
+            Solution::make_good("s".to_string())
+        );
+    }
 
     #[test]
     fn nr_1614_ex_01() {
