@@ -42,6 +42,7 @@ pub mod s713;
 pub mod l2958;
 pub mod c2962;
 pub mod w79;
+pub mod m1249;
 
 #[cfg(test)]
 mod test {
@@ -50,6 +51,21 @@ mod test {
 
     use crate::TreeNode;
     use crate::Solution;
+
+    #[test]
+    fn nr_1249_ex_01() {
+        assert_eq!("lee(t(c)o)de".to_string(), Solution::min_remove_to_make_valid("lee(t(c)o)de)".to_string()));
+    }
+
+    #[test]
+    fn nr_1249_ex_02() {
+        assert_eq!("ab(c)d".to_string(), Solution::min_remove_to_make_valid("a)b(c)d".to_string()));
+    }
+
+    #[test]
+    fn nr_1249_ex_03() {
+        assert_eq!("".to_string(), Solution::min_remove_to_make_valid("))((".to_string()));
+    }
 
     #[test]
     fn nr_79_ex_01() {
