@@ -43,6 +43,7 @@ pub mod l2958;
 pub mod c2962;
 pub mod w79;
 pub mod m1249;
+pub mod v678;
 
 #[cfg(test)]
 mod test {
@@ -51,6 +52,21 @@ mod test {
 
     use crate::TreeNode;
     use crate::Solution;
+
+    #[test]
+    fn nr_678_ex_01() {
+        assert_eq!(true, Solution::check_valid_string("()".to_string()));
+    }
+
+    #[test]
+    fn nr_678_ex_02() {
+        assert_eq!(true, Solution::check_valid_string("(*)".to_string()));
+    }
+
+    #[test]
+    fn nr_678_ex_03() {
+        assert_eq!(true, Solution::check_valid_string("(*))".to_string()));
+    }
 
     #[test]
     fn nr_1249_ex_01() {
