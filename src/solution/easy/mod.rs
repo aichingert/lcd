@@ -13,6 +13,7 @@ pub mod l58;
 pub mod i205;
 pub mod m1614;
 pub mod m1544;
+pub mod n1700;
 
 #[cfg(test)]
 mod test {
@@ -21,6 +22,16 @@ mod test {
 
     use crate::Solution;
     use crate::TreeNode;
+
+    #[test]
+    fn nr_1700_ex_01() {
+        assert_eq!(0, Solution::count_students(vec![1,1,0,0], vec![0,1,0,1]));
+    }
+
+    #[test]
+    fn nr_1700_ex_02() {
+        assert_eq!(3, Solution::count_students(vec![1,1,1,0,0,1], vec![1,0,0,0,1,1]));
+    }
 
     #[test]
     fn nr_1544_ex_01() {
