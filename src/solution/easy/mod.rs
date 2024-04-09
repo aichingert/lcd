@@ -14,6 +14,7 @@ pub mod i205;
 pub mod m1614;
 pub mod m1544;
 pub mod n1700;
+pub mod t2073;
 
 #[cfg(test)]
 mod test {
@@ -22,6 +23,16 @@ mod test {
 
     use crate::Solution;
     use crate::TreeNode;
+
+    #[test]
+    fn nr_2073_ex_01() {
+        assert_eq!(6, Solution::time_required_to_buy(vec![2,3,2], 2));
+    }
+
+    #[test]
+    fn nr_2073_ex_02() {
+        assert_eq!(8, Solution::time_required_to_buy(vec![5,1,1,1], 0));
+    }
 
     #[test]
     fn nr_1700_ex_01() {
