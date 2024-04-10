@@ -44,6 +44,7 @@ pub mod c2962;
 pub mod w79;
 pub mod m1249;
 pub mod v678;
+pub mod r950;
 
 #[cfg(test)]
 mod test {
@@ -52,6 +53,16 @@ mod test {
 
     use crate::TreeNode;
     use crate::Solution;
+
+    #[test]
+    fn nr_950_ex_01() {
+        assert_eq!(vec![2,13,3,11,5,17,7], Solution::deck_revealed_increasing(vec![17,13,11,2,3,5,7]));
+    }
+
+    #[test]
+    fn nr_950_ex_02() {
+        assert_eq!(vec![1,1000], Solution::deck_revealed_increasing(vec![1,1000]));
+    }
 
     #[test]
     fn nr_678_ex_01() {
