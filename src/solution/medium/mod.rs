@@ -45,6 +45,7 @@ pub mod w79;
 pub mod m1249;
 pub mod v678;
 pub mod r950;
+pub mod s129;
 
 #[cfg(test)]
 mod test {
@@ -53,6 +54,52 @@ mod test {
 
     use crate::TreeNode;
     use crate::Solution;
+
+    #[test]
+    fn nr_129_ex_01() {
+        let root = Some(Rc::new(RefCell::new(TreeNode {
+            val: 1,
+            left: Some(Rc::new(RefCell::new(TreeNode{
+                val: 2,
+                left: None,
+                right: None,
+            }))),
+            right: Some(Rc::new(RefCell::new(TreeNode {
+                val: 3,
+                left: None,
+                right: None,
+            }))),
+        })));
+
+        assert_eq!(25, Solution::sum_numbers(root));
+    }
+
+    #[test]
+    fn nr_129_ex_02() {
+        let root = Some(Rc::new(RefCell::new(TreeNode {
+            val: 4,
+            left: Some(Rc::new(RefCell::new(TreeNode {
+                val: 9,
+                left: Some(Rc::new(RefCell::new(TreeNode {
+                    val: 5,
+                    left: None,
+                    right: None,
+                }))),
+                right: Some(Rc::new(RefCell::new(TreeNode {
+                    val: 1,
+                    left: None,
+                    right: None,
+                }))),
+            }))),
+            right: Some(Rc::new(RefCell::new(TreeNode {
+                val: 0,
+                left: None,
+                right: None,
+            }))),
+        })));
+
+        assert_eq!(1026, Solution::sum_numbers(root));
+    }
 
     #[test]
     fn nr_950_ex_01() {
