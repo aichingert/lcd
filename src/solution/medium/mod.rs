@@ -46,6 +46,7 @@ pub mod m1249;
 pub mod v678;
 pub mod r950;
 pub mod s129;
+pub mod n200;
 
 #[cfg(test)]
 mod test {
@@ -54,6 +55,26 @@ mod test {
 
     use crate::TreeNode;
     use crate::Solution;
+
+    #[test]
+    fn nr_200_ex_01() {
+        assert_eq!(1, Solution::num_islands(vec![
+          vec!['1','1','1','1','0'],
+          vec!['1','1','0','1','0'],
+          vec!['1','1','0','0','0'],
+          vec!['0','0','0','0','0']])
+        );
+    }
+
+    #[test]
+    fn nr_200_ex_02() {
+        assert_eq!(3, Solution::num_islands(vec![
+          vec!['1','1','0','0','0'],
+          vec!['1','1','0','0','0'],
+          vec!['0','0','1','0','0'],
+          vec!['0','0','0','1','1']])
+        );
+    }
 
     #[test]
     fn nr_129_ex_01() {
