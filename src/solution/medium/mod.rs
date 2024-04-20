@@ -47,6 +47,7 @@ pub mod v678;
 pub mod r950;
 pub mod s129;
 pub mod n200;
+pub mod f1992;
 
 #[cfg(test)]
 mod test {
@@ -55,6 +56,21 @@ mod test {
 
     use crate::TreeNode;
     use crate::Solution;
+
+    #[test]
+    fn nr_1992_ex_01() {
+        assert_eq!(vec![vec![0,0,0,0],vec![1,1,2,2]], Solution::find_farmland(vec![vec![1,0,0],vec![0,1,1],vec![0,1,1]]));
+    }
+
+    #[test]
+    fn nr_1992_ex_02() {
+        assert_eq!(vec![vec![0,0,1,1]], Solution::find_farmland(vec![vec![1,1], vec![1,1]]));
+    }
+
+    #[test]
+    fn nr_1992_ex_03() {
+        assert_eq!(Vec::<Vec<i32>>::new(), Solution::find_farmland(vec![vec![0i32]]));
+    }
 
     #[test]
     fn nr_200_ex_01() {
