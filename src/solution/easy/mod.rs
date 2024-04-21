@@ -16,6 +16,7 @@ pub mod n1700;
 pub mod number_of_1_bits;
 pub mod sort_integers_by_the_number_of_1_bits;
 pub mod t2073;
+pub mod f1971;
 
 #[cfg(test)]
 mod test {
@@ -24,6 +25,16 @@ mod test {
 
     use crate::Solution;
     use crate::TreeNode;
+
+    #[test]
+    fn nr_1971_ex_01() {
+        assert_eq!(true, Solution::valid_path(3, vec![vec![0,1],vec![1,2],vec![2,0]], 0, 2));
+    }
+
+    #[test]
+    fn nr_1971_ex_02() {
+        assert_eq!(false, Solution::valid_path(3, vec![vec![0,1],vec![0,2],vec![3,5],vec![5,4],vec![4,3]], 0, 5));
+    }
 
     #[test]
     fn nr_463_ex_01() {
