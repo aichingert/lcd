@@ -48,6 +48,7 @@ pub mod r950;
 pub mod s129;
 pub mod n200;
 pub mod f1992;
+pub mod o752;
 
 #[cfg(test)]
 mod test {
@@ -56,6 +57,30 @@ mod test {
 
     use crate::TreeNode;
     use crate::Solution;
+
+    #[test]
+    fn nr_752_ex_01() {
+        assert_eq!(6, Solution::open_lock(
+            vec!["0201".to_string(),"0101".to_string(),"0102".to_string(),"1212".to_string(),"2002".to_string()], 
+            "0202".to_string())
+        );
+    }
+
+    #[test]
+    fn nr_752_ex_02() {
+        assert_eq!(1, Solution::open_lock(
+            vec!["8888".to_string()], 
+            "0009".to_string())
+        );
+    }
+
+    #[test]
+    fn nr_752_ex_03() {
+        assert_eq!(-1, Solution::open_lock(
+            vec!["8887".to_string(),"8889".to_string(),"8878".to_string(),"8898".to_string(),"8788".to_string(),"8988".to_string(),"7888".to_string(),"9888".to_string()],
+            "8888".to_string())
+        );
+    }
 
     #[test]
     fn nr_1992_ex_01() {
