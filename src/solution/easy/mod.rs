@@ -17,6 +17,7 @@ pub mod number_of_1_bits;
 pub mod sort_integers_by_the_number_of_1_bits;
 pub mod t2073;
 pub mod f1971;
+pub mod n1137;
 
 #[cfg(test)]
 mod test {
@@ -25,6 +26,16 @@ mod test {
 
     use crate::Solution;
     use crate::TreeNode;
+
+    #[test]
+    fn nr_1137_ex_01() {
+        assert_eq!(4, Solution::tribonacci(4));
+    }
+
+    #[test]
+    fn nr_1137_ex_02() {
+        assert_eq!(1389537, Solution::tribonacci(25));
+    }
 
     #[test]
     fn nr_1971_ex_01() {
