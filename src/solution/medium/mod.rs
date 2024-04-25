@@ -50,6 +50,7 @@ pub mod n200;
 pub mod f1992;
 pub mod o752;
 pub mod m310;
+pub mod l2370;
 
 #[cfg(test)]
 mod test {
@@ -58,6 +59,16 @@ mod test {
 
     use crate::TreeNode;
     use crate::Solution;
+
+    #[test]
+    fn nr_2370_ex_01() {
+        assert_eq!(4, Solution::longest_ideal_string("acfgbd".to_string(), 2));
+    }
+
+    #[test]
+    fn nr_2370_ex_02() {
+        assert_eq!(4, Solution::longest_ideal_string("abcd".to_string(), 3));
+    }
 
     #[test]
     fn nr_310_ex_01() {
