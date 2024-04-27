@@ -3,11 +3,22 @@ pub mod poor_pigs;
 pub mod design_graph_with_shortest_path_calculator;
 pub mod bus_routes;
 pub mod f41;
+pub mod f514;
 
 #[cfg(test)]
 mod test {
     use crate::Solution;
     use crate::solution::hard::design_graph_with_shortest_path_calculator::Graph;
+
+    #[test]
+    fn nr_514_ex_01() {
+        assert_eq!(4, Solution::find_rotate_steps("godding".to_string(), "gd".to_string()));
+    }
+
+    #[test]
+    fn nr_514_ex_02() {
+        assert_eq!(13, Solution::find_rotate_steps("godding".to_string(), "godding".to_string()));
+    }
 
     #[test]
     fn nr_41_ex_01() {
