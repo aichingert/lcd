@@ -18,6 +18,7 @@ pub mod sort_integers_by_the_number_of_1_bits;
 pub mod t2073;
 pub mod f1971;
 pub mod n1137;
+pub mod r2000;
 
 #[cfg(test)]
 mod test {
@@ -26,6 +27,21 @@ mod test {
 
     use crate::Solution;
     use crate::TreeNode;
+
+    #[test]
+    fn nr_2000_ex_01() {
+        assert_eq!("dcbaefd".to_string(), Solution::reverse_prefix("abcdefd".to_string(), 'd'));
+    }
+
+    #[test]
+    fn nr_2000_ex_02() {
+        assert_eq!("zxyxxe".to_string(), Solution::reverse_prefix("xyxzxe".to_string(), 'z'));
+    }
+    
+    #[test]
+    fn nr_2000_ex_03() {
+        assert_eq!("abcd".to_string(), Solution::reverse_prefix("abcd".to_string(), 'z'));
+    }
 
     #[test]
     fn nr_1137_ex_01() {
