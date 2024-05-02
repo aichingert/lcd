@@ -19,6 +19,7 @@ pub mod t2073;
 pub mod f1971;
 pub mod n1137;
 pub mod r2000;
+pub mod l2441;
 
 #[cfg(test)]
 mod test {
@@ -27,6 +28,21 @@ mod test {
 
     use crate::Solution;
     use crate::TreeNode;
+
+    #[test]
+    fn nr_2441_ex_01() {
+        assert_eq!(3, Solution::find_max_k(vec![-1,2,-3,3]));
+    }
+
+    #[test]
+    fn nr_2441_ex_02() {
+        assert_eq!(7, Solution::find_max_k(vec![-1,10,5,7,-7,1]));
+    }
+
+    #[test]
+    fn nr_2441_ex_03() {
+        assert_eq!(-1, Solution::find_max_k(vec![-10,8,6,7,-2,-3]));
+    }
 
     #[test]
     fn nr_2000_ex_01() {
