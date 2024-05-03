@@ -52,6 +52,7 @@ pub mod o752;
 pub mod m310;
 pub mod l2370;
 pub mod m2997;
+pub mod c165;
 
 #[cfg(test)]
 mod test {
@@ -60,7 +61,22 @@ mod test {
 
     use crate::TreeNode;
     use crate::Solution;
-    
+
+    #[test]
+    fn nr_165_ex_01() {
+        assert_eq!(0, Solution::compare_version("1.01".to_string(), "1.001".to_string()));
+    }
+
+    #[test]
+    fn nr_165_ex_02() {
+        assert_eq!(0, Solution::compare_version("1.0".to_string(), "1.0.0".to_string()));
+    }
+
+    #[test]
+    fn nr_165_ex_03() {
+        assert_eq!(-1, Solution::compare_version("0.1".to_string(), "1.1".to_string()));
+    }
+
     #[test]
     fn nr_2997_ex_01() {
         assert_eq!(2, Solution::min_operations_1_lc_l(vec![2,1,3,4], 1));
