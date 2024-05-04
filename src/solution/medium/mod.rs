@@ -53,6 +53,7 @@ pub mod m310;
 pub mod l2370;
 pub mod m2997;
 pub mod c165;
+pub mod b881;
 
 #[cfg(test)]
 mod test {
@@ -61,6 +62,21 @@ mod test {
 
     use crate::TreeNode;
     use crate::Solution;
+
+    #[test]
+    fn nr_881_ex_01() {
+        assert_eq!(1, Solution::num_rescue_boats(vec![1,2], 3));
+    }
+
+    #[test]
+    fn nr_881_ex_02() {
+        assert_eq!(3, Solution::num_rescue_boats(vec![3,2,2,1], 3));
+    }
+
+    #[test]
+    fn nr_881_ex_03() {
+        assert_eq!(4, Solution::num_rescue_boats(vec![3,5,3,4], 5));
+    }
 
     #[test]
     fn nr_165_ex_01() {
