@@ -20,6 +20,7 @@ pub mod f1971;
 pub mod n1137;
 pub mod r2000;
 pub mod l2441;
+pub mod r506;
 
 #[cfg(test)]
 mod test {
@@ -28,6 +29,18 @@ mod test {
 
     use crate::Solution;
     use crate::TreeNode;
+
+    #[test]
+    fn nr_506_ex_01() {
+        let ans = vec!["Gold Medal","Silver Medal","Bronze Medal","4","5"].into_iter().map(|s| s.to_string()).collect::<Vec<_>>();
+        assert_eq!(ans, Solution::find_relative_ranks(vec![5,4,3,2,1]));
+    }
+
+    #[test]
+    fn nr_506_ex_02() {
+        let ans = vec!["Gold Medal","5","Bronze Medal","Silver Medal","4"].into_iter().map(|s| s.to_string()).collect::<Vec<_>>();
+        assert_eq!(ans, Solution::find_relative_ranks(vec![10,3,8,9,4]));
+    }
 
     #[test]
     fn nr_2441_ex_01() {
