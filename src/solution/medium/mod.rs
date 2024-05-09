@@ -54,6 +54,7 @@ pub mod l2370;
 pub mod m2997;
 pub mod c165;
 pub mod b881;
+pub mod m3075;
 
 #[cfg(test)]
 mod test {
@@ -62,6 +63,21 @@ mod test {
 
     use crate::TreeNode;
     use crate::Solution;
+
+    #[test]
+    fn nr_3075_ex_01() {
+        assert_eq!(4, Solution::maximum_happiness_sum(vec![1,2,3], 2));
+    }
+
+    #[test]
+    fn nr_3075_ex_02() {
+        assert_eq!(1, Solution::maximum_happiness_sum(vec![1,1,1,1], 2));
+    }
+
+    #[test]
+    fn nr_3075_ex_03() {
+        assert_eq!(5, Solution::maximum_happiness_sum(vec![2,3,4,5], 1));
+    }
 
     #[test]
     fn nr_881_ex_01() {
