@@ -55,6 +55,7 @@ pub mod m2997;
 pub mod c165;
 pub mod b881;
 pub mod m3075;
+pub mod k786;
 
 #[cfg(test)]
 mod test {
@@ -63,6 +64,16 @@ mod test {
 
     use crate::TreeNode;
     use crate::Solution;
+
+    #[test]
+    fn nr_786_ex_01() {
+        assert_eq!(vec![2,5], Solution::kth_smallest_prime_fraction(vec![1,2,3,5], 3));
+    }
+
+    #[test]
+    fn nr_786_ex_02() {
+        assert_eq!(vec![1,7], Solution::kth_smallest_prime_fraction(vec![1,7], 1));
+    }
 
     #[test]
     fn nr_3075_ex_01() {
