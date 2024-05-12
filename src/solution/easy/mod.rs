@@ -21,6 +21,7 @@ pub mod n1137;
 pub mod r2000;
 pub mod l2441;
 pub mod r506;
+pub mod l2373;
 
 #[cfg(test)]
 mod test {
@@ -29,6 +30,16 @@ mod test {
 
     use crate::Solution;
     use crate::TreeNode;
+
+    #[test]
+    fn nr_2373_ex_01() {
+        assert_eq!(vec![vec![9,9], vec![8,6]], Solution::largest_local(vec![vec![9,9,8,1],vec![5,6,2,6],vec![8,2,6,4],vec![6,2,2,2]]));
+    }
+
+    #[test]
+    fn nr_2373_ex_02() {
+        assert_eq!(vec![vec![2,2,2],vec![2,2,2],vec![2,2,2]], Solution::largest_local(vec![vec![1,1,1,1,1],vec![1,1,1,1,1],vec![1,1,2,1,1],vec![1,1,1,1,1],vec![1,1,1,1,1]]));
+    }
 
     #[test]
     fn nr_506_ex_01() {
