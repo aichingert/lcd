@@ -56,6 +56,7 @@ pub mod c165;
 pub mod b881;
 pub mod m3075;
 pub mod k786;
+pub mod s861;
 
 #[cfg(test)]
 mod test {
@@ -64,6 +65,16 @@ mod test {
 
     use crate::TreeNode;
     use crate::Solution;
+
+    #[test]
+    fn nr_861_ex_01() {
+        assert_eq!(39, Solution::matrix_score(vec![vec![0,0,1,1],vec![1,0,1,0],vec![1,1,0,0]]));
+    }
+
+    #[test]
+    fn nr_861_ex_02() {
+        assert_eq!(1, Solution::matrix_score(vec![vec![0]]));
+    }
 
     #[test]
     fn nr_786_ex_01() {
