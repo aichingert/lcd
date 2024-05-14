@@ -57,6 +57,7 @@ pub mod b881;
 pub mod m3075;
 pub mod k786;
 pub mod s861;
+pub mod p1219;
 
 #[cfg(test)]
 mod test {
@@ -65,6 +66,16 @@ mod test {
 
     use crate::TreeNode;
     use crate::Solution;
+
+    #[test]
+    fn nr_1219_ex_01() {
+        assert_eq!(24, Solution::get_maximum_gold(vec![vec![0,6,0],vec![5,8,7],vec![0,9,0]]));
+    }
+
+    #[test]
+    fn nr_1219_ex_02() {
+        assert_eq!(28, Solution::get_maximum_gold(vec![vec![1,0,7],vec![2,0,6],vec![3,4,5],vec![0,3,0],vec![9,0,20]]));
+    }
 
     #[test]
     fn nr_861_ex_01() {
