@@ -22,6 +22,7 @@ pub mod r2000;
 pub mod l2441;
 pub mod r506;
 pub mod l2373;
+pub mod e2331;
 
 #[cfg(test)]
 mod test {
@@ -30,6 +31,26 @@ mod test {
 
     use crate::Solution;
     use crate::TreeNode;
+
+    #[test]
+    fn nr_2331_ex_01() {
+        let root = Some(Rc::new(RefCell::new(TreeNode {
+            val: 2,
+            left: Some(Rc::new(RefCell::new(TreeNode::new(1)))),
+            right: Some(Rc::new(RefCell::new(TreeNode {
+                val: 3,
+                left: Some(Rc::new(RefCell::new(TreeNode::new(0)))),
+                right: Some(Rc::new(RefCell::new(TreeNode::new(1)))),
+            }))),
+        })));
+
+        assert_eq!(true, Solution::evaluate_tree(root));
+    }
+
+    #[test]
+    fn nr_2331_ex_02() {
+        assert_eq!(false, Solution::evaluate_tree(Some(Rc::new(RefCell::new(TreeNode::new(0))))));
+    }
 
     #[test]
     fn nr_2373_ex_01() {
