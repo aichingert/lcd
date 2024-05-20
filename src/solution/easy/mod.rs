@@ -23,6 +23,7 @@ pub mod l2441;
 pub mod r506;
 pub mod l2373;
 pub mod e2331;
+pub mod s1863;
 
 #[cfg(test)]
 mod test {
@@ -31,6 +32,21 @@ mod test {
 
     use crate::Solution;
     use crate::TreeNode;
+
+    #[test]
+    fn nr_1863_ex_01() {
+        assert_eq!(6, Solution::subset_xor_sum(vec![1,3]));
+    }
+
+    #[test]
+    fn nr_1863_ex_02() {
+        assert_eq!(28, Solution::subset_xor_sum(vec![5,1,6]));
+    }
+
+    #[test]
+    fn nr_1863_ex_03() {
+        assert_eq!(480, Solution::subset_xor_sum(vec![3,4,5,6,7,8]));
+    }
 
     #[test]
     fn nr_2331_ex_01() {
