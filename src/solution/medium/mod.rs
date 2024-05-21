@@ -58,6 +58,7 @@ pub mod m3075;
 pub mod k786;
 pub mod s861;
 pub mod p1219;
+pub mod s78;
 
 #[cfg(test)]
 mod test {
@@ -66,6 +67,22 @@ mod test {
 
     use crate::TreeNode;
     use crate::Solution;
+
+    #[test]
+    fn nr_78_ex_01() {
+        let ac = Solution::subsets(vec![1,2,3]);
+        for ex in vec![vec![],vec![1],vec![2],vec![1,2],vec![3],vec![1,3],vec![2,3],vec![1,2,3]] {
+            assert!(ac.contains(&ex));
+        }
+    }
+
+    #[test]
+    fn nr_78_ex_02() {
+        let ac = Solution::subsets(vec![0]);
+        for ex in vec![vec![], vec![0]] {
+            assert!(ac.contains(&ex));
+        }
+    }
 
     #[test]
     fn nr_1219_ex_01() {
