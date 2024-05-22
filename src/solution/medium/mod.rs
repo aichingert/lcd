@@ -59,6 +59,7 @@ pub mod k786;
 pub mod s861;
 pub mod p1219;
 pub mod s78;
+pub mod p131;
 
 #[cfg(test)]
 mod test {
@@ -67,6 +68,16 @@ mod test {
 
     use crate::TreeNode;
     use crate::Solution;
+
+    #[test]
+    fn nr_131_ex_01() {
+        assert_eq!(vec![vec!["a".to_string(),"a".to_string(),"b".to_string()],vec!["aa".to_string(),"b".to_string()]], Solution::partition("aab".to_string()));
+    }
+
+    #[test]
+    fn nr_131_ex_02() {
+        assert_eq!(vec![vec!["a".to_string()]], Solution::partition("a".to_string()));
+    }
 
     #[test]
     fn nr_78_ex_01() {
