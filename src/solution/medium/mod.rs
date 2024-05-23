@@ -60,6 +60,7 @@ pub mod s861;
 pub mod p1219;
 pub mod s78;
 pub mod p131;
+pub mod t2597;
 
 #[cfg(test)]
 mod test {
@@ -68,6 +69,16 @@ mod test {
 
     use crate::TreeNode;
     use crate::Solution;
+
+    #[test]
+    fn nr_2597_ex_01() {
+        assert_eq!(4, Solution::beautiful_subsets(vec![2,4,6], 2));
+    }
+
+    #[test]
+    fn nr_2597_ex_02() {
+        assert_eq!(1, Solution::beautiful_subsets(vec![1], 1));
+    }
 
     #[test]
     fn nr_131_ex_01() {
@@ -94,7 +105,7 @@ mod test {
             assert!(ac.contains(&ex));
         }
     }
-
+    
     #[test]
     fn nr_1219_ex_01() {
         assert_eq!(24, Solution::get_maximum_gold(vec![vec![0,6,0],vec![5,8,7],vec![0,9,0]]));
