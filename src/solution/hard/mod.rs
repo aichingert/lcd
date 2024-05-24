@@ -4,11 +4,39 @@ pub mod design_graph_with_shortest_path_calculator;
 pub mod bus_routes;
 pub mod f41;
 pub mod f514;
+pub mod m1255;
 
 #[cfg(test)]
 mod test {
     use crate::Solution;
     use crate::solution::hard::design_graph_with_shortest_path_calculator::Graph;
+
+    #[test]
+    fn nr_1255_ex_01() {
+        assert_eq!(23, Solution::max_score_words(
+            vec!["dog".to_string(),"cat".to_string(),"dad".to_string(),"good".to_string()],
+            vec!['a','a','c','d','d','d','g','o','o'],
+            vec![1,0,9,5,0,0,3,0,0,0,0,0,0,0,2,0,0,0,0,0,0,0,0,0,0,0],
+        ));
+    }
+
+    #[test]
+    fn nr_1255_ex_02() {
+        assert_eq!(27, Solution::max_score_words(
+            vec!["xxxz".to_string(),"ax".to_string(),"bx".to_string(),"cx".to_string()],
+            vec!['z','a','b','c','x','x','x'],
+            vec![4,4,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5,0,10],
+        ));
+    }
+
+    #[test]
+    fn nr_1255_ex_03() {
+        assert_eq!(0, Solution::max_score_words(
+            vec!["leetcode".to_string()],
+            vec!['l','e','t','c','o','d'],
+            vec![0,0,1,1,1,0,0,0,0,0,0,1,0,0,1,0,0,0,0,1,0,0,0,0,0,0],
+        ));
+    }
 
     #[test]
     fn nr_514_ex_01() {
