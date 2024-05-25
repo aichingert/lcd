@@ -5,11 +5,35 @@ pub mod bus_routes;
 pub mod f41;
 pub mod f514;
 pub mod m1255;
+pub mod w140;
 
 #[cfg(test)]
 mod test {
     use crate::Solution;
     use crate::solution::hard::design_graph_with_shortest_path_calculator::Graph;
+
+    #[test]
+    fn nr_140_ex_01() {
+        let expect = vec!["cats and dog".to_string(), "cat sand dog".to_string()];
+
+        for result in Solution::word_break("catsanddog".to_string(), vec!["cat".to_string(), "cats".to_string(), "and".to_string(), "sand".to_string(), "dog".to_string()]) {
+            assert!(expect.contains(&result));
+        }
+    }
+
+    #[test]
+    fn nr_140_ex_02() {
+        let expect = vec!["pine apple pen apple".to_string(),"pineapple pen apple".to_string(),"pine applepen apple".to_string()];
+
+        for result in Solution::word_break("pineapplepenapple".to_string(), vec!["apple".to_string(), "pen".to_string(), "applepen".to_string(), "pine".to_string(), "pineapple".to_string()]) {
+            assert!(expect.contains(&result));
+        }
+    }
+
+    #[test]
+    fn nr_140_ex_03() {
+        assert_eq!(Vec::<String>::new(), Solution::word_break("catsandog".to_string(), vec!["cats".to_string(), "dog".to_string(), "sand".to_string(), "and".to_string(), "cat".to_string()]));
+    }
 
     #[test]
     fn nr_1255_ex_01() {
