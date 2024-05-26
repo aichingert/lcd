@@ -6,11 +6,27 @@ pub mod f41;
 pub mod f514;
 pub mod m1255;
 pub mod w140;
+pub mod s552;
 
 #[cfg(test)]
 mod test {
     use crate::Solution;
     use crate::solution::hard::design_graph_with_shortest_path_calculator::Graph;
+
+    #[test]
+    fn nr_552_ex_01() {
+        assert_eq!(8, Solution::check_record(2));
+    }
+
+    #[test]
+    fn nr_552_ex_02() {
+        assert_eq!(3, Solution::check_record(1));
+    }
+
+    #[test]
+    fn nr_552_ex_03() {
+        assert_eq!(183236316, Solution::check_record(10101));
+    }
 
     #[test]
     fn nr_140_ex_01() {
