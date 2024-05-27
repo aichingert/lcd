@@ -24,6 +24,7 @@ pub mod r506;
 pub mod l2373;
 pub mod e2331;
 pub mod s1863;
+pub mod s1608;
 
 #[cfg(test)]
 mod test {
@@ -32,6 +33,21 @@ mod test {
 
     use crate::Solution;
     use crate::TreeNode;
+
+    #[test]
+    fn nr_1608_ex_01() {
+        assert_eq!(2, Solution::special_array(vec![3,5]));
+    }
+
+    #[test]
+    fn nr_1608_ex_02() {
+        assert_eq!(-1, Solution::special_array(vec![0,0]));
+    }
+
+    #[test]
+    fn nr_1608_ex_03() {
+        assert_eq!(3, Solution::special_array(vec![0,4,3,0,4]));
+    }
 
     #[test]
     fn nr_1863_ex_01() {
