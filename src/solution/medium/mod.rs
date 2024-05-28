@@ -61,6 +61,7 @@ pub mod p1219;
 pub mod s78;
 pub mod p131;
 pub mod t2597;
+pub mod g1208;
 
 #[cfg(test)]
 mod test {
@@ -69,6 +70,21 @@ mod test {
 
     use crate::TreeNode;
     use crate::Solution;
+
+    #[test]
+    fn nr_1208_ex_01() {
+        assert_eq!(3, Solution::equal_substring("abcd".to_string(), "bcdf".to_string(), 3));
+    }
+
+    #[test]
+    fn nr_1208_ex_02() {
+        assert_eq!(1, Solution::equal_substring("abcd".to_string(), "cdef".to_string(), 3));
+    }
+
+    #[test]
+    fn nr_1208_ex_03() {
+        assert_eq!(1, Solution::equal_substring("abcd".to_string(), "acde".to_string(), 0));
+    }
 
     #[test]
     fn nr_2597_ex_01() {
