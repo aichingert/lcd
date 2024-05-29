@@ -62,6 +62,7 @@ pub mod s78;
 pub mod p131;
 pub mod t2597;
 pub mod g1208;
+pub mod n1404;
 
 #[cfg(test)]
 mod test {
@@ -70,6 +71,21 @@ mod test {
 
     use crate::TreeNode;
     use crate::Solution;
+
+    #[test]
+    fn nr_1404_ex_01() {
+        assert_eq!(6, Solution::num_steps("1101".to_string()));
+    }
+
+    #[test]
+    fn nr_1404_ex_02() {
+        assert_eq!(1, Solution::num_steps("10".to_string()));
+    }
+
+    #[test]
+    fn nr_1404_ex_03() {
+        assert_eq!(0, Solution::num_steps("1".to_string()));
+    }
 
     #[test]
     fn nr_1208_ex_01() {
