@@ -63,6 +63,7 @@ pub mod p131;
 pub mod t2597;
 pub mod g1208;
 pub mod n1404;
+pub mod c1442;
 
 #[cfg(test)]
 mod test {
@@ -71,6 +72,16 @@ mod test {
 
     use crate::TreeNode;
     use crate::Solution;
+
+    #[test]
+    fn nr_1442_ex_01() {
+        assert_eq!(4, Solution::count_triplets(vec![2,3,1,6,7]));
+    }
+
+    #[test]
+    fn nr_1442_ex_02() {
+        assert_eq!(10, Solution::count_triplets(vec![1,1,1,1,1]));
+    }
 
     #[test]
     fn nr_1404_ex_01() {
