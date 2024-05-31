@@ -64,6 +64,7 @@ pub mod t2597;
 pub mod g1208;
 pub mod n1404;
 pub mod c1442;
+pub mod s260;
 
 #[cfg(test)]
 mod test {
@@ -72,6 +73,21 @@ mod test {
 
     use crate::TreeNode;
     use crate::Solution;
+
+    #[test]
+    fn nr_260_ex_01() {
+        assert_eq!(vec![5,3], Solution::single_number(vec![1,2,1,3,2,5]));
+    }
+
+    #[test]
+    fn nr_260_ex_02() {
+        assert_eq!(vec![0,-1], Solution::single_number(vec![-1,0]));
+    }
+
+    #[test]
+    fn nr_260_ex_03() {
+        assert_eq!(vec![0,1], Solution::single_number(vec![0,1]));
+    }
 
     #[test]
     fn nr_1442_ex_01() {
