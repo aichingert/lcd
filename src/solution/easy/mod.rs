@@ -25,6 +25,7 @@ pub mod l2373;
 pub mod e2331;
 pub mod s1863;
 pub mod s1608;
+pub mod s3110;
 
 #[cfg(test)]
 mod test {
@@ -33,6 +34,16 @@ mod test {
 
     use crate::Solution;
     use crate::TreeNode;
+
+    #[test]
+    fn nr_3110_ex_01() {
+        assert_eq!(13, Solution::score_of_string("hello".to_string()));
+    }
+
+    #[test]
+    fn nr_3110_ex_02() {
+        assert_eq!(50, Solution::score_of_string("zaz".to_string()));
+    }
 
     #[test]
     fn nr_1608_ex_01() {
