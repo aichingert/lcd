@@ -26,6 +26,7 @@ pub mod e2331;
 pub mod s1863;
 pub mod s1608;
 pub mod s3110;
+pub mod r344;
 
 #[cfg(test)]
 mod test {
@@ -34,6 +35,20 @@ mod test {
 
     use crate::Solution;
     use crate::TreeNode;
+   
+    #[test]
+    fn nr_344_ex_01() {
+        let mut rev = vec!['h','e','l','l','o'];
+        Solution::reverse_string(&mut rev);
+        assert_eq!(vec!['o','l','l','e','h'], rev);
+    }
+
+    #[test]
+    fn nr_344_ex_02() {
+        let mut rev = vec!['H','a','n','n','a', 'h'];
+        Solution::reverse_string(&mut rev);
+        assert_eq!(vec!['h', 'a','n','n','a','H'], rev);
+    }
 
     #[test]
     fn nr_3110_ex_01() {
