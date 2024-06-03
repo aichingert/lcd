@@ -65,6 +65,7 @@ pub mod g1208;
 pub mod n1404;
 pub mod c1442;
 pub mod s260;
+pub mod a2486;
 
 #[cfg(test)]
 mod test {
@@ -73,6 +74,21 @@ mod test {
 
     use crate::TreeNode;
     use crate::Solution;
+
+    #[test]
+    fn nr_2486_ex_01() {
+        assert_eq!(4, Solution::append_characters("coaching".to_string(), "coding".to_string()));
+    }
+
+    #[test]
+    fn nr_2486_ex_02() {
+        assert_eq!(0, Solution::append_characters("abcde".to_string(), "a".to_string()));
+    }
+
+    #[test]
+    fn nr_2486_ex_03() {
+        assert_eq!(5, Solution::append_characters("z".to_string(), "abcde".to_string()));
+    }
 
     #[test]
     fn nr_260_ex_01() {
