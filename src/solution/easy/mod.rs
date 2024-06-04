@@ -27,6 +27,7 @@ pub mod s1863;
 pub mod s1608;
 pub mod s3110;
 pub mod r344;
+pub mod l409;
 
 #[cfg(test)]
 mod test {
@@ -35,6 +36,16 @@ mod test {
 
     use crate::Solution;
     use crate::TreeNode;
+
+    #[test]
+    fn nr_409_ex_01() {
+        assert_eq!(7, Solution::longest_palindrom("abccccdd".to_string()));
+    }
+
+    #[test]
+    fn nr_409_ex_02() {
+        assert_eq!(1, Solution::longest_palindrom("a".to_string()));
+    }
    
     #[test]
     fn nr_344_ex_01() {
