@@ -28,6 +28,7 @@ pub mod s1608;
 pub mod s3110;
 pub mod r344;
 pub mod l409;
+pub mod f1002;
 
 #[cfg(test)]
 mod test {
@@ -38,13 +39,23 @@ mod test {
     use crate::TreeNode;
 
     #[test]
+    fn nr_1002_ex_01() {
+        assert_eq!(vec!["e".to_string(), "l".to_string(), "l".to_string()], Solution::common_chars(vec!["bella".to_string(), "label".to_string(), "roller".to_string()]));
+    }
+
+    #[test]
+    fn nr_1002_ex_02() {
+        assert_eq!(vec!["c".to_string(), "o".to_string()], Solution::common_chars(vec!["cool".to_string(), "lock".to_string(), "cook".to_string()]));
+    }
+
+    #[test]
     fn nr_409_ex_01() {
-        assert_eq!(7, Solution::longest_palindrom("abccccdd".to_string()));
+        assert_eq!(7, Solution::longest_palindrome_dup("abccccdd".to_string()));
     }
 
     #[test]
     fn nr_409_ex_02() {
-        assert_eq!(1, Solution::longest_palindrom("a".to_string()));
+        assert_eq!(1, Solution::longest_palindrome_dup("a".to_string()));
     }
    
     #[test]
