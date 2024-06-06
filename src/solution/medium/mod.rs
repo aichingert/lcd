@@ -66,6 +66,7 @@ pub mod n1404;
 pub mod c1442;
 pub mod s260;
 pub mod a2486;
+pub mod h846;
 
 #[cfg(test)]
 mod test {
@@ -74,6 +75,16 @@ mod test {
 
     use crate::TreeNode;
     use crate::Solution;
+
+    #[test]
+    fn nr_846_ex_01() {
+        assert_eq!(true, Solution::is_n_straight_hand(vec![1,2,3,6,2,3,4,7,8], 3));
+    }
+
+    #[test]
+    fn nr_846_ex_02() {
+        assert_eq!(false, Solution::is_n_straight_hand(vec![1,2,3,4,5], 4));
+    }
 
     #[test]
     fn nr_2486_ex_01() {
