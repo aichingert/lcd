@@ -67,6 +67,7 @@ pub mod c1442;
 pub mod s260;
 pub mod a2486;
 pub mod h846;
+pub mod r648;
 
 #[cfg(test)]
 mod test {
@@ -75,6 +76,16 @@ mod test {
 
     use crate::TreeNode;
     use crate::Solution;
+
+    #[test]
+    fn nr_648_ex_01() {
+        assert_eq!("the cat was rat by the bat".to_string(), Solution::replace_words(vec!["cat".to_string(), "bat".to_string(), "rat".to_string()], "the cattle was rattled by the battery".to_string()));
+    }
+
+    #[test]
+    fn nr_648_ex_02() {
+        assert_eq!("a a b c".to_string(), Solution::replace_words(vec!["a".to_string(), "b".to_string(), "c".to_string()], "aadsfasf absbs bbab cadsfafs".to_string()));
+    }
 
     #[test]
     fn nr_846_ex_01() {
