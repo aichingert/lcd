@@ -68,6 +68,7 @@ pub mod s260;
 pub mod a2486;
 pub mod h846;
 pub mod r648;
+pub mod c523;
 
 #[cfg(test)]
 mod test {
@@ -76,6 +77,21 @@ mod test {
 
     use crate::TreeNode;
     use crate::Solution;
+
+    #[test]
+    fn nr_523_ex_01() {
+        assert_eq!(true, Solution::check_subarray_sum(vec![23,2,4,6,7], 6));
+    }
+
+    #[test]
+    fn nr_523_ex_02() {
+        assert_eq!(true, Solution::check_subarray_sum(vec![23,2,6,4,7], 6));
+    }
+
+    #[test]
+    fn nr_523_ex_03() {
+        assert_eq!(false, Solution::check_subarray_sum(vec![23,2,6,4,7], 13));
+    }
 
     #[test]
     fn nr_648_ex_01() {
