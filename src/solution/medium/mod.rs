@@ -69,6 +69,7 @@ pub mod a2486;
 pub mod h846;
 pub mod r648;
 pub mod c523;
+pub mod s974;
 
 #[cfg(test)]
 mod test {
@@ -77,6 +78,16 @@ mod test {
 
     use crate::TreeNode;
     use crate::Solution;
+
+    #[test]
+    fn nr_974_ex_01() {
+        assert_eq!(7, Solution::subarrays_div_by_k(vec![4,5,0,-2,-3,1], 5));
+    }
+
+    #[test]
+    fn nr_974_ex_02() {
+        assert_eq!(0, Solution::subarrays_div_by_k(vec![5], 9));
+    }
 
     #[test]
     fn nr_523_ex_01() {
