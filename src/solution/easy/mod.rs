@@ -29,6 +29,7 @@ pub mod s3110;
 pub mod r344;
 pub mod l409;
 pub mod f1002;
+pub mod h1051;
 
 #[cfg(test)]
 mod test {
@@ -37,6 +38,21 @@ mod test {
 
     use crate::Solution;
     use crate::TreeNode;
+
+    #[test]
+    fn nr_1051_ex_01() {
+        assert_eq!(3, Solution::height_checker(vec![1,1,4,2,1,3]));
+    }
+
+    #[test]
+    fn nr_1051_ex_02() {
+        assert_eq!(5, Solution::height_checker(vec![5,1,2,3,4]));
+    }
+
+    #[test]
+    fn nr_1051_ex_03() {
+        assert_eq!(0, Solution::height_checker(vec![1,2,3,4,5]));
+    }
 
     #[test]
     fn nr_1002_ex_01() {
