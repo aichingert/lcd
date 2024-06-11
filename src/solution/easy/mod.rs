@@ -30,6 +30,7 @@ pub mod r344;
 pub mod l409;
 pub mod f1002;
 pub mod h1051;
+pub mod r1122;
 
 #[cfg(test)]
 mod test {
@@ -38,6 +39,16 @@ mod test {
 
     use crate::Solution;
     use crate::TreeNode;
+
+    #[test]
+    fn nr_1122_ex_01() {
+        assert_eq!(vec![2,2,2,1,4,3,3,9,6,7,19], Solution::relative_sort_array(vec![2,3,1,3,2,4,6,7,9,2,19], vec![2,1,4,3,9,6]));
+    }
+
+    #[test]
+    fn nr_1122_ex_02() {
+        assert_eq!(vec![22,28,8,6,17,44], Solution::relative_sort_array(vec![28,6,22,8,44,17], vec![22,28,8,6]));
+    }
 
     #[test]
     fn nr_1051_ex_01() {
