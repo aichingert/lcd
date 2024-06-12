@@ -70,6 +70,7 @@ pub mod h846;
 pub mod r648;
 pub mod c523;
 pub mod s974;
+pub mod s75;
 
 #[cfg(test)]
 mod test {
@@ -78,6 +79,20 @@ mod test {
 
     use crate::TreeNode;
     use crate::Solution;
+
+    #[test]
+    fn nr_75_ex_01() {
+        let mut vec = vec![2,0,2,1,1,0];
+        Solution::sort_colors(&mut vec);
+        assert_eq!(vec![0,0,1,1,2,2], vec);
+    }
+
+    #[test]
+    fn nr_75_ex_02() {
+        let mut vec = vec![0,1,2];
+        Solution::sort_colors(&mut vec);
+        assert_eq!(vec![0,1,2], vec);
+    }
 
     #[test]
     fn nr_974_ex_01() {
