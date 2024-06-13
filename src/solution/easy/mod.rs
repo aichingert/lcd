@@ -31,6 +31,7 @@ pub mod l409;
 pub mod f1002;
 pub mod h1051;
 pub mod r1122;
+pub mod m2037;
 
 #[cfg(test)]
 mod test {
@@ -39,6 +40,21 @@ mod test {
 
     use crate::Solution;
     use crate::TreeNode;
+
+    #[test]
+    fn nr_2037_ex_01() {
+        assert_eq!(4, Solution::min_moves_to_seat(vec![3,1,5], vec![2,7,4]));
+    }
+
+    #[test]
+    fn nr_2037_ex_02() {
+        assert_eq!(7, Solution::min_moves_to_seat(vec![4,1,5,9], vec![1,3,2,6]));
+    }
+
+    #[test]
+    fn nr_2037_ex_03() {
+        assert_eq!(4, Solution::min_moves_to_seat(vec![2,2,6,6], vec![1,3,2,6]));
+    }
 
     #[test]
     fn nr_1122_ex_01() {
