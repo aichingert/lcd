@@ -71,6 +71,7 @@ pub mod r648;
 pub mod c523;
 pub mod s974;
 pub mod s75;
+pub mod m945;
 
 #[cfg(test)]
 mod test {
@@ -79,6 +80,16 @@ mod test {
 
     use crate::TreeNode;
     use crate::Solution;
+
+    #[test]
+    fn nr_945_ex_01() {
+        assert_eq!(1, Solution::min_increment_for_unique(vec![1,2,2]));
+    }
+
+    #[test]
+    fn nr_945_ex_02() {
+        assert_eq!(6, Solution::min_increment_for_unique(vec![3,2,1,2,1,7]));
+    }
 
     #[test]
     fn nr_75_ex_01() {
