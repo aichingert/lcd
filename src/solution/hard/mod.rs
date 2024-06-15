@@ -7,11 +7,22 @@ pub mod f514;
 pub mod m1255;
 pub mod w140;
 pub mod s552;
+pub mod i502;
 
 #[cfg(test)]
 mod test {
     use crate::Solution;
     use crate::solution::hard::design_graph_with_shortest_path_calculator::Graph;
+
+    #[test]
+    fn nr_502_ex_01() {
+        assert_eq!(4, Solution::find_maximized_capital(2, 0, vec![1,2,3], vec![0,1,1]));
+    }
+
+    #[test]
+    fn nr_502_ex_02() {
+        assert_eq!(6, Solution::find_maximized_capital(3, 0, vec![1,2,3], vec![0,1,2]));
+    }
 
     #[test]
     fn nr_552_ex_01() {
