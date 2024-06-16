@@ -7,7 +7,7 @@ use std::collections::BinaryHeap;
 impl Solution {
     pub fn find_maximized_capital(mut k: i32, mut w: i32, profits: Vec<i32>, capital: Vec<i32>) -> i32 {
         let mut arr = profits.into_iter().zip(capital).collect::<Vec<_>>();
-        arr.sort_by_key(|&(a, b)| b);
+        arr.sort_by_key(|&(_, b)| b);
 
         let mut mhp = BinaryHeap::new();
         let mut i = 0;

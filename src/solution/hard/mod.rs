@@ -8,11 +8,27 @@ pub mod m1255;
 pub mod w140;
 pub mod s552;
 pub mod i502;
+pub mod p330;
 
 #[cfg(test)]
 mod test {
     use crate::Solution;
     use crate::solution::hard::design_graph_with_shortest_path_calculator::Graph;
+
+    #[test]
+    fn nr_330_ex_01() {
+        assert_eq!(1, Solution::min_patches(vec![1,3], 6));
+    }
+
+    #[test]
+    fn nr_330_ex_02() {
+        assert_eq!(2, Solution::min_patches(vec![1,5,10], 20));
+    }
+
+    #[test]
+    fn nr_330_ex_03() {
+        assert_eq!(0, Solution::min_patches(vec![1,2,2], 5));
+    }
 
     #[test]
     fn nr_502_ex_01() {
