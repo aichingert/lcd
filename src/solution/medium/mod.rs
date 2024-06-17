@@ -72,6 +72,7 @@ pub mod c523;
 pub mod s974;
 pub mod s75;
 pub mod m945;
+pub mod s633;
 
 #[cfg(test)]
 mod test {
@@ -80,6 +81,16 @@ mod test {
 
     use crate::TreeNode;
     use crate::Solution;
+
+    #[test]
+    fn nr_633_ex_01() {
+        assert_eq!(true, Solution::judge_square_sum(5));
+    }
+
+    #[test]
+    fn nr_633_ex_02() {
+        assert_eq!(false, Solution::judge_square_sum(3));
+    }
 
     #[test]
     fn nr_945_ex_01() {
