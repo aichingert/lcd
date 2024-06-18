@@ -73,6 +73,7 @@ pub mod s974;
 pub mod s75;
 pub mod m945;
 pub mod s633;
+pub mod m826;
 
 #[cfg(test)]
 mod test {
@@ -81,6 +82,16 @@ mod test {
 
     use crate::TreeNode;
     use crate::Solution;
+
+    #[test]
+    fn nr_826_ex_01() {
+        assert_eq!(100, Solution::max_profit_assignment(vec![2,4,6,8,10], vec![10, 20, 30, 40, 50], vec![4,5,6,7]));
+    }
+
+    #[test]
+    fn nr_826_ex_02() {
+        assert_eq!(0, Solution::max_profit_assignment(vec![85,47,57], vec![24,66,99], vec![40, 25, 25]));
+    }
 
     #[test]
     fn nr_633_ex_01() {
