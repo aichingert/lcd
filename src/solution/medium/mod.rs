@@ -74,6 +74,7 @@ pub mod s75;
 pub mod m945;
 pub mod s633;
 pub mod m826;
+pub mod m1482;
 
 #[cfg(test)]
 mod test {
@@ -82,6 +83,21 @@ mod test {
 
     use crate::TreeNode;
     use crate::Solution;
+
+    #[test]
+    fn nr_1482_ex_01() {
+        assert_eq!(3, Solution::min_days(vec![1,10,3,10,2], 3, 1));
+    }
+
+    #[test]
+    fn nr_1482_ex_02() {
+        assert_eq!(-1, Solution::min_days(vec![1,10,3,10,2], 3, 2));
+    }
+    
+    #[test]
+    fn nr_1482_ex_03() {
+        assert_eq!(12, Solution::min_days(vec![7,7,7,7,12,7,7], 2, 3));
+    }
 
     #[test]
     fn nr_826_ex_01() {
