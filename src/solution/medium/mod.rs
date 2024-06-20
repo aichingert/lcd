@@ -75,6 +75,7 @@ pub mod m945;
 pub mod s633;
 pub mod m826;
 pub mod m1482;
+pub mod m1552;
 
 #[cfg(test)]
 mod test {
@@ -83,6 +84,16 @@ mod test {
 
     use crate::TreeNode;
     use crate::Solution;
+
+    #[test]
+    fn nr_1552_ex_01() {
+        assert_eq!(3, Solution::max_distance(vec![1,2,3,4,7], 3));
+    }
+
+    #[test]
+    fn nr_1552_ex_02() {
+        assert_eq!(999999999, Solution::max_distance(vec![5,4,3,2,1,1000000000], 2));
+    }
 
     #[test]
     fn nr_1482_ex_01() {
