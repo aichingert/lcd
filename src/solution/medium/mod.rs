@@ -77,6 +77,7 @@ pub mod m826;
 pub mod m1482;
 pub mod m1552;
 pub mod g1052;
+pub mod c1248;
 
 #[cfg(test)]
 mod test {
@@ -87,6 +88,21 @@ mod test {
     use crate::Solution;
 
     #[test]
+    fn nr_1248_ex_01() {
+        assert_eq!(2, Solution::number_of_subarrays(vec![1,1,2,1,1], 3));
+    }
+
+    #[test]
+    fn nr_1248_ex_02() {
+        assert_eq!(0, Solution::number_of_subarrays(vec![2,4,6], 1));
+    }
+
+    #[test]
+    fn nr_1248_ex_03() {
+        assert_eq!(16, Solution::number_of_subarrays(vec![2,2,2,1,2,2,1,2,2,2], 2));
+    }
+
+    #[test]
     fn nr_1052_ex_01() {
         assert_eq!(16, Solution::max_satisfied(vec![1,0,1,2,1,1,7,5], vec![0,1,0,1,0,1,0,1], 3));
     }
@@ -94,7 +110,7 @@ mod test {
     #[test]
     fn nr_1052_ex_02() {
         assert_eq!(1, Solution::max_satisfied(vec![1], vec![0], 1));
-    }
+    } 
 
     #[test]
     fn nr_1552_ex_01() {
