@@ -78,6 +78,7 @@ pub mod m1482;
 pub mod m1552;
 pub mod g1052;
 pub mod c1248;
+pub mod l1438;
 
 #[cfg(test)]
 mod test {
@@ -86,6 +87,21 @@ mod test {
 
     use crate::TreeNode;
     use crate::Solution;
+
+    #[test]
+    fn nr_1438_ex_01() {
+        assert_eq!(2, Solution::longest_subarray(vec![8, 2, 4, 7], 4));
+    }
+
+    #[test]
+    fn nr_1438_ex_02() {
+        assert_eq!(4, Solution::longest_subarray(vec![10,1,2,4,7,2], 5));
+    }
+
+    #[test]
+    fn nr_1438_ex_03() {
+        assert_eq!(3, Solution::longest_subarray(vec![4,2,2,2,4,4,2,2], 0));
+    }
 
     #[test]
     fn nr_1248_ex_01() {
