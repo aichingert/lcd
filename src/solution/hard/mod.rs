@@ -9,11 +9,27 @@ pub mod w140;
 pub mod s552;
 pub mod i502;
 pub mod p330;
+pub mod m995;
 
 #[cfg(test)]
 mod test {
     use crate::Solution;
     use crate::solution::hard::design_graph_with_shortest_path_calculator::Graph;
+
+    #[test]
+    fn nr_995_ex_01() {
+        assert_eq!(2, Solution::min_k_bit_flips(vec![0,1,0], 1));
+    }
+
+    #[test]
+    fn nr_995_ex_02() {
+        assert_eq!(-1, Solution::min_k_bit_flips(vec![1,1,0], 2));
+    }
+
+    #[test]
+    fn nr_995_ex_03() {
+        assert_eq!(3, Solution::min_k_bit_flips(vec![0,0,0,1,0,1,1,0], 3));
+    }
 
     #[test]
     fn nr_330_ex_01() {
