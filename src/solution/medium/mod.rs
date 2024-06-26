@@ -79,6 +79,7 @@ pub mod m1552;
 pub mod g1052;
 pub mod c1248;
 pub mod l1438;
+pub mod b1382;
 
 #[cfg(test)]
 mod test {
@@ -87,6 +88,46 @@ mod test {
 
     use crate::TreeNode;
     use crate::Solution;
+
+    #[test]
+    fn nr_1382_ex_01() {
+        let root = Some(Rc::new(RefCell::new(TreeNode {
+            val: 1,
+            left: None,
+            right: Some(Rc::new(RefCell::new(TreeNode {
+                val: 2,
+                left: None,
+                right: Some(Rc::new(RefCell::new(TreeNode {
+                    val: 3,
+                    left: None,
+                    right: Some(Rc::new(RefCell::new(TreeNode::new(4)))),
+                }))),
+            }))),
+        })));
+
+        let expect = Some(Rc::new(RefCell::new(TreeNode {
+            val: 3, 
+            left: Some(Rc::new(RefCell::new(TreeNode {
+                val: 2,
+                left: Some(Rc::new(RefCell::new(TreeNode::new(1)))),
+                right: None,
+            }))),
+            right: Some(Rc::new(RefCell::new(TreeNode::new(4)))),
+        })));
+
+        assert_eq!(expect, Solution::balance_bst(root));
+    }
+
+    #[test]
+    fn nr_1382_ex_02() {
+        let root = Some(Rc::new(RefCell::new(TreeNode {
+            val: 2,
+            left: Some(Rc::new(RefCell::new(TreeNode::new(1)))),
+            right: Some(Rc::new(RefCell::new(TreeNode::new(3)))),
+        })));
+
+        assert_eq!(root.clone(), Solution::balance_bst(root));
+    }
 
     #[test]
     fn nr_1438_ex_01() {

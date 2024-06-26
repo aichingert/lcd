@@ -10,6 +10,7 @@ use std::cell::RefCell;
 pub mod solution;
 pub use solution::Solution;
 
+#[derive(Debug, PartialEq)]
 pub struct TreeNode {
     pub val: i32,
     pub left: Option<Rc<RefCell<TreeNode>>>,
