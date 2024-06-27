@@ -32,6 +32,7 @@ pub mod f1002;
 pub mod h1051;
 pub mod r1122;
 pub mod m2037;
+pub mod f1791;
 
 #[cfg(test)]
 mod test {
@@ -40,6 +41,16 @@ mod test {
 
     use crate::Solution;
     use crate::TreeNode;
+
+    #[test]
+    fn nr_1791_ex_01() {
+        assert_eq!(2, Solution::find_center(vec![vec![1,2], vec![2,3], vec![4,2]]));
+    }
+
+    #[test]
+    fn nr_1791_ex_02() {
+        assert_eq!(1, Solution::find_center(vec![vec![1,2], vec![5,1], vec![1,3], vec![1,4]]));
+    }
 
     #[test]
     fn nr_2037_ex_01() {
