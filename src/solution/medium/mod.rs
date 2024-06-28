@@ -80,6 +80,7 @@ pub mod g1052;
 pub mod c1248;
 pub mod l1438;
 pub mod b1382;
+pub mod m2285;
 
 #[cfg(test)]
 mod test {
@@ -88,6 +89,16 @@ mod test {
 
     use crate::TreeNode;
     use crate::Solution;
+
+    #[test]
+    fn nr_2285_ex_01() {
+        assert_eq!(43, Solution::maximum_importance(5, vec![vec![0,1],vec![1,2], vec![2,3], vec![0,2], vec![1,3], vec![2,4]]));
+    }
+
+    #[test]
+    fn nr_2285_ex_02() {
+        assert_eq!(20, Solution::maximum_importance(5, vec![vec![0,3], vec![2,4], vec![1,3]]));
+    }
 
     #[test]
     fn nr_1382_ex_01() {
