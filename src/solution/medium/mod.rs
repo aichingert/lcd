@@ -81,6 +81,7 @@ pub mod c1248;
 pub mod l1438;
 pub mod b1382;
 pub mod m2285;
+pub mod a2192;
 
 #[cfg(test)]
 mod test {
@@ -88,7 +89,17 @@ mod test {
     use std::cell::RefCell;
 
     use crate::TreeNode;
-    use crate::Solution;
+    use crate::Solution; 
+
+    #[test]
+    fn nr_2192_ex_01() {
+        assert_eq!(vec![vec![], vec![], vec![], vec![0,1], vec![0,2],vec![0,1,3],vec![0,1,2,3,4],vec![0,1,2,3]], Solution::get_ancestors(8, vec![vec![0,3], vec![0,4], vec![1,3], vec![2,4], vec![2,7], vec![3,5], vec![3,6], vec![3,7], vec![4,6]]));
+    }
+
+    #[test]
+    fn nr_2192_ex_02() {
+        assert_eq!(vec![vec![],vec![0],vec![0,1],vec![0,1,2],vec![0,1,2,3]], Solution::get_ancestors(5, vec![vec![0,1],vec![0,2],vec![0,3],vec![0,4],vec![1,2],vec![1,3],vec![1,4],vec![2,3],vec![2,4],vec![3,4]]));
+    }
 
     #[test]
     fn nr_2285_ex_01() {
