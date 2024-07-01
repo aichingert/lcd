@@ -33,6 +33,7 @@ pub mod h1051;
 pub mod r1122;
 pub mod m2037;
 pub mod f1791;
+pub mod t1550;
 
 #[cfg(test)]
 mod test {
@@ -41,6 +42,16 @@ mod test {
 
     use crate::Solution;
     use crate::TreeNode;
+
+    #[test]
+    fn nr_1550_ex_01() {
+        assert_eq!(false, Solution::three_consecutive_odds(vec![2,6,4,1]));
+    }
+
+    #[test]
+    fn nr_1550_ex_02() {
+        assert_eq!(true, Solution::three_consecutive_odds(vec![1,2,34,3,4,5,7,23,12]));
+    }
 
     #[test]
     fn nr_1791_ex_01() {
