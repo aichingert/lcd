@@ -82,6 +82,7 @@ pub mod l1438;
 pub mod b1382;
 pub mod m2285;
 pub mod a2192;
+pub mod m1509;
 
 #[cfg(test)]
 mod test {
@@ -90,6 +91,21 @@ mod test {
 
     use crate::TreeNode;
     use crate::Solution; 
+
+    #[test]
+    fn nr_1509_ex_01() {
+        assert_eq!(0, Solution::min_difference(vec![5,3,2,4]));
+    }
+
+    #[test]
+    fn nr_1509_ex_02() {
+        assert_eq!(1, Solution::min_difference(vec![1,5,0,10,14]));
+    }
+
+    #[test]
+    fn nr_1509_ex_03() {
+        assert_eq!(0, Solution::min_difference(vec![3,100,20]));
+    }
 
     #[test]
     fn nr_2192_ex_01() {
