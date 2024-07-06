@@ -35,6 +35,7 @@ pub mod m2037;
 pub mod f1791;
 pub mod t1550;
 pub mod i350;
+pub mod p2582;
 
 #[cfg(test)]
 mod test {
@@ -43,6 +44,16 @@ mod test {
 
     use crate::Solution;
     use crate::TreeNode;
+
+    #[test]
+    fn nr_2582_ex_01() {
+        assert_eq!(2, Solution::pass_the_pillow(4, 5));
+    }
+
+    #[test]
+    fn nr_2582_ex_02() {
+        assert_eq!(3, Solution::pass_the_pillow(3, 2));
+    }
 
     #[test]
     fn nr_350_ex_01() {
