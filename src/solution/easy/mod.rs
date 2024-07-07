@@ -36,6 +36,7 @@ pub mod f1791;
 pub mod t1550;
 pub mod i350;
 pub mod p2582;
+pub mod w1518;
 
 #[cfg(test)]
 mod test {
@@ -44,6 +45,16 @@ mod test {
 
     use crate::Solution;
     use crate::TreeNode;
+
+    #[test]
+    fn nr_1518_ex_01() {
+        assert_eq!(13, Solution::num_water_bottles(9, 3));
+    }
+
+    #[test]
+    fn nr_1518_ex_02() {
+        assert_eq!(19, Solution::num_water_bottles(15, 4));
+    }
 
     #[test]
     fn nr_2582_ex_01() {
