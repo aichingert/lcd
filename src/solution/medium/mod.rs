@@ -83,6 +83,7 @@ pub mod b1382;
 pub mod m2285;
 pub mod a2192;
 pub mod m1509;
+pub mod f1823;
 
 #[cfg(test)]
 mod test {
@@ -91,6 +92,16 @@ mod test {
 
     use crate::TreeNode;
     use crate::Solution; 
+
+    #[test]
+    fn nr_1823_ex_01() {
+        assert_eq!(3, Solution::find_the_winner(5, 2));
+    }
+
+    #[test]
+    fn nr_1823_ex_02() {
+        assert_eq!(1, Solution::find_the_winner(6, 5));
+    }
 
     #[test]
     fn nr_1509_ex_01() {
