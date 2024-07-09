@@ -84,6 +84,7 @@ pub mod m2285;
 pub mod a2192;
 pub mod m1509;
 pub mod f1823;
+pub mod a1701;
 
 #[cfg(test)]
 mod test {
@@ -92,6 +93,16 @@ mod test {
 
     use crate::TreeNode;
     use crate::Solution; 
+
+    #[test]
+    fn nr_1701_ex_01() {
+        assert_eq!(5f64, Solution::average_waiting_time(vec![vec![1,2],vec![2,5],vec![4,3]]));
+    }
+
+    #[test]
+    fn nr_1701_ex_02() {
+        assert_eq!(3.25f64, Solution::average_waiting_time(vec![vec![5,2],vec![5,4],vec![10,3],vec![20,1]]));
+    }
 
     #[test]
     fn nr_1823_ex_01() {
