@@ -37,6 +37,7 @@ pub mod t1550;
 pub mod i350;
 pub mod p2582;
 pub mod w1518;
+pub mod c1598;
 
 #[cfg(test)]
 mod test {
@@ -45,6 +46,17 @@ mod test {
 
     use crate::Solution;
     use crate::TreeNode;
+
+    #[test]
+    fn nr_1598_ex_01() {
+        assert_eq!(2, Solution::min_operations_2_lc_l(vec!["d1/".to_string(), "d2/".to_string(), "../".to_string(), "d21/".to_string(), "./".to_string()]));
+    }
+
+    #[test]
+    fn nr_1598_ex_02() {
+        assert_eq!(3, Solution::min_operations_2_lc_l(vec!["d1/".to_string(), "d2/".to_string(), "./".to_string(), "d3/".to_string(), "../".to_string(), "d31/".to_string()]));
+    }
+
 
     #[test]
     fn nr_1518_ex_01() {
