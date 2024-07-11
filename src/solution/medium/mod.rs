@@ -85,6 +85,7 @@ pub mod a2192;
 pub mod m1509;
 pub mod f1823;
 pub mod a1701;
+pub mod r1190;
 
 #[cfg(test)]
 mod test {
@@ -93,6 +94,21 @@ mod test {
 
     use crate::TreeNode;
     use crate::Solution; 
+
+    #[test]
+    fn nr_1190_ex_01() {
+        assert_eq!("dcba".to_string(), Solution::reverse_parentheses(String::from("(abcd)")));
+    }
+
+    #[test]
+    fn nr_1190_ex_02() {
+        assert_eq!("iloveu".to_string(), Solution::reverse_parentheses(String::from("(u(love)i)")));
+    }
+
+    #[test]
+    fn nr_1190_ex_03() {
+        assert_eq!("leetcode".to_string(), Solution::reverse_parentheses(String::from("(ed(et(oc))el)")));
+    }
 
     #[test]
     fn nr_1701_ex_01() {
