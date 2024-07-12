@@ -86,6 +86,7 @@ pub mod m1509;
 pub mod f1823;
 pub mod a1701;
 pub mod r1190;
+pub mod m1717;
 
 #[cfg(test)]
 mod test {
@@ -94,6 +95,16 @@ mod test {
 
     use crate::TreeNode;
     use crate::Solution; 
+
+    #[test]
+    fn nr_1717_ex_01() {
+        assert_eq!(19, Solution::maximum_gain("cdbcbbaaabab".to_string(), 4, 5));
+    }
+
+    #[test]
+    fn nr_1717_ex_02() {
+        assert_eq!(20, Solution::maximum_gain("aabbaaxybbaabb".to_string(), 5, 4));
+    }
 
     #[test]
     fn nr_1190_ex_01() {
@@ -282,12 +293,12 @@ mod test {
 
     #[test]
     fn nr_633_ex_01() {
-        assert_eq!(true, Solution::judge_square_sum(5));
+        assert!(Solution::judge_square_sum(5));
     }
 
     #[test]
     fn nr_633_ex_02() {
-        assert_eq!(false, Solution::judge_square_sum(3));
+        assert!(!Solution::judge_square_sum(3));
     }
 
     #[test]
@@ -326,17 +337,17 @@ mod test {
 
     #[test]
     fn nr_523_ex_01() {
-        assert_eq!(true, Solution::check_subarray_sum(vec![23,2,4,6,7], 6));
+        assert!(Solution::check_subarray_sum(vec![23,2,4,6,7], 6));
     }
 
     #[test]
     fn nr_523_ex_02() {
-        assert_eq!(true, Solution::check_subarray_sum(vec![23,2,6,4,7], 6));
+        assert!(Solution::check_subarray_sum(vec![23,2,6,4,7], 6));
     }
 
     #[test]
     fn nr_523_ex_03() {
-        assert_eq!(false, Solution::check_subarray_sum(vec![23,2,6,4,7], 13));
+        assert!(!Solution::check_subarray_sum(vec![23,2,6,4,7], 13));
     }
 
     #[test]
@@ -351,12 +362,12 @@ mod test {
 
     #[test]
     fn nr_846_ex_01() {
-        assert_eq!(true, Solution::is_n_straight_hand(vec![1,2,3,6,2,3,4,7,8], 3));
+        assert!(Solution::is_n_straight_hand(vec![1,2,3,6,2,3,4,7,8], 3));
     }
 
     #[test]
     fn nr_846_ex_02() {
-        assert_eq!(false, Solution::is_n_straight_hand(vec![1,2,3,4,5], 4));
+        assert!(!Solution::is_n_straight_hand(vec![1,2,3,4,5], 4));
     }
 
     #[test]
@@ -452,7 +463,7 @@ mod test {
     #[test]
     fn nr_78_ex_01() {
         let ac = Solution::subsets(vec![1,2,3]);
-        for ex in vec![vec![],vec![1],vec![2],vec![1,2],vec![3],vec![1,3],vec![2,3],vec![1,2,3]] {
+        for ex in [vec![],vec![1],vec![2],vec![1,2],vec![3],vec![1,3],vec![2,3],vec![1,2,3]] {
             assert!(ac.contains(&ex));
         }
     }
@@ -460,7 +471,7 @@ mod test {
     #[test]
     fn nr_78_ex_02() {
         let ac = Solution::subsets(vec![0]);
-        for ex in vec![vec![], vec![0]] {
+        for ex in [vec![], vec![0]] {
             assert!(ac.contains(&ex));
         }
     }
@@ -687,17 +698,17 @@ mod test {
 
     #[test]
     fn nr_678_ex_01() {
-        assert_eq!(true, Solution::check_valid_string("()".to_string()));
+        assert!(Solution::check_valid_string("()".to_string()));
     }
 
     #[test]
     fn nr_678_ex_02() {
-        assert_eq!(true, Solution::check_valid_string("(*)".to_string()));
+        assert!(Solution::check_valid_string("(*)".to_string()));
     }
 
     #[test]
     fn nr_678_ex_03() {
-        assert_eq!(true, Solution::check_valid_string("(*))".to_string()));
+        assert!(Solution::check_valid_string("(*))".to_string()));
     }
 
     #[test]
@@ -717,17 +728,17 @@ mod test {
 
     #[test]
     fn nr_79_ex_01() {
-        assert_eq!(true, Solution::exist(vec![vec!['A','B','C','E'],vec!['S','F','C','S'],vec!['A','D','E','E']], "ABCCED".to_string()));
+        assert!(Solution::exist(vec![vec!['A','B','C','E'],vec!['S','F','C','S'],vec!['A','D','E','E']], "ABCCED".to_string()));
     }
 
     #[test]
     fn nr_79_ex_02() {
-        assert_eq!(true, Solution::exist(vec![vec!['A','B','C','E'],vec!['S','F','C','S'],vec!['A','D','E','E']], "SEE".to_string()));
+        assert!(Solution::exist(vec![vec!['A','B','C','E'],vec!['S','F','C','S'],vec!['A','D','E','E']], "SEE".to_string()));
     }
 
     #[test]
     fn nr_79_ex_03() {
-        assert_eq!(false, Solution::exist(vec![vec!['A','B','C','E'],vec!['S','F','C','S'],vec!['A','D','E','E']], "ABCB".to_string()));
+        assert!(!Solution::exist(vec![vec!['A','B','C','E'],vec!['S','F','C','S'],vec!['A','D','E','E']], "ABCB".to_string()));
     }
 
     #[test]
