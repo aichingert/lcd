@@ -90,12 +90,12 @@ mod test {
 
     #[test]
     fn nr_1550_ex_01() {
-        assert_eq!(false, Solution::three_consecutive_odds(vec![2,6,4,1]));
+        assert!(!Solution::three_consecutive_odds(vec![2,6,4,1]));
     }
 
     #[test]
     fn nr_1550_ex_02() {
-        assert_eq!(true, Solution::three_consecutive_odds(vec![1,2,34,3,4,5,7,23,12]));
+        assert!(Solution::three_consecutive_odds(vec![1,2,34,3,4,5,7,23,12]));
     }
 
     #[test]
@@ -234,12 +234,12 @@ mod test {
             }))),
         })));
 
-        assert_eq!(true, Solution::evaluate_tree(root));
+        assert!(Solution::evaluate_tree(root));
     }
 
     #[test]
     fn nr_2331_ex_02() {
-        assert_eq!(false, Solution::evaluate_tree(Some(Rc::new(RefCell::new(TreeNode::new(0))))));
+        assert!(!Solution::evaluate_tree(Some(Rc::new(RefCell::new(TreeNode::new(0))))));
     }
 
     #[test]
@@ -306,12 +306,12 @@ mod test {
 
     #[test]
     fn nr_1971_ex_01() {
-        assert_eq!(true, Solution::valid_path(3, vec![vec![0,1],vec![1,2],vec![2,0]], 0, 2));
+        assert!(Solution::valid_path(3, vec![vec![0,1],vec![1,2],vec![2,0]], 0, 2));
     }
 
     #[test]
     fn nr_1971_ex_02() {
-        assert_eq!(false, Solution::valid_path(3, vec![vec![0,1],vec![0,2],vec![3,5],vec![5,4],vec![4,3]], 0, 5));
+        assert!(!Solution::valid_path(3, vec![vec![0,1],vec![0,2],vec![3,5],vec![5,4],vec![4,3]], 0, 5));
     }
 
     #[test]
@@ -393,24 +393,21 @@ mod test {
 
     #[test]
     fn nr_205_ex_01() {
-        assert_eq!(
-            true,
+        assert!(
             Solution::is_isomorphic("egg".to_string(), "add".to_string())
         );
     }
 
     #[test]
     fn nr_205_ex_02() {
-        assert_eq!(
-            false,
-            Solution::is_isomorphic("foo".to_string(), "bar".to_string())
+        assert!(
+            !Solution::is_isomorphic("foo".to_string(), "bar".to_string())
         );
     }
 
     #[test]
     fn nr_205_ex_03() {
-        assert_eq!(
-            true,
+        assert!(
             Solution::is_isomorphic("paper".to_string(), "title".to_string())
         );
     }

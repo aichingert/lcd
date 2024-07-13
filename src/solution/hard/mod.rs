@@ -10,11 +10,27 @@ pub mod s552;
 pub mod i502;
 pub mod p330;
 pub mod m995;
+pub mod r2751;
 
 #[cfg(test)]
 mod test {
     use crate::Solution;
     use crate::solution::hard::design_graph_with_shortest_path_calculator::Graph;
+
+    #[test]
+    fn nr_2751_ex_01() {
+        assert_eq!(vec![2,17,9,15,10], Solution::survived_robots_healths(vec![5,4,3,2,1], vec![2,17,9,15,10], String::from("RRRRR")));
+    }
+
+    #[test]
+    fn nr_2751_ex_02() {
+        assert_eq!(vec![14], Solution::survived_robots_healths(vec![3,5,2,6], vec![10, 10, 15, 12], String::from("RLRL")));
+    }
+
+    #[test]
+    fn nr_2751_ex_03() {
+        assert_eq!(Vec::<i32>::new(), Solution::survived_robots_healths(vec![1,2,5,6], vec![10,10,11,11], String::from("RLRL")));
+    }
 
     #[test]
     fn nr_995_ex_01() {
@@ -73,7 +89,7 @@ mod test {
 
     #[test]
     fn nr_140_ex_01() {
-        let expect = vec!["cats and dog".to_string(), "cat sand dog".to_string()];
+        let expect = ["cats and dog".to_string(), "cat sand dog".to_string()];
 
         for result in Solution::word_break("catsanddog".to_string(), vec!["cat".to_string(), "cats".to_string(), "and".to_string(), "sand".to_string(), "dog".to_string()]) {
             assert!(expect.contains(&result));
@@ -82,7 +98,7 @@ mod test {
 
     #[test]
     fn nr_140_ex_02() {
-        let expect = vec!["pine apple pen apple".to_string(),"pineapple pen apple".to_string(),"pine applepen apple".to_string()];
+        let expect = ["pine apple pen apple".to_string(),"pineapple pen apple".to_string(),"pine applepen apple".to_string()];
 
         for result in Solution::word_break("pineapplepenapple".to_string(), vec!["apple".to_string(), "pen".to_string(), "applepen".to_string(), "pine".to_string(), "pineapple".to_string()]) {
             assert!(expect.contains(&result));
