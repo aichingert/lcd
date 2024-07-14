@@ -11,11 +11,27 @@ pub mod i502;
 pub mod p330;
 pub mod m995;
 pub mod r2751;
+pub mod n726;
 
 #[cfg(test)]
 mod test {
     use crate::Solution;
     use crate::solution::hard::design_graph_with_shortest_path_calculator::Graph;
+
+    #[test]
+    fn nr_726_ex_01() {
+        assert_eq!("H2O".to_string(), Solution::count_of_atoms("H2O".to_string()));
+    }
+
+    #[test]
+    fn nr_726_ex_02() {
+        assert_eq!("H2MgO2".to_string(), Solution::count_of_atoms("Mg(OH)2".to_string()));
+    }
+
+    #[test]
+    fn nr_726_ex_03() {
+        assert_eq!("K4N2O14S4".to_string(), Solution::count_of_atoms("K4(ON(SO3)2)2".to_string()));
+    }
 
     #[test]
     fn nr_2751_ex_01() {
