@@ -87,6 +87,7 @@ pub mod f1823;
 pub mod a1701;
 pub mod r1190;
 pub mod m1717;
+pub mod s2096;
 
 #[cfg(test)]
 mod test {
@@ -95,6 +96,36 @@ mod test {
 
     use crate::TreeNode;
     use crate::Solution; 
+
+    #[test]
+    fn nr_2096_ex_01() {
+        let root = Some(Rc::new(RefCell::new(TreeNode {
+            val: 5,
+            left: Some(Rc::new(RefCell::new(TreeNode {
+                val: 1,
+                left: Some(Rc::new(RefCell::new(TreeNode::new(3)))),
+                right: None,
+            }))),
+            right: Some(Rc::new(RefCell::new(TreeNode {
+                val: 2,
+                left: Some(Rc::new(RefCell::new(TreeNode::new(6)))),
+                right: Some(Rc::new(RefCell::new(TreeNode::new(4)))),
+            }))),
+        })));
+
+        assert_eq!("UURL".to_string(), Solution::get_directions(root, 3, 6));
+    }
+
+    #[test]
+    fn nr_2096_ex_02() {
+        let root = Some(Rc::new(RefCell::new(TreeNode {
+            val: 2,
+            left: Some(Rc::new(RefCell::new(TreeNode::new(1)))),
+            right: None,
+        })));
+
+        assert_eq!("L".to_string(), Solution::get_directions(root, 2, 1));
+    }
 
     #[test]
     fn nr_1717_ex_01() {
