@@ -88,6 +88,7 @@ pub mod a1701;
 pub mod r1190;
 pub mod m1717;
 pub mod s2096;
+pub mod d1110;
 
 #[cfg(test)]
 mod test {
@@ -96,6 +97,72 @@ mod test {
 
     use crate::TreeNode;
     use crate::Solution; 
+
+    #[test]
+    fn nr_1110_ex_01() {
+        let root = Some(Rc::new(RefCell::new(TreeNode {
+            val: 1,
+            left: Some(Rc::new(RefCell::new(TreeNode {
+                val: 2,
+                left: Some(Rc::new(RefCell::new(TreeNode::new(4)))),
+                right: Some(Rc::new(RefCell::new(TreeNode::new(5)))),
+            }))),
+            right: Some(Rc::new(RefCell::new(TreeNode {
+                val: 3,
+                left: Some(Rc::new(RefCell::new(TreeNode::new(6)))),
+                right: Some(Rc::new(RefCell::new(TreeNode::new(7)))),
+            }))),
+        })));
+        let expect = vec![
+            Some(Rc::new(RefCell::new(TreeNode::new(6)))),
+            Some(Rc::new(RefCell::new(TreeNode::new(7)))),
+            Some(Rc::new(RefCell::new(TreeNode {
+                val: 1,
+                left: Some(Rc::new(RefCell::new(TreeNode {
+                    val: 2,
+                    left: Some(Rc::new(RefCell::new(TreeNode::new(4)))),
+                    right: None,
+                }))),
+                right: None,
+            }))),
+        ];
+
+        assert_eq!(expect, Solution::del_nodes(root, vec![3, 5]));
+    }
+
+    #[test]
+    fn nr_1110_ex_02() {
+        let root = Some(Rc::new(RefCell::new(TreeNode {
+            val: 1,
+            left: Some(Rc::new(RefCell::new(TreeNode {
+                val: 2,
+                left: None,
+                right: Some(Rc::new(RefCell::new(TreeNode::new(3)))),
+            }))),
+            right: Some(Rc::new(RefCell::new(TreeNode {
+                val: 4,
+                left: None,
+                right: None,
+            }))),
+        })));
+        let expect = vec![
+            Some(Rc::new(RefCell::new(TreeNode {
+                val: 1,
+                left: Some(Rc::new(RefCell::new(TreeNode {
+                    val: 2,
+                    left: None,
+                    right: None,
+                }))),
+                right: Some(Rc::new(RefCell::new(TreeNode {
+                    val: 4,
+                    left: None,
+                    right: None,
+                }))),
+            }))),
+        ];
+
+        assert_eq!(expect, Solution::del_nodes(root, vec![3]));
+    }
 
     #[test]
     fn nr_2096_ex_01() {
