@@ -89,6 +89,7 @@ pub mod r1190;
 pub mod m1717;
 pub mod s2096;
 pub mod d1110;
+pub mod n1530;
 
 #[cfg(test)]
 mod test {
@@ -97,6 +98,69 @@ mod test {
 
     use crate::TreeNode;
     use crate::Solution; 
+
+    #[test]
+    fn nr_1530_ex_01() {
+        let root = Some(Rc::new(RefCell::new(TreeNode {
+            val: 1,
+            left: Some(Rc::new(RefCell::new(TreeNode {
+                val: 2,
+                left: None,
+                right: Some(Rc::new(RefCell::new(TreeNode::new(4)))),
+            }))),
+            right: Some(Rc::new(RefCell::new(TreeNode {
+                val: 3,
+                left: None,
+                right: None,
+            }))),
+        })));
+
+        assert_eq!(1, Solution::count_pairs(root, 3));
+    }
+
+    #[test]
+    fn nr_1530_ex_02() {
+        let root = Some(Rc::new(RefCell::new(TreeNode {
+            val: 1,
+            left: Some(Rc::new(RefCell::new(TreeNode {
+                val: 2,
+                left: Some(Rc::new(RefCell::new(TreeNode::new(4)))),
+                right: Some(Rc::new(RefCell::new(TreeNode::new(5)))),
+            }))),
+            right: Some(Rc::new(RefCell::new(TreeNode {
+                val: 3,
+                left: Some(Rc::new(RefCell::new(TreeNode::new(6)))),
+                right: Some(Rc::new(RefCell::new(TreeNode::new(7)))),
+            }))),
+        })));
+
+        assert_eq!(2, Solution::count_pairs(root, 3));
+    }
+
+    #[test]
+    fn nr_1530_ex_03() {
+        let root = Some(Rc::new(RefCell::new(TreeNode {
+            val: 7,
+            left: Some(Rc::new(RefCell::new(TreeNode {
+                val: 1,
+                left: Some(Rc::new(RefCell::new(TreeNode::new(6)))),
+                right: None,
+            }))),
+            right: Some(Rc::new(RefCell::new(TreeNode {
+                val: 4,
+                left: Some(Rc::new(RefCell::new(TreeNode::new(5)))),
+                right: Some(Rc::new(RefCell::new(TreeNode {
+                    val: 3,
+                    left: None,
+                    right: Some(Rc::new(RefCell::new(TreeNode::new(2)))),
+                }))),
+            }))),
+        })));
+
+        assert_eq!(1, Solution::count_pairs(root, 3));
+    }
+
+
 
     #[test]
     fn nr_1110_ex_01() {
