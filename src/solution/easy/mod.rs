@@ -38,6 +38,7 @@ pub mod i350;
 pub mod p2582;
 pub mod w1518;
 pub mod c1598;
+pub mod l1380;
 
 #[cfg(test)]
 mod test {
@@ -46,6 +47,21 @@ mod test {
 
     use crate::Solution;
     use crate::TreeNode;
+
+    #[test]
+    fn nr_1380_ex_01() {
+        assert_eq!(vec![15], Solution::lucky_numbers(vec![vec![3,7,8],vec![9,11,13],vec![15,16,17]]));
+    }
+    
+    #[test]
+    fn nr_1380_ex_02() {
+        assert_eq!(vec![12], Solution::lucky_numbers(vec![vec![1,10,4,2],vec![9,3,8,7],vec![15,16,17,12]]));
+    }
+
+    #[test]
+    fn nr_1380_ex_03() {
+        assert_eq!(vec![7], Solution::lucky_numbers(vec![vec![7,8],vec![1,2]]));
+    }
 
     #[test]
     fn nr_1598_ex_01() {
