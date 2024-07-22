@@ -39,6 +39,7 @@ pub mod p2582;
 pub mod w1518;
 pub mod c1598;
 pub mod l1380;
+pub mod s2418;
 
 #[cfg(test)]
 mod test {
@@ -47,6 +48,16 @@ mod test {
 
     use crate::Solution;
     use crate::TreeNode;
+
+    #[test]
+    fn nr_2418_ex_01() {
+        assert_eq!(vec!["Mary".to_string(), "Emma".to_string(), "John".to_string()], Solution::sort_people(vec!["Mary".to_string(), "John".to_string(), "Emma".to_string()], vec![180, 165, 170]));
+    }
+
+    #[test]
+    fn nr_2418_ex_02() {
+        assert_eq!(vec!["Alice".to_string(), "Bob".to_string(), "Bob".to_string()], Solution::sort_people(vec!["Bob".to_string(), "Alice".to_string(), "Bob".to_string()], vec![155, 185, 150]));
+    }
 
     #[test]
     fn nr_1380_ex_01() {
