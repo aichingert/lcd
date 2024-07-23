@@ -40,6 +40,7 @@ pub mod w1518;
 pub mod c1598;
 pub mod l1380;
 pub mod s2418;
+pub mod s1636;
 
 #[cfg(test)]
 mod test {
@@ -48,6 +49,21 @@ mod test {
 
     use crate::Solution;
     use crate::TreeNode;
+
+    #[test]
+    fn nr_1636_ex_01() {
+        assert_eq!(vec![3,1,1,2,2,2], Solution::frequency_sort_lcd_dup_2(vec![1,1,2,2,2,3]));
+    }
+
+    #[test]
+    fn nr_1636_ex_02() {
+        assert_eq!(vec![1,3,3,2,2], Solution::frequency_sort_lcd_dup_2(vec![2,3,1,3,2]));
+    }
+
+    #[test]
+    fn nr_1636_ex_03() {
+        assert_eq!(vec![5,-1,4,4,-6,-6,1,1,1], Solution::frequency_sort_lcd_dup_2(vec![-1,1,-6,4,5,-6,1,4,1]));
+    }
 
     #[test]
     fn nr_2418_ex_01() {
