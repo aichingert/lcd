@@ -91,6 +91,7 @@ pub mod s2096;
 pub mod d1110;
 pub mod n1530;
 pub mod f1605;
+pub mod s2191;
 
 #[cfg(test)]
 mod test {
@@ -99,6 +100,16 @@ mod test {
 
     use crate::TreeNode;
     use crate::Solution; 
+
+    #[test]
+    fn nr_2191_ex_01() {
+        assert_eq!(vec![338, 38, 991], Solution::sort_jumbled(vec![8,9,4,0,2,1,3,5,7,6], vec![991,338,38]));
+    }
+
+    #[test]
+    fn nr_2191_ex_02() {
+        assert_eq!(vec![123, 456, 789], Solution::sort_jumbled(vec![0,1,2,3,4,5,6,7,8,9], vec![789, 456, 123]));
+    }
 
     #[test]
     fn nr_1605_ex_01() {
