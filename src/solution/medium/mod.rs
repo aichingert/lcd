@@ -92,6 +92,7 @@ pub mod d1110;
 pub mod n1530;
 pub mod f1605;
 pub mod s2191;
+pub mod s912;
 
 #[cfg(test)]
 mod test {
@@ -100,6 +101,16 @@ mod test {
 
     use crate::TreeNode;
     use crate::Solution; 
+
+    #[test]
+    fn nr_912_ex_01() {
+        assert_eq!(vec![1,2,3,5], Solution::sort_array(vec![5,2,3,1]));
+    }
+
+    #[test]
+    fn nr_912_ex_02() {
+        assert_eq!(vec![0, 0, 1, 1, 2, 5], Solution::sort_array(vec![5,1,1,2,0,0]));
+    }
 
     #[test]
     fn nr_2191_ex_01() {
