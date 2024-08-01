@@ -41,6 +41,7 @@ pub mod c1598;
 pub mod l1380;
 pub mod s2418;
 pub mod s1636;
+pub mod n2678;
 
 #[cfg(test)]
 mod test {
@@ -49,6 +50,16 @@ mod test {
 
     use crate::Solution;
     use crate::TreeNode;
+
+    #[test]
+    fn nr_2678_ex_01() {
+        assert_eq!(2, Solution::count_seniors(vec!["7868190130M7522".to_string(),"5303914400F9211".to_string(),"9273338290F4010".to_string()])); 
+    }
+
+    #[test]
+    fn nr_2678_ex_02() {
+        assert_eq!(0, Solution::count_seniors(vec!["1313579440F2036".to_string(),"2921522980M5644".to_string()])); 
+    }
 
     #[test]
     fn nr_1636_ex_01() {
