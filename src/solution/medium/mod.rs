@@ -93,6 +93,7 @@ pub mod n1530;
 pub mod f1605;
 pub mod s2191;
 pub mod s912;
+pub mod m2134;
 
 #[cfg(test)]
 mod test {
@@ -101,6 +102,21 @@ mod test {
 
     use crate::TreeNode;
     use crate::Solution; 
+
+    #[test]
+    fn nr_2134_ex_01() {
+        assert_eq!(1, Solution::min_swaps(vec![0, 1, 0, 1, 1, 0, 0]));
+    }
+
+    #[test]
+    fn nr_2134_ex_02() {
+        assert_eq!(2, Solution::min_swaps(vec![0,1,1,1,0,0,1,1,0]));
+    }
+
+    #[test]
+    fn nr_2134_ex_03() {
+        assert_eq!(0, Solution::min_swaps(vec![1,1,0,0,1]));
+    }
 
     #[test]
     fn nr_912_ex_01() {
