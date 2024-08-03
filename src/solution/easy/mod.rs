@@ -42,6 +42,7 @@ pub mod l1380;
 pub mod s2418;
 pub mod s1636;
 pub mod n2678;
+pub mod m1460;
 
 #[cfg(test)]
 mod test {
@@ -50,6 +51,21 @@ mod test {
 
     use crate::Solution;
     use crate::TreeNode;
+
+    #[test]
+    fn nr_1460_ex_01() {
+        assert_eq!(true, Solution::can_be_equal(vec![1,2,3,4], vec![2,4,1,3])); 
+    }
+
+    #[test]
+    fn nr_1460_ex_02() {
+        assert_eq!(true, Solution::can_be_equal(vec![7], vec![7])); 
+    }
+
+    #[test]
+    fn nr_1460_ex_03() {
+        assert_eq!(false, Solution::can_be_equal(vec![3,7,9], vec![3,7,11])); 
+    }
 
     #[test]
     fn nr_2678_ex_01() {
