@@ -94,6 +94,7 @@ pub mod f1605;
 pub mod s2191;
 pub mod s912;
 pub mod m2134;
+pub mod r1508;
 
 #[cfg(test)]
 mod test {
@@ -102,6 +103,21 @@ mod test {
 
     use crate::TreeNode;
     use crate::Solution; 
+
+    #[test]
+    fn nr_1508_ex_01() {
+        assert_eq!(13, Solution::range_sum(vec![1,2,3,4], 4, 1, 5));
+    }
+
+    #[test]
+    fn nr_1508_ex_02() {
+        assert_eq!(6, Solution::range_sum(vec![1,2,3,4], 4, 3, 4));
+    }
+
+    #[test]
+    fn nr_1508_ex_03() {
+        assert_eq!(50, Solution::range_sum(vec![1,2,3,4], 4, 1, 10));
+    }
 
     #[test]
     fn nr_2134_ex_01() {
