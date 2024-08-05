@@ -43,6 +43,7 @@ pub mod s2418;
 pub mod s1636;
 pub mod n2678;
 pub mod m1460;
+pub mod k2053;
 
 #[cfg(test)]
 mod test {
@@ -51,6 +52,21 @@ mod test {
 
     use crate::Solution;
     use crate::TreeNode;
+
+    #[test]
+    fn nr_2053_ex_01() {
+        assert_eq!("a".to_string(), Solution::kth_distinct(vec!["d".to_string(), "b".to_string(), "c".to_string(), "b".to_string(), "c".to_string(), "a".to_string()], 2));
+    }
+
+    #[test]
+    fn nr_2053_ex_02() {
+        assert_eq!("aaa".to_string(), Solution::kth_distinct(vec!["aaa".to_string(), "aa".to_string(), "a".to_string()], 1));
+    }
+
+    #[test]
+    fn nr_2053_ex_03() {
+        assert_eq!("".to_string(), Solution::kth_distinct(vec!["a".to_string(), "b".to_string(), "a".to_string()], 3));
+    }
 
     #[test]
     fn nr_1460_ex_01() {
