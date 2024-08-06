@@ -95,6 +95,7 @@ pub mod s2191;
 pub mod s912;
 pub mod m2134;
 pub mod r1508;
+pub mod m3016;
 
 #[cfg(test)]
 mod test {
@@ -103,6 +104,21 @@ mod test {
 
     use crate::TreeNode;
     use crate::Solution; 
+
+    #[test]
+    fn nr_3016_ex_01() {
+        assert_eq!(5, Solution::minimum_pushes("abcde".to_string()));
+    }
+
+    #[test]
+    fn nr_3016_ex_02() {
+        assert_eq!(12, Solution::minimum_pushes("xyzxyzxyzxyz".to_string()));
+    }
+    
+    #[test]
+    fn nr_3016_ex_03() {
+        assert_eq!(24, Solution::minimum_pushes("aabbccddeeffgghhiiiiii".to_string()));
+    }
 
     #[test]
     fn nr_1508_ex_01() {
