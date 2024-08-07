@@ -12,11 +12,27 @@ pub mod p330;
 pub mod m995;
 pub mod r2751;
 pub mod n726;
+pub mod i273;
 
 #[cfg(test)]
 mod test {
     use crate::Solution;
     use crate::solution::hard::design_graph_with_shortest_path_calculator::Graph;
+
+    #[test]
+    fn nr_273_ex_01() {
+        assert_eq!("One Hundred Twenty Three".to_string(), Solution::number_to_words(123));
+    }
+
+    #[test]
+    fn nr_273_ex_02() {
+        assert_eq!("Twelve Thousand Three Hundred Forty Five".to_string(), Solution::number_to_words(12345));
+    }
+
+    #[test]
+    fn nr_273_ex_03() {
+        assert_eq!("One Million Two Hundred Thirty Four Thousand Five Hundred Sixty Seven".to_string(), Solution::number_to_words(1234567));
+    }
 
     #[test]
     fn nr_726_ex_01() {
