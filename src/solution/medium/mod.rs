@@ -96,6 +96,7 @@ pub mod s912;
 pub mod m2134;
 pub mod r1508;
 pub mod m3016;
+pub mod s885;
 
 #[cfg(test)]
 mod test {
@@ -104,6 +105,16 @@ mod test {
 
     use crate::TreeNode;
     use crate::Solution; 
+    
+    #[test]
+    fn nr_885_ex_01() {
+        assert_eq!(vec![vec![0,0], vec![0,1], vec![0,2], vec![0,3]], Solution::spiral_matrix_iii(1,4, 0, 0));
+    }
+
+    #[test]
+    fn nr_885_ex_02() {
+        assert_eq!(vec![vec![1,4],vec![1,5],vec![2,5],vec![2,4],vec![2,3],vec![1,3],vec![0,3],vec![0,4],vec![0,5],vec![3,5],vec![3,4],vec![3,3],vec![3,2],vec![2,2],vec![1,2],vec![0,2],vec![4,5],vec![4,4],vec![4,3],vec![4,2],vec![4,1],vec![3,1],vec![2,1],vec![1,1],vec![0,1],vec![4,0],vec![3,0],vec![2,0],vec![1,0],vec![0,0]], Solution::spiral_matrix_iii(5, 6, 1, 4));
+    }
 
     #[test]
     fn nr_3016_ex_01() {
