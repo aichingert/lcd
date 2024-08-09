@@ -97,6 +97,7 @@ pub mod m2134;
 pub mod r1508;
 pub mod m3016;
 pub mod s885;
+pub mod m840;
 
 #[cfg(test)]
 mod test {
@@ -105,6 +106,16 @@ mod test {
 
     use crate::TreeNode;
     use crate::Solution; 
+
+    #[test]
+    fn nr_840_ex_01() {
+        assert_eq!(1, Solution::num_magic_squares_inside(vec![vec![4,3,8,4],vec![9,5,1,9],vec![2,7,6,2]]));
+    }
+
+    #[test]
+    fn nr_840_ex_02() {
+        assert_eq!(0, Solution::num_magic_squares_inside(vec![vec![8]]));
+    }
     
     #[test]
     fn nr_885_ex_01() {
