@@ -98,6 +98,7 @@ pub mod r1508;
 pub mod m3016;
 pub mod s885;
 pub mod m840;
+pub mod r959;
 
 #[cfg(test)]
 mod test {
@@ -106,6 +107,21 @@ mod test {
 
     use crate::TreeNode;
     use crate::Solution; 
+
+    #[test]
+    fn nr_959_ex_01() {
+        assert_eq!(2, Solution::regions_by_slashes(vec![" /".to_string(), "/ ".to_string()]));
+    }
+
+    #[test]
+    fn nr_959_ex_02() {
+        assert_eq!(1, Solution::regions_by_slashes(vec![" /".to_string(), "  ".to_string()]));
+    }
+
+    #[test]
+    fn nr_959_ex_03() {
+        assert_eq!(5, Solution::regions_by_slashes(vec!["/\\".to_string(), "\\/".to_string()]));
+    }
 
     #[test]
     fn nr_840_ex_01() {
