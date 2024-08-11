@@ -13,11 +13,22 @@ pub mod m995;
 pub mod r2751;
 pub mod n726;
 pub mod i273;
+pub mod m1568;
 
 #[cfg(test)]
 mod test {
     use crate::Solution;
     use crate::solution::hard::design_graph_with_shortest_path_calculator::Graph;
+
+    #[test]
+    fn nr_1568_ex_01() {
+        assert_eq!(2, Solution::min_days_lc_1(vec![vec![0,1,1,0],vec![0,1,1,0],vec![0,0,0,0]]));
+    }
+
+    #[test]
+    fn nr_1568_ex_02() {
+        assert_eq!(2, Solution::min_days_lc_1(vec![vec![1,1]]));
+    }
 
     #[test]
     fn nr_273_ex_01() {
