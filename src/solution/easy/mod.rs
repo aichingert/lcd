@@ -44,6 +44,7 @@ pub mod s1636;
 pub mod n2678;
 pub mod m1460;
 pub mod k2053;
+pub mod k703;
 
 #[cfg(test)]
 mod test {
@@ -52,6 +53,18 @@ mod test {
 
     use crate::Solution;
     use crate::TreeNode;
+
+    #[test]
+    fn nr_703_ex_01() {
+        let mut kth = crate::solution::easy::k703::KthLargest::new(3, vec![4, 5, 8, 2]);
+        let mut actual = Vec::new();
+        actual.push(kth.add(3));
+        actual.push(kth.add(5));
+        actual.push(kth.add(10));
+        actual.push(kth.add(9));
+        actual.push(kth.add(4));
+        assert_eq!(vec![4, 5, 5, 8, 8], actual);
+    }
 
     #[test]
     fn nr_2053_ex_01() {
