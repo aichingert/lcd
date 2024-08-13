@@ -99,6 +99,7 @@ pub mod m3016;
 pub mod s885;
 pub mod m840;
 pub mod r959;
+pub mod c40;
 
 #[cfg(test)]
 mod test {
@@ -107,6 +108,16 @@ mod test {
 
     use crate::TreeNode;
     use crate::Solution; 
+
+    #[test]
+    fn nr_40_ex_01() {
+        assert_eq!(vec![vec![1,1,6], vec![1,2,5], vec![1,7], vec![2,6]], Solution::combination_sum2(vec![10, 1, 2, 7, 6, 1, 5], 8));
+    }
+
+    #[test]
+    fn nr_40_ex_02() {
+        assert_eq!(vec![vec![1,2,2], vec![5]], Solution::combination_sum2(vec![2,5,2,1,2], 5));
+    }
 
     #[test]
     fn nr_959_ex_01() {
