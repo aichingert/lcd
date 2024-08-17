@@ -14,11 +14,27 @@ pub mod r2751;
 pub mod n726;
 pub mod i273;
 pub mod m1568;
+pub mod f719;
 
 #[cfg(test)]
 mod test {
     use crate::Solution;
     use crate::solution::hard::design_graph_with_shortest_path_calculator::Graph;
+
+    #[test]
+    fn nr_719_ex_01() {
+        assert_eq!(0, Solution::smallest_distance_pair(vec![1,3,1], 1));
+    }
+
+    #[test]
+    fn nr_719_ex_02() {
+        assert_eq!(0, Solution::smallest_distance_pair(vec![1,1,1], 2));
+    }
+
+    #[test]
+    fn nr_719_ex_03() {
+        assert_eq!(5, Solution::smallest_distance_pair(vec![1,6,1], 3));
+    }
 
     #[test]
     fn nr_1568_ex_01() {
