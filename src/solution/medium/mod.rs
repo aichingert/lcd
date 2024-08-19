@@ -101,6 +101,7 @@ pub mod m840;
 pub mod r959;
 pub mod c40;
 pub mod m624;
+pub mod k650;
 
 #[cfg(test)]
 mod test {
@@ -109,6 +110,16 @@ mod test {
 
     use crate::TreeNode;
     use crate::Solution; 
+
+    #[test]
+    fn nr_650_ex_01() {
+        assert_eq!(3, Solution::min_steps_lc_1(3));
+    }
+
+    #[test]
+    fn nr_650_ex_02() {
+        assert_eq!(0, Solution::min_steps_lc_1(1));
+    }
 
     #[test]
     fn nr_624_ex_01() {
