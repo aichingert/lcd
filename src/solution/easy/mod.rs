@@ -45,6 +45,7 @@ pub mod n2678;
 pub mod m1460;
 pub mod k2053;
 pub mod k703;
+pub mod n476;
 
 #[cfg(test)]
 mod test {
@@ -53,6 +54,16 @@ mod test {
 
     use crate::Solution;
     use crate::TreeNode;
+
+    #[test]
+    fn nr_476_ex_01() {
+        assert_eq!(2, Solution::find_complement(5));
+    }
+
+    #[test]
+    fn nr_476_ex_02() {
+        assert_eq!(1, Solution::find_complement(0));
+    }
 
     #[test]
     fn nr_703_ex_01() {
