@@ -102,6 +102,7 @@ pub mod r959;
 pub mod c40;
 pub mod m624;
 pub mod k650;
+pub mod f592;
 
 #[cfg(test)]
 mod test {
@@ -110,6 +111,21 @@ mod test {
 
     use crate::TreeNode;
     use crate::Solution; 
+
+    #[test]
+    fn nr_592_ex_01() {
+        assert_eq!("0/1".to_string(), Solution::fraction_addition("-1/2+1/2".to_string()));
+    }
+
+    #[test]
+    fn nr_592_ex_02() {
+        assert_eq!("1/3".to_string(), Solution::fraction_addition("-1/2+1/2+1/3".to_string()));
+    }
+    
+    #[test]
+    fn nr_592_ex_03() {
+        assert_eq!("-1/6".to_string(), Solution::fraction_addition("1/3-1/2".to_string()));
+    }
 
     #[test]
     fn nr_650_ex_01() {
