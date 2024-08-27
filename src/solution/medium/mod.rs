@@ -103,6 +103,7 @@ pub mod c40;
 pub mod m624;
 pub mod k650;
 pub mod f592;
+pub mod p1514;
 
 #[cfg(test)]
 mod test {
@@ -111,6 +112,21 @@ mod test {
 
     use crate::TreeNode;
     use crate::Solution; 
+
+    #[test]
+    fn nr_1514_ex_01() {
+        assert_eq!(0.25, Solution::max_probability(3, vec![vec![0,1], vec![1,2], vec![0,2]], vec![0.5, 0.5, 0.2], 0, 2));
+    }
+
+    #[test]
+    fn nr_1514_ex_02() {
+        assert_eq!(0.3, Solution::max_probability(3, vec![vec![0,1],vec![1,2],vec![0,2]], vec![0.5, 0.5, 0.3], 0, 2));
+    }
+
+    #[test]
+    fn nr_1514_ex_03() {
+        assert_eq!(0.0, Solution::max_probability(3, vec![vec![0,1]], vec![0.5], 0, 2));
+    }
 
     #[test]
     fn nr_592_ex_01() {
