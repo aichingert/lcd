@@ -104,6 +104,7 @@ pub mod m624;
 pub mod k650;
 pub mod f592;
 pub mod p1514;
+pub mod c1905;
 
 #[cfg(test)]
 mod test {
@@ -112,6 +113,16 @@ mod test {
 
     use crate::TreeNode;
     use crate::Solution; 
+    
+    #[test]
+    fn nr_1905_ex_01() {
+        assert_eq!(3, Solution::count_sub_islands(vec![vec![1,1,1,0,0],vec![0,1,1,1,1],vec![0,0,0,0,0],vec![1,0,0,0,0],vec![1,1,0,1,1]], vec![vec![1,1,1,0,0],vec![0,0,1,1,1],vec![0,1,0,0,0],vec![1,0,1,1,0],vec![0,1,0,1,0]]));
+    }
+
+    #[test]
+    fn nr_1905_ex_02() {
+        assert_eq!(2, Solution::count_sub_islands(vec![vec![1,0,1,0,1],vec![1,1,1,1,1],vec![0,0,0,0,0],vec![1,1,1,1,1],vec![1,0,1,0,1]], vec![vec![0,0,0,0,0],vec![1,1,1,1,1],vec![0,1,0,1,0],vec![0,1,0,1,0],vec![1,0,0,0,1]]));
+    }
 
     #[test]
     fn nr_1514_ex_01() {
