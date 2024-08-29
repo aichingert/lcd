@@ -105,6 +105,7 @@ pub mod k650;
 pub mod f592;
 pub mod p1514;
 pub mod c1905;
+pub mod m947;
 
 #[cfg(test)]
 mod test {
@@ -113,6 +114,21 @@ mod test {
 
     use crate::TreeNode;
     use crate::Solution; 
+
+    #[test]
+    fn nr_947_ex_01() {
+        assert_eq!(5, Solution::remove_stones_lc_1(vec![vec![0,0],vec![0,1],vec![1,0],vec![1,2],vec![2,1],vec![2,2]]));
+    }
+
+    #[test]
+    fn nr_947_ex_02() {
+        assert_eq!(3, Solution::remove_stones_lc_1(vec![vec![0,0],vec![0,2],vec![1,1],vec![2,0],vec![2,2]]));
+    }
+
+    #[test]
+    fn nr_947_ex_03() {
+        assert_eq!(0, Solution::remove_stones_lc_1(vec![vec![0,0]]));
+    }
     
     #[test]
     fn nr_1905_ex_01() {
