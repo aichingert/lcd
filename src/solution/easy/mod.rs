@@ -46,6 +46,7 @@ pub mod m1460;
 pub mod k2053;
 pub mod k703;
 pub mod n476;
+pub mod c2022;
 
 #[cfg(test)]
 mod test {
@@ -54,6 +55,21 @@ mod test {
 
     use crate::Solution;
     use crate::TreeNode;
+
+    #[test]
+    fn nr_2022_ex_01() {
+        assert_eq!(vec![vec![1,2], vec![3,4]], Solution::construct2_d_array(vec![1,2,3,4], 2, 2));
+    }
+
+    #[test]
+    fn nr_2022_ex_02() {
+        assert_eq!(vec![vec![1,2,3]], Solution::construct2_d_array(vec![1,2,3,], 1, 3));
+    }
+
+    #[test]
+    fn nr_2022_ex_03() {
+        assert_eq!(Vec::<Vec<i32>>::new(), Solution::construct2_d_array(vec![1,2], 1, 1));
+    }
 
     #[test]
     fn nr_476_ex_01() {
