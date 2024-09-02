@@ -106,6 +106,7 @@ pub mod f592;
 pub mod p1514;
 pub mod c1905;
 pub mod m947;
+pub mod f1894;
 
 #[cfg(test)]
 mod test {
@@ -114,6 +115,16 @@ mod test {
 
     use crate::TreeNode;
     use crate::Solution; 
+
+    #[test]
+    fn nr_1894_ex_01() {
+        assert_eq!(0, Solution::chalk_replacer(vec![5, 1, 5], 22));
+    }
+
+    #[test]
+    fn nr_1894_ex_02() {
+        assert_eq!(1, Solution::chalk_replacer(vec![3,4,1,2], 25));
+    }
 
     #[test]
     fn nr_947_ex_01() {
