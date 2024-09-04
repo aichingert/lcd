@@ -107,6 +107,7 @@ pub mod p1514;
 pub mod c1905;
 pub mod m947;
 pub mod f1894;
+pub mod w874;
 
 #[cfg(test)]
 mod test {
@@ -115,6 +116,23 @@ mod test {
 
     use crate::TreeNode;
     use crate::Solution; 
+
+    #[test]
+    fn nr_874_ex_01() {
+        assert_eq!(25, Solution::robot_sim(vec![4,-1,3], vec![]));
+    }
+
+    #[test]
+    fn nr_874_ex_02() {
+        assert_eq!(65, Solution::robot_sim(vec![4,-1,4,-2,4], vec![vec![2,4]]));
+    }
+
+    #[test]
+    fn nr_874_ex_03() {
+        assert_eq!(36, Solution::robot_sim(vec![6,-1,-1,6], vec![]));
+    }
+
+
 
     #[test]
     fn nr_1894_ex_01() {
