@@ -108,6 +108,7 @@ pub mod c1905;
 pub mod m947;
 pub mod f1894;
 pub mod w874;
+pub mod f2028;
 
 #[cfg(test)]
 mod test {
@@ -116,6 +117,21 @@ mod test {
 
     use crate::TreeNode;
     use crate::Solution; 
+
+    #[test]
+    fn nr_2028_ex_01() {
+        assert_eq!(vec![6, 6], Solution::missing_rolls(vec![3,2,4,3], 4, 2));
+    }
+
+    #[test]
+    fn nr_2028_ex_02() {
+        assert_eq!(vec![6, 1, 1, 1], Solution::missing_rolls(vec![1, 5, 6], 3, 4));
+    }
+
+    #[test]
+    fn nr_2028_ex_03() {
+        assert_eq!(Vec::<i32>::new(), Solution::missing_rolls(vec![1, 2, 3, 4], 6, 4));
+    }
 
     #[test]
     fn nr_874_ex_01() {
