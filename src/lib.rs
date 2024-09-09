@@ -27,6 +27,21 @@ impl TreeNode {
     }
 }
 
+#[derive(Debug, PartialEq)]
+pub struct ListNode {
+    pub val: i32,
+    pub next: Option<Box<ListNode>>,
+}
+
+impl ListNode {
+    pub fn new(val: i32) -> Self {
+        Self {
+            val: val,
+            next: None,
+        }
+    }
+}
+
 pub fn is_palindrome(s: &[char]) -> bool  {
     for i in 0..s.len() / 2 {
         if s[i] != s[s.len() - i - 1] {

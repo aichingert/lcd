@@ -109,6 +109,7 @@ pub mod m947;
 pub mod f1894;
 pub mod w874;
 pub mod f2028;
+pub mod s2326;
 
 #[cfg(test)]
 mod test {
@@ -116,7 +117,68 @@ mod test {
     use std::cell::RefCell;
 
     use crate::TreeNode;
+    use crate::ListNode;
     use crate::Solution; 
+
+    #[test]
+    fn nr_2326_ex_01() {
+        let list = ListNode { 
+            val: 3, 
+            next: Some(Box::new(ListNode {
+                val: 0,
+                next: Some(Box::new(ListNode {
+                    val: 2,
+                    next: Some(Box::new(ListNode {
+                        val: 6,
+                        next: Some(Box::new(ListNode {
+                            val: 8,
+                            next: Some(Box::new(ListNode {
+                                val: 1,
+                                next: Some(Box::new(ListNode {
+                                    val: 7,
+                                    next: Some(Box::new(ListNode {
+                                        val: 9,
+                                        next: Some(Box::new(ListNode {
+                                            val: 4,
+                                            next: Some(Box::new(ListNode {
+                                                val: 2,
+                                                next: Some(Box::new(ListNode {
+                                                    val: 5,
+                                                    next: Some(Box::new(ListNode {
+                                                        val: 5,
+                                                        next: Some(Box::new(ListNode::new(0))),
+                                                    })),
+                                                })),
+                                            })),
+                                        })),
+                                    })),
+                                })),
+                            })),
+                        })),
+                    })),
+                })),
+            })),
+        };
+
+        assert_eq!(vec![
+            vec![3,0,2,6,8],
+            vec![5,0,-1,-1,1],
+            vec![5,2,4,9,7]
+        ], Solution::spiral_matrix(3, 5, Some(Box::new(list))));
+    }
+
+    #[test]
+    fn nr_2326_ex_02() {
+        let list = Some(Box::new(ListNode { 
+            val: 0, 
+            next: Some(Box::new(ListNode {
+                val: 1,
+                next: Some(Box::new(ListNode::new(2))),
+            })),
+        }));
+
+        assert_eq!(vec![vec![0,1,2,-1]], Solution::spiral_matrix(1, 4, list));
+    }
 
     #[test]
     fn nr_2028_ex_01() {
