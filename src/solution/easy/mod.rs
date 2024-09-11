@@ -47,6 +47,7 @@ pub mod k2053;
 pub mod k703;
 pub mod n476;
 pub mod c2022;
+pub mod m2220;
 
 #[cfg(test)]
 mod test {
@@ -55,6 +56,16 @@ mod test {
 
     use crate::Solution;
     use crate::TreeNode;
+
+    #[test]
+    fn nr_2220_ex_01() {
+        assert_eq!(3, Solution::min_bit_flips(10, 7));
+    }
+
+    #[test]
+    fn nr_2220_ex_02() {
+        assert_eq!(3, Solution::min_bit_flips(3, 4));
+    }
 
     #[test]
     fn nr_2022_ex_01() {
