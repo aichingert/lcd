@@ -36,7 +36,7 @@ pub struct ListNode {
 impl ListNode {
     pub fn new(val: i32) -> Self {
         Self {
-            val: val,
+            val,
             next: None,
         }
     }
