@@ -110,6 +110,7 @@ pub mod f1894;
 pub mod w874;
 pub mod f2028;
 pub mod s2326;
+pub mod x1310;
 
 #[cfg(test)]
 mod test {
@@ -119,6 +120,16 @@ mod test {
     use crate::TreeNode;
     use crate::ListNode;
     use crate::Solution; 
+
+    #[test]
+    fn nr_1310_ex_01() {
+        assert_eq!(vec![2,7,14,8], Solution::xor_queries(vec![1,3,4,8], vec![vec![0,1], vec![1,2], vec![0,3], vec![3,3]]));
+    }
+
+    #[test]
+    fn nr_1310_ex_02() {
+        assert_eq!(vec![8,0,4,4], Solution::xor_queries(vec![4,8,2,10], vec![vec![2,3],vec![1,3],vec![0,0],vec![0,3]]));
+    }
 
     #[test]
     fn nr_2326_ex_01() {
