@@ -111,6 +111,7 @@ pub mod w874;
 pub mod f2028;
 pub mod s2326;
 pub mod x1310;
+pub mod l2419;
 
 #[cfg(test)]
 mod test {
@@ -120,6 +121,16 @@ mod test {
     use crate::TreeNode;
     use crate::ListNode;
     use crate::Solution; 
+
+    #[test]
+    fn nr_2419_ex_01() {
+        assert_eq!(2, Solution::longest_subarray_lc_1(vec![1,2,3,3,2,2]));
+    }
+
+    #[test]
+    fn nr_2419_ex_02() {
+        assert_eq!(1, Solution::longest_subarray_lc_1(vec![1,2,3,4]));
+    }
 
     #[test]
     fn nr_1310_ex_01() {
