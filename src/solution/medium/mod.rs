@@ -112,6 +112,7 @@ pub mod f2028;
 pub mod s2326;
 pub mod x1310;
 pub mod l2419;
+pub mod f1371;
 
 #[cfg(test)]
 mod test {
@@ -121,6 +122,21 @@ mod test {
     use crate::TreeNode;
     use crate::ListNode;
     use crate::Solution; 
+
+    #[test]
+    fn nr_1371_ex_01() {
+        assert_eq!(13, Solution::find_the_longest_substring("eleetminicoworoep".to_string()));
+    }
+
+    #[test]
+    fn nr_1371_ex_02() {
+        assert_eq!(5, Solution::find_the_longest_substring("leetcodeisgreate".to_string()));
+    }
+
+    #[test]
+    fn nr_1371_ex_03() {
+        assert_eq!(6, Solution::find_the_longest_substring("bcbcbc".to_string()));
+    }
 
     #[test]
     fn nr_2419_ex_01() {
