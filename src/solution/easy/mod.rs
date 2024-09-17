@@ -49,6 +49,7 @@ pub mod n476;
 pub mod c2022;
 pub mod m2220;
 pub mod c1684;
+pub mod u884;
 
 #[cfg(test)]
 mod test {
@@ -57,6 +58,28 @@ mod test {
 
     use crate::Solution;
     use crate::TreeNode;
+
+    #[test]
+    fn nr_884_ex_01() {
+        assert_eq!(
+            vec!["sweet".to_string(), "sour".to_string()],
+            Solution::uncommon_from_sentences(
+                "this apple is sweet".to_string(),
+                "this apple is sour".to_string(),
+            )
+        );
+    }
+
+    #[test]
+    fn nr_884_ex_02() {
+        assert_eq!(
+            vec!["banana".to_string()],
+            Solution::uncommon_from_sentences(
+                "apple apple".to_string(),
+                "banana".to_string(),
+            )
+        );
+    }
 
     #[test]
     fn nr_1684_ex_01() {
