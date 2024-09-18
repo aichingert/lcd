@@ -113,6 +113,7 @@ pub mod s2326;
 pub mod x1310;
 pub mod l2419;
 pub mod f1371;
+pub mod l179;
 
 #[cfg(test)]
 mod test {
@@ -122,6 +123,16 @@ mod test {
     use crate::TreeNode;
     use crate::ListNode;
     use crate::Solution; 
+
+    #[test]
+    fn nr_179_ex_01() {
+        assert_eq!("210".to_string(), Solution::largest_number(vec![10, 2]));
+    }
+
+    #[test]
+    fn nr_179_ex_02() {
+        assert_eq!("9534330".to_string(), Solution::largest_number(vec![3, 30, 34, 5, 9]));
+    }
 
     #[test]
     fn nr_1371_ex_01() {

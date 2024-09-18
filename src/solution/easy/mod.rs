@@ -61,23 +61,29 @@ mod test {
 
     #[test]
     fn nr_884_ex_01() {
+        let mut ex = Solution::uncommon_from_sentences(
+            "this apple is sweet".to_string(),
+            "this apple is sour".to_string(),
+        );
+        ex.sort();
+
         assert_eq!(
-            vec!["sweet".to_string(), "sour".to_string()],
-            Solution::uncommon_from_sentences(
-                "this apple is sweet".to_string(),
-                "this apple is sour".to_string(),
-            )
+            vec!["sour".to_string(), "sweet".to_string()],
+            ex,
         );
     }
 
     #[test]
     fn nr_884_ex_02() {
+        let mut ex = Solution::uncommon_from_sentences(
+            "apple apple".to_string(),
+            "banana".to_string(),
+        );
+        ex.sort();
+
         assert_eq!(
             vec!["banana".to_string()],
-            Solution::uncommon_from_sentences(
-                "apple apple".to_string(),
-                "banana".to_string(),
-            )
+            ex,
         );
     }
 
