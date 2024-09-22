@@ -114,6 +114,7 @@ pub mod x1310;
 pub mod l2419;
 pub mod f1371;
 pub mod l179;
+pub mod l386;
 
 #[cfg(test)]
 mod test {
@@ -123,6 +124,16 @@ mod test {
     use crate::TreeNode;
     use crate::ListNode;
     use crate::Solution; 
+
+    #[test]
+    fn nr_386_ex_01() {
+        assert_eq!(vec![1,10,11,12,13,2,3,4,5,6,7,8,9], Solution::lexical_order(13));
+    }
+
+    #[test]
+    fn nr_386_ex_02() {
+        assert_eq!(vec![1,2], Solution::lexical_order(2));
+    }
 
     #[test]
     fn nr_179_ex_01() {
