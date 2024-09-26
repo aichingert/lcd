@@ -115,6 +115,7 @@ pub mod l2419;
 pub mod f1371;
 pub mod l179;
 pub mod l386;
+pub mod m729;
 
 #[cfg(test)]
 mod test {
@@ -124,6 +125,15 @@ mod test {
     use crate::TreeNode;
     use crate::ListNode;
     use crate::Solution; 
+
+    #[test]
+    fn nr_729_ex_01() {
+        let mut c = super::m729::MyCalendar::default();
+
+        assert_eq!(true, c.book(10, 20));
+        assert_eq!(false, c.book(15, 25));
+        assert_eq!(true, c.book(20, 30));
+    }
 
     #[test]
     fn nr_386_ex_01() {
