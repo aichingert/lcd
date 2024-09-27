@@ -116,6 +116,7 @@ pub mod f1371;
 pub mod l179;
 pub mod l386;
 pub mod m729;
+pub mod m731;
 
 #[cfg(test)]
 mod test {
@@ -133,6 +134,18 @@ mod test {
         assert_eq!(true, c.book(10, 20));
         assert_eq!(false, c.book(15, 25));
         assert_eq!(true, c.book(20, 30));
+    }
+
+    #[test]
+    fn nr_731_ex_01() {
+        let mut c = super::m731::MyCalendarTwo::default();
+
+        assert_eq!(true, c.book(10, 20));
+        assert_eq!(true, c.book(50, 60));
+        assert_eq!(true, c.book(10, 40));
+        assert_eq!(false, c.book(5, 15));
+        assert_eq!(true, c.book(5, 10));
+        assert_eq!(true, c.book(25, 55));
     }
 
     #[test]
