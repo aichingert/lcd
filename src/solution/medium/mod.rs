@@ -117,6 +117,7 @@ pub mod l179;
 pub mod l386;
 pub mod m729;
 pub mod m731;
+pub mod d1381;
 
 #[cfg(test)]
 mod test {
@@ -126,6 +127,24 @@ mod test {
     use crate::TreeNode;
     use crate::ListNode;
     use crate::Solution; 
+
+    #[test]
+    fn nr_1381_ex_01() {
+        let mut s = super::d1381::CustomStack::new(3);
+
+        s.push(1);
+        s.push(2);
+        assert_eq!(2, s.pop());
+        s.push(2);
+        s.push(3);
+        s.push(4);
+        s.increment(5, 100);
+        s.increment(2, 100);
+        assert_eq!(103, s.pop());
+        assert_eq!(202, s.pop());
+        assert_eq!(201, s.pop());
+        assert_eq!(-1, s.pop());
+    }
 
     #[test]
     fn nr_729_ex_01() {
