@@ -118,6 +118,7 @@ pub mod l386;
 pub mod m729;
 pub mod m731;
 pub mod d1381;
+pub mod c1497;
 
 #[cfg(test)]
 mod test {
@@ -127,6 +128,21 @@ mod test {
     use crate::TreeNode;
     use crate::ListNode;
     use crate::Solution; 
+
+    #[test]
+    fn nr_1497_ex_01() {
+        assert_eq!(true, Solution::can_arrange(vec![1,2,3,4,5,10,6,7,8,9], 5));
+    }
+
+    #[test]
+    fn nr_1497_ex_02() {
+        assert_eq!(true, Solution::can_arrange(vec![1,2,3,4,5,6], 7));
+    }
+
+    #[test]
+    fn nr_1497_ex_03() {
+        assert_eq!(false, Solution::can_arrange(vec![1,2,3,4,5,6], 10));
+    }
 
     #[test]
     fn nr_1381_ex_01() {
