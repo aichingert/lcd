@@ -50,6 +50,7 @@ pub mod c2022;
 pub mod m2220;
 pub mod c1684;
 pub mod u884;
+pub mod r1331;
 
 #[cfg(test)]
 mod test {
@@ -58,6 +59,21 @@ mod test {
 
     use crate::Solution;
     use crate::TreeNode;
+
+    #[test]
+    fn nr_1331_ex_01() {
+        assert_eq!(vec![4, 1, 2, 3], Solution::array_rank_transform(vec![40, 10, 20, 30]));
+    }
+
+    #[test]
+    fn nr_1331_ex_02() {
+        assert_eq!(vec![1, 1, 1], Solution::array_rank_transform(vec![100, 100, 100]));
+    }
+
+    #[test]
+    fn nr_1331_ex_03() {
+        assert_eq!(vec![5,3,4,2,8,6,7,1,3], Solution::array_rank_transform(vec![37, 12, 28, 9, 100, 56, 80, 5, 12]));
+    }
 
     #[test]
     fn nr_884_ex_01() {
