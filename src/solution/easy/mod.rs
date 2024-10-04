@@ -51,6 +51,7 @@ pub mod m2220;
 pub mod c1684;
 pub mod u884;
 pub mod r1331;
+pub mod d2491;
 
 #[cfg(test)]
 mod test {
@@ -59,6 +60,21 @@ mod test {
 
     use crate::Solution;
     use crate::TreeNode;
+
+    #[test]
+    fn nr_2491_ex_01() {
+        assert_eq!(22, Solution::divide_players(vec![3,2,5,1,3,4]));
+    }
+
+    #[test]
+    fn nr_2491_ex_02() {
+        assert_eq!(12, Solution::divide_players(vec![3, 4]));
+    }
+
+    #[test]
+    fn nr_2491_ex_03() {
+        assert_eq!(-1, Solution::divide_players(vec![1,1,2,3]));
+    }
 
     #[test]
     fn nr_1331_ex_01() {
