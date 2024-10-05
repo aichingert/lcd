@@ -119,6 +119,7 @@ pub mod m729;
 pub mod m731;
 pub mod d1381;
 pub mod c1497;
+pub mod p567;
 
 #[cfg(test)]
 mod test {
@@ -128,6 +129,16 @@ mod test {
     use crate::TreeNode;
     use crate::ListNode;
     use crate::Solution; 
+
+    #[test]
+    fn nr_567_ex_01() {
+        assert_eq!(true, Solution::check_inclusion("ab".to_string(), "eidbaooo".to_string()));
+    }
+
+    #[test]
+    fn nr_567_ex_02() {
+        assert_eq!(false, Solution::check_inclusion("ab".to_string(), "eidboaoo".to_string()));
+    }
 
     #[test]
     fn nr_1497_ex_01() {
