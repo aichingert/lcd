@@ -120,6 +120,7 @@ pub mod m731;
 pub mod d1381;
 pub mod c1497;
 pub mod p567;
+pub mod s1813;
 
 #[cfg(test)]
 mod test {
@@ -129,6 +130,21 @@ mod test {
     use crate::TreeNode;
     use crate::ListNode;
     use crate::Solution; 
+
+    #[test]
+    fn nr_1813_ex_01() {
+        assert_eq!(true, Solution::are_sentences_similar("My name is Haley".to_string(), "My Haley".to_string()));
+    }
+
+    #[test]
+    fn nr_1813_ex_02() {
+        assert_eq!(false, Solution::are_sentences_similar("of".to_string(), "A lot of words".to_string()));
+    }
+
+    #[test]
+    fn nr_1813_ex_03() {
+        assert_eq!(true, Solution::are_sentences_similar("Eating right now".to_string(), "Eating".to_string()));
+    }
 
     #[test]
     fn nr_567_ex_01() {
