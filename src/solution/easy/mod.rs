@@ -1,57 +1,57 @@
+pub mod c1598;
+pub mod c1684;
+pub mod c2022;
 pub mod c3005;
 pub mod c70;
 pub mod calculate_money_in_leetcode_bank;
 pub mod count_of_matches_in_tournament;
+pub mod d2491;
+pub mod e2331;
+pub mod f1002;
+pub mod f1791;
+pub mod f1971;
 pub mod f2485;
 pub mod find_mode_in_binary_search_tree;
+pub mod h1051;
 pub mod i205;
 pub mod i349;
-pub mod i463;
-pub mod l58;
-pub mod m1544;
-pub mod m1614;
-pub mod m2540;
-pub mod m2864;
-pub mod n1700;
-pub mod number_of_1_bits;
-pub mod sort_integers_by_the_number_of_1_bits;
-pub mod t2073;
-pub mod f1971;
-pub mod n1137;
-pub mod r2000;
-pub mod l2441;
-pub mod r506;
-pub mod l2373;
-pub mod e2331;
-pub mod s1863;
-pub mod s1608;
-pub mod s3110;
-pub mod r344;
-pub mod l409;
-pub mod f1002;
-pub mod h1051;
-pub mod r1122;
-pub mod m2037;
-pub mod f1791;
-pub mod t1550;
 pub mod i350;
-pub mod p2582;
-pub mod w1518;
-pub mod c1598;
-pub mod l1380;
-pub mod s2418;
-pub mod s1636;
-pub mod n2678;
-pub mod m1460;
+pub mod i463;
 pub mod k2053;
 pub mod k703;
-pub mod n476;
-pub mod c2022;
+pub mod l1380;
+pub mod l2373;
+pub mod l2441;
+pub mod l409;
+pub mod l58;
+pub mod m1460;
+pub mod m1544;
+pub mod m1614;
+pub mod m2037;
 pub mod m2220;
-pub mod c1684;
-pub mod u884;
+pub mod m2540;
+pub mod m2864;
+pub mod n1137;
+pub mod n1700;
+pub mod n2678;
+pub mod n476;
+pub mod number_of_1_bits;
+pub mod p2582;
+pub mod r1122;
 pub mod r1331;
-pub mod d2491;
+pub mod r2000;
+pub mod r344;
+pub mod r506;
+pub mod s1608;
+pub mod s1636;
+pub mod s1863;
+pub mod s2418;
+pub mod s3110;
+pub mod sort_integers_by_the_number_of_1_bits;
+pub mod t1550;
+pub mod t2073;
+pub mod u884;
+pub mod w1518;
 
 #[cfg(test)]
 mod test {
@@ -63,7 +63,7 @@ mod test {
 
     #[test]
     fn nr_2491_ex_01() {
-        assert_eq!(22, Solution::divide_players(vec![3,2,5,1,3,4]));
+        assert_eq!(22, Solution::divide_players(vec![3, 2, 5, 1, 3, 4]));
     }
 
     #[test]
@@ -73,22 +73,31 @@ mod test {
 
     #[test]
     fn nr_2491_ex_03() {
-        assert_eq!(-1, Solution::divide_players(vec![1,1,2,3]));
+        assert_eq!(-1, Solution::divide_players(vec![1, 1, 2, 3]));
     }
 
     #[test]
     fn nr_1331_ex_01() {
-        assert_eq!(vec![4, 1, 2, 3], Solution::array_rank_transform(vec![40, 10, 20, 30]));
+        assert_eq!(
+            vec![4, 1, 2, 3],
+            Solution::array_rank_transform(vec![40, 10, 20, 30])
+        );
     }
 
     #[test]
     fn nr_1331_ex_02() {
-        assert_eq!(vec![1, 1, 1], Solution::array_rank_transform(vec![100, 100, 100]));
+        assert_eq!(
+            vec![1, 1, 1],
+            Solution::array_rank_transform(vec![100, 100, 100])
+        );
     }
 
     #[test]
     fn nr_1331_ex_03() {
-        assert_eq!(vec![5,3,4,2,8,6,7,1,3], Solution::array_rank_transform(vec![37, 12, 28, 9, 100, 56, 80, 5, 12]));
+        assert_eq!(
+            vec![5, 3, 4, 2, 8, 6, 7, 1, 3],
+            Solution::array_rank_transform(vec![37, 12, 28, 9, 100, 56, 80, 5, 12])
+        );
     }
 
     #[test]
@@ -99,48 +108,72 @@ mod test {
         );
         ex.sort();
 
-        assert_eq!(
-            vec!["sour".to_string(), "sweet".to_string()],
-            ex,
-        );
+        assert_eq!(vec!["sour".to_string(), "sweet".to_string()], ex,);
     }
 
     #[test]
     fn nr_884_ex_02() {
-        let mut ex = Solution::uncommon_from_sentences(
-            "apple apple".to_string(),
-            "banana".to_string(),
-        );
+        let mut ex =
+            Solution::uncommon_from_sentences("apple apple".to_string(), "banana".to_string());
         ex.sort();
 
-        assert_eq!(
-            vec!["banana".to_string()],
-            ex,
-        );
+        assert_eq!(vec!["banana".to_string()], ex,);
     }
 
     #[test]
     fn nr_1684_ex_01() {
-        assert_eq!(2, Solution::count_consistent_strings(
-                "ab".to_string(), 
-                vec!["ad".to_string(), "bd".to_string(), "aaab".to_string(), "baa".to_string(), "badab".to_string()],
-        ));
+        assert_eq!(
+            2,
+            Solution::count_consistent_strings(
+                "ab".to_string(),
+                vec![
+                    "ad".to_string(),
+                    "bd".to_string(),
+                    "aaab".to_string(),
+                    "baa".to_string(),
+                    "badab".to_string()
+                ],
+            )
+        );
     }
 
     #[test]
     fn nr_1684_ex_02() {
-        assert_eq!(7, Solution::count_consistent_strings(
-                "abc".to_string(), 
-                vec!["a".to_string(), "b".to_string(), "c".to_string(), "ab".to_string(), "ac".to_string(), "bc".to_string(), "abc".to_string()],
-        ));
+        assert_eq!(
+            7,
+            Solution::count_consistent_strings(
+                "abc".to_string(),
+                vec![
+                    "a".to_string(),
+                    "b".to_string(),
+                    "c".to_string(),
+                    "ab".to_string(),
+                    "ac".to_string(),
+                    "bc".to_string(),
+                    "abc".to_string()
+                ],
+            )
+        );
     }
 
     #[test]
     fn nr_1684_ex_03() {
-        assert_eq!(4, Solution::count_consistent_strings(
-                "cad".to_string(), 
-                vec!["cc".to_string(), "acd".to_string(), "b".to_string(), "ba".to_string(), "bac".to_string(), "bad".to_string(), "ac".to_string(), "d".to_string()],
-        ));
+        assert_eq!(
+            4,
+            Solution::count_consistent_strings(
+                "cad".to_string(),
+                vec![
+                    "cc".to_string(),
+                    "acd".to_string(),
+                    "b".to_string(),
+                    "ba".to_string(),
+                    "bac".to_string(),
+                    "bad".to_string(),
+                    "ac".to_string(),
+                    "d".to_string()
+                ],
+            )
+        );
     }
 
     #[test]
@@ -155,17 +188,26 @@ mod test {
 
     #[test]
     fn nr_2022_ex_01() {
-        assert_eq!(vec![vec![1,2], vec![3,4]], Solution::construct2_d_array(vec![1,2,3,4], 2, 2));
+        assert_eq!(
+            vec![vec![1, 2], vec![3, 4]],
+            Solution::construct2_d_array(vec![1, 2, 3, 4], 2, 2)
+        );
     }
 
     #[test]
     fn nr_2022_ex_02() {
-        assert_eq!(vec![vec![1,2,3]], Solution::construct2_d_array(vec![1,2,3,], 1, 3));
+        assert_eq!(
+            vec![vec![1, 2, 3]],
+            Solution::construct2_d_array(vec![1, 2, 3,], 1, 3)
+        );
     }
 
     #[test]
     fn nr_2022_ex_03() {
-        assert_eq!(Vec::<Vec<i32>>::new(), Solution::construct2_d_array(vec![1,2], 1, 1));
+        assert_eq!(
+            Vec::<Vec<i32>>::new(),
+            Solution::construct2_d_array(vec![1, 2], 1, 1)
+        );
     }
 
     #[test]
@@ -192,94 +234,184 @@ mod test {
 
     #[test]
     fn nr_2053_ex_01() {
-        assert_eq!("a".to_string(), Solution::kth_distinct(vec!["d".to_string(), "b".to_string(), "c".to_string(), "b".to_string(), "c".to_string(), "a".to_string()], 2));
+        assert_eq!(
+            "a".to_string(),
+            Solution::kth_distinct(
+                vec![
+                    "d".to_string(),
+                    "b".to_string(),
+                    "c".to_string(),
+                    "b".to_string(),
+                    "c".to_string(),
+                    "a".to_string()
+                ],
+                2
+            )
+        );
     }
 
     #[test]
     fn nr_2053_ex_02() {
-        assert_eq!("aaa".to_string(), Solution::kth_distinct(vec!["aaa".to_string(), "aa".to_string(), "a".to_string()], 1));
+        assert_eq!(
+            "aaa".to_string(),
+            Solution::kth_distinct(
+                vec!["aaa".to_string(), "aa".to_string(), "a".to_string()],
+                1
+            )
+        );
     }
 
     #[test]
     fn nr_2053_ex_03() {
-        assert_eq!("".to_string(), Solution::kth_distinct(vec!["a".to_string(), "b".to_string(), "a".to_string()], 3));
+        assert_eq!(
+            "".to_string(),
+            Solution::kth_distinct(vec!["a".to_string(), "b".to_string(), "a".to_string()], 3)
+        );
     }
 
     #[test]
     fn nr_1460_ex_01() {
-        assert_eq!(true, Solution::can_be_equal(vec![1,2,3,4], vec![2,4,1,3])); 
+        assert_eq!(
+            true,
+            Solution::can_be_equal(vec![1, 2, 3, 4], vec![2, 4, 1, 3])
+        );
     }
 
     #[test]
     fn nr_1460_ex_02() {
-        assert_eq!(true, Solution::can_be_equal(vec![7], vec![7])); 
+        assert_eq!(true, Solution::can_be_equal(vec![7], vec![7]));
     }
 
     #[test]
     fn nr_1460_ex_03() {
-        assert_eq!(false, Solution::can_be_equal(vec![3,7,9], vec![3,7,11])); 
+        assert_eq!(false, Solution::can_be_equal(vec![3, 7, 9], vec![3, 7, 11]));
     }
 
     #[test]
     fn nr_2678_ex_01() {
-        assert_eq!(2, Solution::count_seniors(vec!["7868190130M7522".to_string(),"5303914400F9211".to_string(),"9273338290F4010".to_string()])); 
+        assert_eq!(
+            2,
+            Solution::count_seniors(vec![
+                "7868190130M7522".to_string(),
+                "5303914400F9211".to_string(),
+                "9273338290F4010".to_string()
+            ])
+        );
     }
 
     #[test]
     fn nr_2678_ex_02() {
-        assert_eq!(0, Solution::count_seniors(vec!["1313579440F2036".to_string(),"2921522980M5644".to_string()])); 
+        assert_eq!(
+            0,
+            Solution::count_seniors(vec![
+                "1313579440F2036".to_string(),
+                "2921522980M5644".to_string()
+            ])
+        );
     }
 
     #[test]
     fn nr_1636_ex_01() {
-        assert_eq!(vec![3,1,1,2,2,2], Solution::frequency_sort_lcd_dup_2(vec![1,1,2,2,2,3]));
+        assert_eq!(
+            vec![3, 1, 1, 2, 2, 2],
+            Solution::frequency_sort_lcd_dup_2(vec![1, 1, 2, 2, 2, 3])
+        );
     }
 
     #[test]
     fn nr_1636_ex_02() {
-        assert_eq!(vec![1,3,3,2,2], Solution::frequency_sort_lcd_dup_2(vec![2,3,1,3,2]));
+        assert_eq!(
+            vec![1, 3, 3, 2, 2],
+            Solution::frequency_sort_lcd_dup_2(vec![2, 3, 1, 3, 2])
+        );
     }
 
     #[test]
     fn nr_1636_ex_03() {
-        assert_eq!(vec![5,-1,4,4,-6,-6,1,1,1], Solution::frequency_sort_lcd_dup_2(vec![-1,1,-6,4,5,-6,1,4,1]));
+        assert_eq!(
+            vec![5, -1, 4, 4, -6, -6, 1, 1, 1],
+            Solution::frequency_sort_lcd_dup_2(vec![-1, 1, -6, 4, 5, -6, 1, 4, 1])
+        );
     }
 
     #[test]
     fn nr_2418_ex_01() {
-        assert_eq!(vec!["Mary".to_string(), "Emma".to_string(), "John".to_string()], Solution::sort_people(vec!["Mary".to_string(), "John".to_string(), "Emma".to_string()], vec![180, 165, 170]));
+        assert_eq!(
+            vec!["Mary".to_string(), "Emma".to_string(), "John".to_string()],
+            Solution::sort_people(
+                vec!["Mary".to_string(), "John".to_string(), "Emma".to_string()],
+                vec![180, 165, 170]
+            )
+        );
     }
 
     #[test]
     fn nr_2418_ex_02() {
-        assert_eq!(vec!["Alice".to_string(), "Bob".to_string(), "Bob".to_string()], Solution::sort_people(vec!["Bob".to_string(), "Alice".to_string(), "Bob".to_string()], vec![155, 185, 150]));
+        assert_eq!(
+            vec!["Alice".to_string(), "Bob".to_string(), "Bob".to_string()],
+            Solution::sort_people(
+                vec!["Bob".to_string(), "Alice".to_string(), "Bob".to_string()],
+                vec![155, 185, 150]
+            )
+        );
     }
 
     #[test]
     fn nr_1380_ex_01() {
-        assert_eq!(vec![15], Solution::lucky_numbers(vec![vec![3,7,8],vec![9,11,13],vec![15,16,17]]));
+        assert_eq!(
+            vec![15],
+            Solution::lucky_numbers(vec![vec![3, 7, 8], vec![9, 11, 13], vec![15, 16, 17]])
+        );
     }
-    
+
     #[test]
     fn nr_1380_ex_02() {
-        assert_eq!(vec![12], Solution::lucky_numbers(vec![vec![1,10,4,2],vec![9,3,8,7],vec![15,16,17,12]]));
+        assert_eq!(
+            vec![12],
+            Solution::lucky_numbers(vec![
+                vec![1, 10, 4, 2],
+                vec![9, 3, 8, 7],
+                vec![15, 16, 17, 12]
+            ])
+        );
     }
 
     #[test]
     fn nr_1380_ex_03() {
-        assert_eq!(vec![7], Solution::lucky_numbers(vec![vec![7,8],vec![1,2]]));
+        assert_eq!(
+            vec![7],
+            Solution::lucky_numbers(vec![vec![7, 8], vec![1, 2]])
+        );
     }
 
     #[test]
     fn nr_1598_ex_01() {
-        assert_eq!(2, Solution::min_operations_2_lc_l(vec!["d1/".to_string(), "d2/".to_string(), "../".to_string(), "d21/".to_string(), "./".to_string()]));
+        assert_eq!(
+            2,
+            Solution::min_operations_2_lc_l(vec![
+                "d1/".to_string(),
+                "d2/".to_string(),
+                "../".to_string(),
+                "d21/".to_string(),
+                "./".to_string()
+            ])
+        );
     }
 
     #[test]
     fn nr_1598_ex_02() {
-        assert_eq!(3, Solution::min_operations_2_lc_l(vec!["d1/".to_string(), "d2/".to_string(), "./".to_string(), "d3/".to_string(), "../".to_string(), "d31/".to_string()]));
+        assert_eq!(
+            3,
+            Solution::min_operations_2_lc_l(vec![
+                "d1/".to_string(),
+                "d2/".to_string(),
+                "./".to_string(),
+                "d3/".to_string(),
+                "../".to_string(),
+                "d31/".to_string()
+            ])
+        );
     }
-
 
     #[test]
     fn nr_1518_ex_01() {
@@ -303,82 +435,125 @@ mod test {
 
     #[test]
     fn nr_350_ex_01() {
-        assert_eq!(vec![2,2], Solution::intersect(vec![1,2,2,1], vec![2,2,]));
+        assert_eq!(
+            vec![2, 2],
+            Solution::intersect(vec![1, 2, 2, 1], vec![2, 2,])
+        );
     }
-    
+
     #[test]
     fn nr_350_ex_02() {
-        assert_eq!(vec![4,9], Solution::intersect(vec![4,9,5], vec![9,4,9,8,4]));
+        assert_eq!(
+            vec![4, 9],
+            Solution::intersect(vec![4, 9, 5], vec![9, 4, 9, 8, 4])
+        );
     }
 
     #[test]
     fn nr_1550_ex_01() {
-        assert!(!Solution::three_consecutive_odds(vec![2,6,4,1]));
+        assert!(!Solution::three_consecutive_odds(vec![2, 6, 4, 1]));
     }
 
     #[test]
     fn nr_1550_ex_02() {
-        assert!(Solution::three_consecutive_odds(vec![1,2,34,3,4,5,7,23,12]));
+        assert!(Solution::three_consecutive_odds(vec![
+            1, 2, 34, 3, 4, 5, 7, 23, 12
+        ]));
     }
 
     #[test]
     fn nr_1791_ex_01() {
-        assert_eq!(2, Solution::find_center(vec![vec![1,2], vec![2,3], vec![4,2]]));
+        assert_eq!(
+            2,
+            Solution::find_center(vec![vec![1, 2], vec![2, 3], vec![4, 2]])
+        );
     }
 
     #[test]
     fn nr_1791_ex_02() {
-        assert_eq!(1, Solution::find_center(vec![vec![1,2], vec![5,1], vec![1,3], vec![1,4]]));
+        assert_eq!(
+            1,
+            Solution::find_center(vec![vec![1, 2], vec![5, 1], vec![1, 3], vec![1, 4]])
+        );
     }
 
     #[test]
     fn nr_2037_ex_01() {
-        assert_eq!(4, Solution::min_moves_to_seat(vec![3,1,5], vec![2,7,4]));
+        assert_eq!(4, Solution::min_moves_to_seat(vec![3, 1, 5], vec![2, 7, 4]));
     }
 
     #[test]
     fn nr_2037_ex_02() {
-        assert_eq!(7, Solution::min_moves_to_seat(vec![4,1,5,9], vec![1,3,2,6]));
+        assert_eq!(
+            7,
+            Solution::min_moves_to_seat(vec![4, 1, 5, 9], vec![1, 3, 2, 6])
+        );
     }
 
     #[test]
     fn nr_2037_ex_03() {
-        assert_eq!(4, Solution::min_moves_to_seat(vec![2,2,6,6], vec![1,3,2,6]));
+        assert_eq!(
+            4,
+            Solution::min_moves_to_seat(vec![2, 2, 6, 6], vec![1, 3, 2, 6])
+        );
     }
 
     #[test]
     fn nr_1122_ex_01() {
-        assert_eq!(vec![2,2,2,1,4,3,3,9,6,7,19], Solution::relative_sort_array(vec![2,3,1,3,2,4,6,7,9,2,19], vec![2,1,4,3,9,6]));
+        assert_eq!(
+            vec![2, 2, 2, 1, 4, 3, 3, 9, 6, 7, 19],
+            Solution::relative_sort_array(
+                vec![2, 3, 1, 3, 2, 4, 6, 7, 9, 2, 19],
+                vec![2, 1, 4, 3, 9, 6]
+            )
+        );
     }
 
     #[test]
     fn nr_1122_ex_02() {
-        assert_eq!(vec![22,28,8,6,17,44], Solution::relative_sort_array(vec![28,6,22,8,44,17], vec![22,28,8,6]));
+        assert_eq!(
+            vec![22, 28, 8, 6, 17, 44],
+            Solution::relative_sort_array(vec![28, 6, 22, 8, 44, 17], vec![22, 28, 8, 6])
+        );
     }
 
     #[test]
     fn nr_1051_ex_01() {
-        assert_eq!(3, Solution::height_checker(vec![1,1,4,2,1,3]));
+        assert_eq!(3, Solution::height_checker(vec![1, 1, 4, 2, 1, 3]));
     }
 
     #[test]
     fn nr_1051_ex_02() {
-        assert_eq!(5, Solution::height_checker(vec![5,1,2,3,4]));
+        assert_eq!(5, Solution::height_checker(vec![5, 1, 2, 3, 4]));
     }
 
     #[test]
     fn nr_1051_ex_03() {
-        assert_eq!(0, Solution::height_checker(vec![1,2,3,4,5]));
+        assert_eq!(0, Solution::height_checker(vec![1, 2, 3, 4, 5]));
     }
 
     #[test]
     fn nr_1002_ex_01() {
-        assert_eq!(vec!["e".to_string(), "l".to_string(), "l".to_string()], Solution::common_chars(vec!["bella".to_string(), "label".to_string(), "roller".to_string()]));
+        assert_eq!(
+            vec!["e".to_string(), "l".to_string(), "l".to_string()],
+            Solution::common_chars(vec![
+                "bella".to_string(),
+                "label".to_string(),
+                "roller".to_string()
+            ])
+        );
     }
 
     #[test]
     fn nr_1002_ex_02() {
-        assert_eq!(vec!["c".to_string(), "o".to_string()], Solution::common_chars(vec!["cool".to_string(), "lock".to_string(), "cook".to_string()]));
+        assert_eq!(
+            vec!["c".to_string(), "o".to_string()],
+            Solution::common_chars(vec![
+                "cool".to_string(),
+                "lock".to_string(),
+                "cook".to_string()
+            ])
+        );
     }
 
     #[test]
@@ -390,19 +565,19 @@ mod test {
     fn nr_409_ex_02() {
         assert_eq!(1, Solution::longest_palindrome_dup("a".to_string()));
     }
-   
+
     #[test]
     fn nr_344_ex_01() {
-        let mut rev = vec!['h','e','l','l','o'];
+        let mut rev = vec!['h', 'e', 'l', 'l', 'o'];
         Solution::reverse_string(&mut rev);
-        assert_eq!(vec!['o','l','l','e','h'], rev);
+        assert_eq!(vec!['o', 'l', 'l', 'e', 'h'], rev);
     }
 
     #[test]
     fn nr_344_ex_02() {
-        let mut rev = vec!['H','a','n','n','a', 'h'];
+        let mut rev = vec!['H', 'a', 'n', 'n', 'a', 'h'];
         Solution::reverse_string(&mut rev);
-        assert_eq!(vec!['h', 'a','n','n','a','H'], rev);
+        assert_eq!(vec!['h', 'a', 'n', 'n', 'a', 'H'], rev);
     }
 
     #[test]
@@ -417,32 +592,32 @@ mod test {
 
     #[test]
     fn nr_1608_ex_01() {
-        assert_eq!(2, Solution::special_array(vec![3,5]));
+        assert_eq!(2, Solution::special_array(vec![3, 5]));
     }
 
     #[test]
     fn nr_1608_ex_02() {
-        assert_eq!(-1, Solution::special_array(vec![0,0]));
+        assert_eq!(-1, Solution::special_array(vec![0, 0]));
     }
 
     #[test]
     fn nr_1608_ex_03() {
-        assert_eq!(3, Solution::special_array(vec![0,4,3,0,4]));
+        assert_eq!(3, Solution::special_array(vec![0, 4, 3, 0, 4]));
     }
 
     #[test]
     fn nr_1863_ex_01() {
-        assert_eq!(6, Solution::subset_xor_sum(vec![1,3]));
+        assert_eq!(6, Solution::subset_xor_sum(vec![1, 3]));
     }
 
     #[test]
     fn nr_1863_ex_02() {
-        assert_eq!(28, Solution::subset_xor_sum(vec![5,1,6]));
+        assert_eq!(28, Solution::subset_xor_sum(vec![5, 1, 6]));
     }
 
     #[test]
     fn nr_1863_ex_03() {
-        assert_eq!(480, Solution::subset_xor_sum(vec![3,4,5,6,7,8]));
+        assert_eq!(480, Solution::subset_xor_sum(vec![3, 4, 5, 6, 7, 8]));
     }
 
     #[test]
@@ -462,59 +637,93 @@ mod test {
 
     #[test]
     fn nr_2331_ex_02() {
-        assert!(!Solution::evaluate_tree(Some(Rc::new(RefCell::new(TreeNode::new(0))))));
+        assert!(!Solution::evaluate_tree(Some(Rc::new(RefCell::new(
+            TreeNode::new(0)
+        )))));
     }
 
     #[test]
     fn nr_2373_ex_01() {
-        assert_eq!(vec![vec![9,9], vec![8,6]], Solution::largest_local(vec![vec![9,9,8,1],vec![5,6,2,6],vec![8,2,6,4],vec![6,2,2,2]]));
+        assert_eq!(
+            vec![vec![9, 9], vec![8, 6]],
+            Solution::largest_local(vec![
+                vec![9, 9, 8, 1],
+                vec![5, 6, 2, 6],
+                vec![8, 2, 6, 4],
+                vec![6, 2, 2, 2]
+            ])
+        );
     }
 
     #[test]
     fn nr_2373_ex_02() {
-        assert_eq!(vec![vec![2,2,2],vec![2,2,2],vec![2,2,2]], Solution::largest_local(vec![vec![1,1,1,1,1],vec![1,1,1,1,1],vec![1,1,2,1,1],vec![1,1,1,1,1],vec![1,1,1,1,1]]));
+        assert_eq!(
+            vec![vec![2, 2, 2], vec![2, 2, 2], vec![2, 2, 2]],
+            Solution::largest_local(vec![
+                vec![1, 1, 1, 1, 1],
+                vec![1, 1, 1, 1, 1],
+                vec![1, 1, 2, 1, 1],
+                vec![1, 1, 1, 1, 1],
+                vec![1, 1, 1, 1, 1]
+            ])
+        );
     }
 
     #[test]
     fn nr_506_ex_01() {
-        let ans = vec!["Gold Medal","Silver Medal","Bronze Medal","4","5"].into_iter().map(|s| s.to_string()).collect::<Vec<_>>();
-        assert_eq!(ans, Solution::find_relative_ranks(vec![5,4,3,2,1]));
+        let ans = vec!["Gold Medal", "Silver Medal", "Bronze Medal", "4", "5"]
+            .into_iter()
+            .map(|s| s.to_string())
+            .collect::<Vec<_>>();
+        assert_eq!(ans, Solution::find_relative_ranks(vec![5, 4, 3, 2, 1]));
     }
 
     #[test]
     fn nr_506_ex_02() {
-        let ans = vec!["Gold Medal","5","Bronze Medal","Silver Medal","4"].into_iter().map(|s| s.to_string()).collect::<Vec<_>>();
-        assert_eq!(ans, Solution::find_relative_ranks(vec![10,3,8,9,4]));
+        let ans = vec!["Gold Medal", "5", "Bronze Medal", "Silver Medal", "4"]
+            .into_iter()
+            .map(|s| s.to_string())
+            .collect::<Vec<_>>();
+        assert_eq!(ans, Solution::find_relative_ranks(vec![10, 3, 8, 9, 4]));
     }
 
     #[test]
     fn nr_2441_ex_01() {
-        assert_eq!(3, Solution::find_max_k(vec![-1,2,-3,3]));
+        assert_eq!(3, Solution::find_max_k(vec![-1, 2, -3, 3]));
     }
 
     #[test]
     fn nr_2441_ex_02() {
-        assert_eq!(7, Solution::find_max_k(vec![-1,10,5,7,-7,1]));
+        assert_eq!(7, Solution::find_max_k(vec![-1, 10, 5, 7, -7, 1]));
     }
 
     #[test]
     fn nr_2441_ex_03() {
-        assert_eq!(-1, Solution::find_max_k(vec![-10,8,6,7,-2,-3]));
+        assert_eq!(-1, Solution::find_max_k(vec![-10, 8, 6, 7, -2, -3]));
     }
 
     #[test]
     fn nr_2000_ex_01() {
-        assert_eq!("dcbaefd".to_string(), Solution::reverse_prefix("abcdefd".to_string(), 'd'));
+        assert_eq!(
+            "dcbaefd".to_string(),
+            Solution::reverse_prefix("abcdefd".to_string(), 'd')
+        );
     }
 
     #[test]
     fn nr_2000_ex_02() {
-        assert_eq!("zxyxxe".to_string(), Solution::reverse_prefix("xyxzxe".to_string(), 'z'));
+        assert_eq!(
+            "zxyxxe".to_string(),
+            Solution::reverse_prefix("xyxzxe".to_string(), 'z')
+        );
     }
-    
+
     #[test]
     fn nr_2000_ex_03() {
-        assert_eq!("abcd".to_string(), Solution::reverse_prefix("abcd".to_string(), 'z'));
+        assert_eq!(
+            "abcd".to_string(),
+            Solution::reverse_prefix("abcd".to_string(), 'z')
+        );
     }
 
     #[test]
@@ -529,12 +738,22 @@ mod test {
 
     #[test]
     fn nr_1971_ex_01() {
-        assert!(Solution::valid_path(3, vec![vec![0,1],vec![1,2],vec![2,0]], 0, 2));
+        assert!(Solution::valid_path(
+            3,
+            vec![vec![0, 1], vec![1, 2], vec![2, 0]],
+            0,
+            2
+        ));
     }
 
     #[test]
     fn nr_1971_ex_02() {
-        assert!(!Solution::valid_path(3, vec![vec![0,1],vec![0,2],vec![3,5],vec![5,4],vec![4,3]], 0, 5));
+        assert!(!Solution::valid_path(
+            3,
+            vec![vec![0, 1], vec![0, 2], vec![3, 5], vec![5, 4], vec![4, 3]],
+            0,
+            5
+        ));
     }
 
     #[test]
@@ -616,23 +835,26 @@ mod test {
 
     #[test]
     fn nr_205_ex_01() {
-        assert!(
-            Solution::is_isomorphic("egg".to_string(), "add".to_string())
-        );
+        assert!(Solution::is_isomorphic(
+            "egg".to_string(),
+            "add".to_string()
+        ));
     }
 
     #[test]
     fn nr_205_ex_02() {
-        assert!(
-            !Solution::is_isomorphic("foo".to_string(), "bar".to_string())
-        );
+        assert!(!Solution::is_isomorphic(
+            "foo".to_string(),
+            "bar".to_string()
+        ));
     }
 
     #[test]
     fn nr_205_ex_03() {
-        assert!(
-            Solution::is_isomorphic("paper".to_string(), "title".to_string())
-        );
+        assert!(Solution::is_isomorphic(
+            "paper".to_string(),
+            "title".to_string()
+        ));
     }
 
     #[test]

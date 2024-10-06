@@ -8,7 +8,7 @@ impl Solution {
 
         for _ in 1..n {
             let mut next = [0; 10];
-            
+
             next[0] = (ans[5] + ans[7]) % MOD;
             next[1] = (ans[6] + ans[8]) % MOD;
             next[2] = (ans[3] + ans[7]) % MOD;

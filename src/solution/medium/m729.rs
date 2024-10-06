@@ -13,11 +13,10 @@ impl Default for MyCalendar {
  * If you need a mutable reference, change it to `&mut self` instead.
  */
 impl MyCalendar {
-
     pub fn new() -> Self {
         Self { dates: Vec::new() }
     }
-    
+
     pub fn book(&mut self, start: i32, end: i32) -> bool {
         for date in self.dates.iter() {
             if date.0 < end && date.1 > start {

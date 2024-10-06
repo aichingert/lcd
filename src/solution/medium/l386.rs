@@ -16,9 +16,7 @@ impl Solution {
                 }
 
                 c += 1;
-
             }
-
         }
 
         v

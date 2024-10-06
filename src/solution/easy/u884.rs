@@ -13,6 +13,9 @@ impl Solution {
             h.entry(w).and_modify(|n| *n += 1).or_insert(1);
         }
 
-        h.into_iter().filter(|(_, v)| *v == 1).map(|(k, _)| k.to_string()).collect::<Vec<_>>()
+        h.into_iter()
+            .filter(|(_, v)| *v == 1)
+            .map(|(k, _)| k.to_string())
+            .collect::<Vec<_>>()
     }
 }

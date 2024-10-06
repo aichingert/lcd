@@ -2,7 +2,11 @@ use crate::Solution;
 use std::cmp::Ordering;
 
 impl Solution {
-    pub fn survived_robots_healths(positions: Vec<i32>, healths: Vec<i32>, directions: String) -> Vec<i32> {
+    pub fn survived_robots_healths(
+        positions: Vec<i32>,
+        healths: Vec<i32>,
+        directions: String,
+    ) -> Vec<i32> {
         let mut ans = Vec::new();
         let mut st = Vec::<(usize, char, i32, i32)>::new();
 
@@ -12,7 +16,7 @@ impl Solution {
             comb.push((i, ch, positions[i], healths[i]));
         }
 
-        comb.sort_unstable_by(|(_, _, a,_), (_, _, b, _)| a.cmp(b));
+        comb.sort_unstable_by(|(_, _, a, _), (_, _, b, _)| a.cmp(b));
 
         for mut cur in comb {
             if cur.1 == 'R' {
@@ -41,7 +45,11 @@ impl Solution {
             }
         }
 
-        let mut res = st.into_iter().chain(ans).map(|(i, _, _, h)| (i, h)).collect::<Vec<_>>();
+        let mut res = st
+            .into_iter()
+            .chain(ans)
+            .map(|(i, _, _, h)| (i, h))
+            .collect::<Vec<_>>();
         res.sort_unstable_by(|a, b| a.0.cmp(&b.0));
         res.into_iter().map(|(_, h)| h).collect()
     }

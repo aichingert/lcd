@@ -10,7 +10,9 @@ impl Solution {
             let mut g = 0;
 
             for &(d, p) in &zip {
-                if d > w { break; }
+                if d > w {
+                    break;
+                }
                 g = g.max(p);
             }
 

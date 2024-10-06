@@ -20,7 +20,12 @@ fn bktk((i, j, k): (i32, i32, usize), b: &mut [Vec<char>], w: &[char]) -> bool {
     if k == w.len() {
         return true;
     }
-    if i < 0 || j < 0 || i >= b.len() as i32 || j >= b[0].len() as i32 || b[i as usize][j as usize] != w[k] {
+    if i < 0
+        || j < 0
+        || i >= b.len() as i32
+        || j >= b[0].len() as i32
+        || b[i as usize][j as usize] != w[k]
+    {
         return false;
     }
 
@@ -28,8 +33,11 @@ fn bktk((i, j, k): (i32, i32, usize), b: &mut [Vec<char>], w: &[char]) -> bool {
     b[i as usize][j as usize] = '\0';
     let k = k + 1;
 
-    if bktk((i + 1, j, k), b, w) || bktk((i, j + 1, k), b, w) 
-    || bktk((i - 1, j, k), b, w) || bktk((i, j - 1, k), b, w) {
+    if bktk((i + 1, j, k), b, w)
+        || bktk((i, j + 1, k), b, w)
+        || bktk((i - 1, j, k), b, w)
+        || bktk((i, j - 1, k), b, w)
+    {
         return true;
     }
 

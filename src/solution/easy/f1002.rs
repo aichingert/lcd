@@ -10,7 +10,12 @@ impl Solution {
             }
         }
 
-        let res = cnts.into_iter().fold([1000; 26], |mut a, c| { for i in 0..a.len() { a[i] = a[i].min(c[i]); } a });
+        let res = cnts.into_iter().fold([1000; 26], |mut a, c| {
+            for i in 0..a.len() {
+                a[i] = a[i].min(c[i]);
+            }
+            a
+        });
         let mut ans = Vec::new();
 
         for (i, a) in res.into_iter().enumerate() {

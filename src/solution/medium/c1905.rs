@@ -37,7 +37,9 @@ impl Solution {
                     }
                 }
 
-                if c { a += 1; }
+                if c {
+                    a += 1;
+                }
             }
         }
 

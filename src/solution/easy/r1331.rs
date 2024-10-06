@@ -17,7 +17,7 @@ impl Solution {
             ans[i] = cnt;
             prv = Some(v);
         }
-        
+
         ans
     }
 }

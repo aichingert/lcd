@@ -17,7 +17,7 @@ impl Solution {
             while n > 0 {
                 let cur = mapping[n as usize % 10] * len;
                 res += cur;
-                
+
                 n /= 10;
                 len *= 10;
             }

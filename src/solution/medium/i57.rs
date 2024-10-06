@@ -36,7 +36,10 @@ impl Solution {
                 ans.push(intervals[i].clone());
                 j += 1;
             } else {
-                ans[j] = vec![ans[j][0].min(intervals[i][0]), ans[j][1].max(intervals[i][1])];
+                ans[j] = vec![
+                    ans[j][0].min(intervals[i][0]),
+                    ans[j][1].max(intervals[i][1]),
+                ];
             }
 
             i += 1;

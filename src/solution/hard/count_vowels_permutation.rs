@@ -8,7 +8,7 @@ impl Solution {
     pub fn count_vowel_permutation(n: i32) -> i32 {
         let mut start = [1; 5];
         const MOD: i64 = 1e9 as i64 + 7;
-        
+
         for _ in 1..n {
             let mut cp = [0; 5];
 

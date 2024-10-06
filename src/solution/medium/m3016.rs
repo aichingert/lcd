@@ -14,7 +14,9 @@ impl Solution {
         let mut a = 0;
 
         for (i, e) in m.into_iter().enumerate() {
-            if e == 0 { break; }
+            if e == 0 {
+                break;
+            }
             if i > 0 && i % 8 == 0 {
                 c += 1;
             }

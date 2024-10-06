@@ -10,7 +10,9 @@ impl Solution {
                 }
             }
 
-            if cnt == i { return i; }
+            if cnt == i {
+                return i;
+            }
         }
 
         -1

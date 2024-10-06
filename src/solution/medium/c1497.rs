@@ -16,7 +16,6 @@ impl Solution {
                     if hs[&0] == 0 {
                         hs.remove(&0);
                     }
-
                 } else {
                     hs.entry(0).and_modify(|n| *n += 1).or_insert(1);
                 }
@@ -34,7 +33,7 @@ impl Solution {
                 }
             }
         }
-        
+
         hs.is_empty()
     }
 }

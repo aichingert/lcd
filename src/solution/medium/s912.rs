@@ -18,10 +18,10 @@ fn merge_sort(mut arr: Vec<i32>) -> Vec<i32> {
     while lp < l.len() || rp < r.len() {
         if lp < l.len() && (rp >= r.len() || l[lp] < r[rp]) {
             arr[lp + rp] = l[lp];
-            lp+=1;
+            lp += 1;
         } else {
             arr[lp + rp] = r[rp];
-            rp+=1;
+            rp += 1;
         }
     }
 

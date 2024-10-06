@@ -5,8 +5,6 @@ impl Solution {
         let mut ex = heights.clone();
         ex.sort_unstable();
 
-        heights.into_iter().zip(ex)
-            .filter(|(h, e)| h != e)
-            .count() as i32
+        heights.into_iter().zip(ex).filter(|(h, e)| h != e).count() as i32
     }
 }

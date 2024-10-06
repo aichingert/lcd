@@ -9,8 +9,12 @@ impl Solution {
         let mut v = vec![source];
 
         for edge in edges {
-            g.entry(edge[0]).and_modify(|v| v.push(edge[1])).or_insert(vec![edge[1]]);
-            g.entry(edge[1]).and_modify(|v| v.push(edge[0])).or_insert(vec![edge[0]]);
+            g.entry(edge[0])
+                .and_modify(|v| v.push(edge[1]))
+                .or_insert(vec![edge[1]]);
+            g.entry(edge[1])
+                .and_modify(|v| v.push(edge[0]))
+                .or_insert(vec![edge[0]]);
         }
 
         while let Some(c) = v.pop() {

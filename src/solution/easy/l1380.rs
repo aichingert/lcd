@@ -12,7 +12,8 @@ impl Solution {
                 if match *a {
                     Ok(n) => n,
                     Err(n) => n,
-                } < row[j] {
+                } < row[j]
+                {
                     *a = Err(row[j]);
                 }
 
@@ -25,7 +26,8 @@ impl Solution {
             if match ans[idx] {
                 Ok(n) => n,
                 Err(n) => n,
-            } <= min {
+            } <= min
+            {
                 ans[idx] = Ok(min);
             }
         }

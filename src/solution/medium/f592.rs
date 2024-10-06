@@ -6,7 +6,9 @@ impl Solution {
         let expr = expression.bytes().collect::<Vec<_>>();
         let mut i = 0;
         let mut is_neg = expr[i] == b'-';
-        if is_neg { i += 1; }
+        if is_neg {
+            i += 1;
+        }
 
         let mut num = get_next(&mut i, &expr);
         i += 1; // /n
@@ -26,7 +28,7 @@ impl Solution {
                     if den != oden {
                         next = den * oden;
                         num *= oden;
-                        onum *= den; 
+                        onum *= den;
                     }
 
                     if is_neg {
@@ -64,7 +66,7 @@ impl Solution {
                 _ => panic!("invalid op {}", op as char),
             }
         }
-        
+
         let mut short = 2;
         while short < num + den {
             if num % short == 0 && den % short == 0 {
@@ -84,7 +86,10 @@ impl Solution {
             den /= den;
         }
 
-        if num == 0 { is_neg = false; den = 1; }
+        if num == 0 {
+            is_neg = false;
+            den = 1;
+        }
 
         format!("{}{num}/{den}", if is_neg { "-" } else { "" })
     }

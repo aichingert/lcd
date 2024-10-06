@@ -2,8 +2,8 @@
  * aichingert
  */
 
-use crate::Solution;
 use crate::is_palindrome;
+use crate::Solution;
 
 impl Solution {
     pub fn longest_palindrome(s: String) -> String {

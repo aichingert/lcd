@@ -8,7 +8,7 @@ use crate::TreeNode;
 //   pub left: Option<Rc<RefCell<TreeNode>>>,
 //   pub right: Option<Rc<RefCell<TreeNode>>>,
 // }
-// 
+//
 // impl TreeNode {
 //   #[inline]
 //   pub fn new(val: i32) -> Self {
@@ -19,8 +19,8 @@ use crate::TreeNode;
 //     }
 //   }
 // }
-use std::rc::Rc;
 use std::cell::RefCell;
+use std::rc::Rc;
 type Node = Option<Rc<RefCell<TreeNode>>>;
 impl Solution {
     pub fn balance_bst(root: Node) -> Option<Rc<RefCell<TreeNode>>> {
@@ -31,7 +31,9 @@ impl Solution {
 }
 
 fn build(v: &[i32]) -> Node {
-    if v.is_empty() { return None }
+    if v.is_empty() {
+        return None;
+    }
     let mut tn = TreeNode::new(v[v.len() / 2]);
 
     tn.left = build(&v[..v.len() / 2]);

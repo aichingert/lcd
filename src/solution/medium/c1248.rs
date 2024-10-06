@@ -16,7 +16,7 @@ impl Solution {
                     if nums[start] & 1 == 1 {
                         qsize -= 1;
                     }
-        
+
                     gap += 1;
                     start += 1;
                 }

@@ -8,10 +8,14 @@ impl Solution {
         let (mut l, mut r) = (0, 0);
 
         while r < nums.len() {
-            if nums[r] == s { sen += 1; }
+            if nums[r] == s {
+                sen += 1;
+            }
 
             while l <= r && sen >= k {
-                if nums[l] == s { sen -= 1; }
+                if nums[l] == s {
+                    sen -= 1;
+                }
                 l += 1;
             }
 

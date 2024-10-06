@@ -33,7 +33,6 @@ impl Solution {
                             continue 'outer;
                         }
                     }
-
                 }
             }
         }

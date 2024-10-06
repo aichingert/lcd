@@ -10,7 +10,7 @@ impl Solution {
         }
 
         let mut vec = map.into_values().collect::<Vec<_>>();
-        vec.sort_unstable_by(|a,b| b.cmp(a));
+        vec.sort_unstable_by(|a, b| b.cmp(a));
         let mut int = 0;
 
         while vec[0] != 0 {
@@ -25,7 +25,7 @@ impl Solution {
                 cur += 1;
             }
 
-            vec.sort_unstable_by(|a,b| b.cmp(a));
+            vec.sort_unstable_by(|a, b| b.cmp(a));
 
             if cur > n || vec[0] == 0 {
                 int += cur;

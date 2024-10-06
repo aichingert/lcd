@@ -1,5 +1,5 @@
-use crate::Solution;
 use crate::ListNode;
+use crate::Solution;
 
 // Definition for singly-linked list.
 // #[derive(PartialEq, Eq, Clone, Debug)]
@@ -7,7 +7,7 @@ use crate::ListNode;
 //   pub val: i32,
 //   pub next: Option<Box<ListNode>>
 // }
-// 
+//
 // impl ListNode {
 //   #[inline]
 //   fn new(val: i32) -> Self {
@@ -27,21 +27,29 @@ impl Solution {
 
         while let Some(node) = head {
             s[r][c] = node.val;
-            
+
             match d {
-                0 => if c == n - h {
-                    d = 1;
-                },
-                1 => if r == m - v {
-                    v += 1;
-                    d = 2;
-                },
-                2 => if c == h {
-                    h += 1;
-                    d = 3;
-                },
-                _ => if r == v {
-                    d = 0;
+                0 => {
+                    if c == n - h {
+                        d = 1;
+                    }
+                }
+                1 => {
+                    if r == m - v {
+                        v += 1;
+                        d = 2;
+                    }
+                }
+                2 => {
+                    if c == h {
+                        h += 1;
+                        d = 3;
+                    }
+                }
+                _ => {
+                    if r == v {
+                        d = 0;
+                    }
                 }
             }
 

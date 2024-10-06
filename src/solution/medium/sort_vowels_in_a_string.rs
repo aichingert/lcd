@@ -6,7 +6,7 @@ impl Solution {
         let chs = s.chars().collect::<Vec<_>>();
         let mut vowels = chs.iter().filter(|&c| is_vowel(*c)).collect::<Vec<_>>();
         vowels.sort();
-        
+
         let mut ans = String::new();
         let mut j = 0usize;
 

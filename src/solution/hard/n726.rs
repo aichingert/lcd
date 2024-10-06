@@ -12,13 +12,15 @@ impl Solution {
         }
 
         ans.sort_by(|a, b| a.0.cmp(&b.0));
-        ans.into_iter().fold((String::new(), 0), |mut acc, cur| {
-            acc.0.push_str(&cur.0);
-            if cur.1 > 1 {
-                acc.0.push_str(&cur.1.to_string());
-            }
-            acc
-        }).0
+        ans.into_iter()
+            .fold((String::new(), 0), |mut acc, cur| {
+                acc.0.push_str(&cur.0);
+                if cur.1 > 1 {
+                    acc.0.push_str(&cur.1.to_string());
+                }
+                acc
+            })
+            .0
     }
 }
 
@@ -44,7 +46,10 @@ fn parse_scope(chs: &[char], mut p: usize) -> (HashMap<String, i32>, usize) {
 
                 cnt = cnt.max(1);
                 for (k, v) in inner {
-                    scope.entry(k).and_modify(|cur| *cur += v * cnt).or_insert(v * cnt);
+                    scope
+                        .entry(k)
+                        .and_modify(|cur| *cur += v * cnt)
+                        .or_insert(v * cnt);
                 }
             }
             'A'..='Z' => {

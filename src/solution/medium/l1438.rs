@@ -11,7 +11,10 @@ impl Solution {
         for r in 0..nums.len() {
             *map.entry(nums[r]).or_insert(0) += 1;
 
-            let (mut min, mut max) = (*map.first_key_value().unwrap().0, *map.last_key_value().unwrap().0);
+            let (mut min, mut max) = (
+                *map.first_key_value().unwrap().0,
+                *map.last_key_value().unwrap().0,
+            );
 
             match max - min <= limit {
                 true => ans = ans.max(r - l + 1),
@@ -22,7 +25,10 @@ impl Solution {
                         if *e == 0 {
                             map.remove(&nums[l]);
                         }
-                        (max, min) = (*map.first_key_value().unwrap().0, *map.last_key_value().unwrap().0);
+                        (max, min) = (
+                            *map.first_key_value().unwrap().0,
+                            *map.last_key_value().unwrap().0,
+                        );
                         l += 1;
                     }
                 }

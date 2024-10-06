@@ -11,7 +11,7 @@ impl Solution {
         }
 
         let mut v = m.into_iter().collect::<Vec<_>>();
-        v.sort_by(|a,b| b.1.cmp(&a.1));
+        v.sort_by(|a, b| b.1.cmp(&a.1));
 
         let mut ans = String::new();
 

@@ -1,11 +1,11 @@
 /* Leetcode daily (lcd)
  * *******************************
- * library for functions that will 
+ * library for functions that will
  * be used in more than one day
  */
 
-use std::rc::Rc;
 use std::cell::RefCell;
+use std::rc::Rc;
 
 pub mod solution;
 pub use solution::Solution;
@@ -35,14 +35,11 @@ pub struct ListNode {
 
 impl ListNode {
     pub fn new(val: i32) -> Self {
-        Self {
-            val,
-            next: None,
-        }
+        Self { val, next: None }
     }
 }
 
-pub fn is_palindrome(s: &[char]) -> bool  {
+pub fn is_palindrome(s: &[char]) -> bool {
     for i in 0..s.len() / 2 {
         if s[i] != s[s.len() - i - 1] {
             return false;
@@ -53,5 +50,8 @@ pub fn is_palindrome(s: &[char]) -> bool  {
 }
 
 pub fn is_vowel(ch: char) -> bool {
-    matches!(ch, 'a' | 'A' | 'e' | 'E' | 'i' | 'I' | 'o' | 'O' | 'u' | 'U')
+    matches!(
+        ch,
+        'a' | 'A' | 'e' | 'E' | 'i' | 'I' | 'o' | 'O' | 'u' | 'U'
+    )
 }

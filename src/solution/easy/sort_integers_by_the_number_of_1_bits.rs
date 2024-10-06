@@ -2,7 +2,6 @@
  * aichingert
  */
 
-
 use crate::Solution;
 
 impl Solution {

@@ -9,7 +9,10 @@ impl Solution {
             return false;
         }
 
-        let chk = s1.chars().fold(HashMap::new(), |mut acc, c| {acc.entry(c).and_modify(|n| *n += 1).or_insert(1i32); acc});
+        let chk = s1.chars().fold(HashMap::new(), |mut acc, c| {
+            acc.entry(c).and_modify(|n| *n += 1).or_insert(1i32);
+            acc
+        });
         let chs = s2.chars().collect::<Vec<_>>();
         let mut cur = HashMap::new();
 
@@ -20,7 +23,7 @@ impl Solution {
             cur.entry(ch).and_modify(|n| *n += 1).or_insert(1i32);
         }
 
-        for _ in p2..chs.len() {
+        for _ in s1.len()..chs.len() {
             if cur == chk {
                 return true;
             }

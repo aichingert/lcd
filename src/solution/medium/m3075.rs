@@ -7,7 +7,9 @@ impl Solution {
 
         for i in 0..k {
             let cur = 0.max(happiness[happiness.len() - i as usize - 1] - i);
-            if cur == 0 { break; }
+            if cur == 0 {
+                break;
+            }
             ans += cur as i64;
         }
 

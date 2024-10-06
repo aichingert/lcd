@@ -6,7 +6,7 @@ impl Solution {
     pub fn regions_by_slashes(grid: Vec<String>) -> i32 {
         let n = grid.len();
         let mut t = vec![vec![0; n * 3]; n * 3];
-        
+
         for (i, r) in grid.iter().enumerate() {
             for (j, c) in r.chars().enumerate() {
                 match c {
@@ -14,7 +14,7 @@ impl Solution {
                         t[i * 3][j * 3 + 2] = 1;
                         t[i * 3 + 1][j * 3 + 1] = 1;
                         t[i * 3 + 2][j * 3] = 1;
-                    },
+                    }
                     '\\' => {
                         t[i * 3][j * 3] = 1;
                         t[i * 3 + 1][j * 3 + 1] = 1;

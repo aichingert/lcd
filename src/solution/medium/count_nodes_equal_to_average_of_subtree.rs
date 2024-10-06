@@ -2,15 +2,16 @@
  * aichingert
  */
 
-use std::rc::Rc;
 use std::cell::RefCell;
+use std::rc::Rc;
 
 use crate::Solution;
 use crate::TreeNode;
 
 impl Solution {
     pub fn average_of_subtree(root: Option<Rc<RefCell<TreeNode>>>) -> i32 {
-        let mut ans = 0; Solution::find_avg_subtrees(&root, &mut ans);
+        let mut ans = 0;
+        Solution::find_avg_subtrees(&root, &mut ans);
         ans
     }
 

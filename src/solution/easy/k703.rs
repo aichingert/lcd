@@ -5,9 +5,7 @@ pub struct KthLargest {
     len: usize,
 }
 
-
 impl KthLargest {
-
     pub fn new(k: i32, mut nums: Vec<i32>) -> Self {
         nums.sort_unstable();
         let skip = (nums.len() as i32 - k).max(0) as usize;
@@ -17,7 +15,7 @@ impl KthLargest {
             len: k as usize,
         }
     }
-    
+
     pub fn add(&mut self, val: i32) -> i32 {
         if self.nth.len() == self.len && val <= self.nth[0] {
             return self.nth[0];

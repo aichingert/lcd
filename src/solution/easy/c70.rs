@@ -7,7 +7,7 @@ impl Solution {
         for i in 2..=n as usize + 1 {
             dp.push(dp[i - 1] + dp[i - 2]);
         }
-        
+
         dp[(n + 1) as usize]
     }
 }

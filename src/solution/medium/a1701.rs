@@ -15,7 +15,7 @@ impl Solution {
             ans += ts[1] as i64;
             cur_t += ts[1] as i64;
         }
-        
+
         ans as f64 / customers.len() as f64
     }
 }

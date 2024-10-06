@@ -2,8 +2,10 @@ use crate::Solution;
 
 impl Solution {
     pub fn num_subarray_product_less_than_k(nums: Vec<i32>, k: i32) -> i32 {
-        if k <= 1 { return 0; }
-    
+        if k <= 1 {
+            return 0;
+        }
+
         let mut ans = 0;
 
         let (mut l, mut r) = (0, 0);

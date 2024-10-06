@@ -1,13 +1,13 @@
 use crate::Solution;
 
-use std::collections::{VecDeque, HashSet};
+use std::collections::{HashSet, VecDeque};
 
 impl Solution {
     pub fn find_rotate_steps(ring: String, key: String) -> i32 {
         let mut s = HashSet::<(i32, i32)>::new();
         let r = ring.chars().collect::<Vec<_>>();
         let k = key.chars().collect::<Vec<_>>();
-        
+
         let mut bfs = VecDeque::from([(0, 0, 0)]);
 
         while let Some((rp, kp, ans)) = bfs.pop_front() {

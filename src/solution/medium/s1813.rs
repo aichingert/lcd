@@ -19,7 +19,7 @@ impl Solution {
             e1 -= 1;
             e2 -= 1;
         }
-        
+
         e1 < s as i32
     }
 }

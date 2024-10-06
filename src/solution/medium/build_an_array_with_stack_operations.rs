@@ -6,7 +6,9 @@ impl Solution {
         let mut ptr = 0;
 
         for i in 1..=n {
-            if ptr >= target.len() { break; }
+            if ptr >= target.len() {
+                break;
+            }
 
             ops.push(String::from("Push"));
             if target[ptr] > i {

@@ -11,7 +11,9 @@ impl Solution {
                     r += 1;
                 }
                 ')' => {
-                    if r == 0 { return false; }
+                    if r == 0 {
+                        return false;
+                    }
                     l = (l - 1).max(0);
                     r -= 1;
                 }
@@ -26,4 +28,3 @@ impl Solution {
         l == 0
     }
 }
-

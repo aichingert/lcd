@@ -5,6 +5,8 @@ impl Solution {
         seats.sort_unstable();
         students.sort_unstable();
 
-        (0..seats.len()).map(|i| (seats[i] - students[i]).abs()).sum()
+        (0..seats.len())
+            .map(|i| (seats[i] - students[i]).abs())
+            .sum()
     }
 }

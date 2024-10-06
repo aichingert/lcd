@@ -19,7 +19,9 @@ fn bkt(s: &[char], cur: String, dict: &[String]) -> Vec<String> {
         if dict.contains(&ss) {
             let mut cl = cur.clone();
 
-            if !cl.is_empty() { cl.push(' '); }
+            if !cl.is_empty() {
+                cl.push(' ');
+            }
             cl.push_str(&ss);
 
             for n in bkt(&s[i + 1..], cl, dict) {

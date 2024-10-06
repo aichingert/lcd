@@ -19,7 +19,7 @@ fn dfs(memo: &mut HashMap<(usize, usize), i32>, m: &Vec<Vec<i32>>, (r, c): (usiz
     if let Some(res) = memo.get(&(r, c)) {
         return *res;
     }
-    
+
     if r >= m.len() || c >= m[0].len() {
         return i32::MAX;
     }

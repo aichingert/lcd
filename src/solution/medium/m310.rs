@@ -21,7 +21,12 @@ impl Solution {
             d[b] += 1;
         }
 
-        let mut leaves = VecDeque::from_iter(d.iter().enumerate().filter(|(_, &e)| e == 1).map(|(i, _)| i));
+        let mut leaves = VecDeque::from_iter(
+            d.iter()
+                .enumerate()
+                .filter(|(_, &e)| e == 1)
+                .map(|(i, _)| i),
+        );
         let mut remaining = n;
 
         // there can be one or two mht's

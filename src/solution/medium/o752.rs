@@ -17,21 +17,25 @@ impl Solution {
             }
 
             let nxt = cur.chars().collect::<Vec<_>>();
-            
+
             for (i, c) in nxt.iter().enumerate() {
                 let mut nps = nxt.clone();
 
                 nps[i] = (*c as u8 + 1) as char;
-                if (nps[i] as u8) > b'9' { nps[i] = '0'; }
+                if (nps[i] as u8) > b'9' {
+                    nps[i] = '0';
+                }
                 bfs.push_back((nps.iter().collect::<String>(), spins + 1));
                 nps[i] = (*c as u8 - 1) as char;
-                if (nps[i] as u8) < b'0' { nps[i] = '9'; }
-                bfs.push_back((nps.iter().collect::<String>(), spins + 1)) ;
+                if (nps[i] as u8) < b'0' {
+                    nps[i] = '9';
+                }
+                bfs.push_back((nps.iter().collect::<String>(), spins + 1));
             }
 
             set.insert(cur);
         }
-        
+
         -1
     }
 }

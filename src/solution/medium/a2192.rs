@@ -1,6 +1,6 @@
 use crate::Solution;
 
-use std::collections::{HashSet, HashMap};
+use std::collections::{HashMap, HashSet};
 
 impl Solution {
     pub fn get_ancestors(n: i32, edges: Vec<Vec<i32>>) -> Vec<Vec<i32>> {
@@ -8,7 +8,9 @@ impl Solution {
         let mut g: HashMap<i32, Vec<i32>> = HashMap::new();
 
         for edge in edges {
-            g.entry(edge[1]).and_modify(|v| v.push(edge[0])).or_insert(vec![edge[0]]);
+            g.entry(edge[1])
+                .and_modify(|v| v.push(edge[0]))
+                .or_insert(vec![edge[0]]);
         }
 
         for i in 0..n {
@@ -29,7 +31,7 @@ impl Solution {
             ans[i as usize].sort_unstable();
             ans[i as usize].dedup();
         }
-        
+
         ans
     }
 }

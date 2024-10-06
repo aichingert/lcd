@@ -10,7 +10,7 @@ impl Solution {
             }
         }
 
-        ans.sort_by(|(da,_,_),(db,_,_)| da.partial_cmp(db).unwrap());
+        ans.sort_by(|(da, _, _), (db, _, _)| da.partial_cmp(db).unwrap());
         vec![*ans[k as usize - 1].1, *ans[k as usize - 1].2]
     }
 }

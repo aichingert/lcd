@@ -8,7 +8,7 @@ impl Solution {
         for &n in nums.iter() {
             hm.entry(n).and_modify(|x| *x += 1).or_insert(1);
         }
-        
+
         nums.sort_unstable_by(|a, b| hm[a].cmp(&hm[b]).then_with(|| b.cmp(a)));
         nums
     }

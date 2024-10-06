@@ -2,7 +2,8 @@ use crate::Solution;
 
 impl Solution {
     pub fn equal_substring(s: String, t: String, max_cost: i32) -> i32 {
-        let d = s.chars()
+        let d = s
+            .chars()
             .zip(t.chars())
             .map(|(si, ti)| (((si as u8) as i32) - ((ti as u8) as i32)).abs())
             .collect::<Vec<_>>();

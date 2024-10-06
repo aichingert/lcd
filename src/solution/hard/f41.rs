@@ -3,7 +3,7 @@ use crate::Solution;
 impl Solution {
     pub fn first_missing_positive(mut nums: Vec<i32>) -> i32 {
         let n = nums.len() as i32;
-        
+
         for i in 0..nums.len() {
             let mut x = nums[i];
 
@@ -19,7 +19,7 @@ impl Solution {
                 return x;
             }
         }
-        
+
         n + 1
     }
 }

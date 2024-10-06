@@ -6,10 +6,11 @@ impl Solution {
 
         for i in 1..n {
             for j in 0..m {
-                if matrix[i][j] != 0 { matrix[i][j] += matrix[i - 1][j]; }
+                if matrix[i][j] != 0 {
+                    matrix[i][j] += matrix[i - 1][j];
+                }
             }
         }
-
 
         for row in matrix.iter_mut().take(n) {
             row.sort_unstable();

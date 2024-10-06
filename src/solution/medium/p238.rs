@@ -22,7 +22,7 @@ impl Solution {
         for i in 0..len - 2 {
             res.push(f[i] * b[len - i - 3])
         }
-        
+
         res.push(f[len - 2]);
         res
     }

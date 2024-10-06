@@ -8,7 +8,7 @@ use crate::TreeNode;
 //   pub left: Option<Rc<RefCell<TreeNode>>>,
 //   pub right: Option<Rc<RefCell<TreeNode>>>,
 // }
-// 
+//
 // impl TreeNode {
 //   #[inline]
 //   pub fn new(val: i32) -> Self {
@@ -19,12 +19,15 @@ use crate::TreeNode;
 //     }
 //   }
 // }
-use std::rc::Rc;
 use std::cell::RefCell;
+use std::rc::Rc;
 type Node = Option<Rc<RefCell<TreeNode>>>;
 
 impl Solution {
-    pub fn del_nodes(root: Option<Rc<RefCell<TreeNode>>>, mut to_delete: Vec<i32>) -> Vec<Option<Rc<RefCell<TreeNode>>>> {
+    pub fn del_nodes(
+        root: Option<Rc<RefCell<TreeNode>>>,
+        mut to_delete: Vec<i32>,
+    ) -> Vec<Option<Rc<RefCell<TreeNode>>>> {
         to_delete.sort_unstable();
         let mut ans = Vec::new();
         d(&root, &mut ans, &to_delete, true);

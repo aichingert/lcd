@@ -21,6 +21,8 @@ impl Solution {
             }
         }
 
-        chs.into_iter().filter(|&c| !matches!(c, '(' | ')')).collect::<String>()
+        chs.into_iter()
+            .filter(|&c| !matches!(c, '(' | ')'))
+            .collect::<String>()
     }
 }

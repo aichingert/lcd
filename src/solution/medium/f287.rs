@@ -8,7 +8,9 @@ impl Solution {
             slow = nums[slow as usize];
             fast = nums[nums[fast as usize] as usize];
 
-            if slow == fast { break; }
+            if slow == fast {
+                break;
+            }
         }
 
         slow = 0;

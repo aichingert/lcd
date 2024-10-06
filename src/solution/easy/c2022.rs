@@ -7,7 +7,7 @@ impl Solution {
         }
 
         let mut ans = vec![vec![0; n as usize]; m as usize];
-        
+
         for i in 0..m as usize {
             for j in 0..n as usize {
                 ans[i][j] = original[i * n as usize + j]

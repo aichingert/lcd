@@ -20,7 +20,8 @@ impl Solution {
                     for (y, x) in [(0, 1), (1, 0), (0, -1), (-1, 0)] {
                         let (ny, nx) = (dy as i32 + y, dx as i32 + x);
 
-                        if ny < 0 || nx < 0 || ny >= grid.len() as i32 || nx >= grid[0].len() as i32 {
+                        if ny < 0 || nx < 0 || ny >= grid.len() as i32 || nx >= grid[0].len() as i32
+                        {
                             continue;
                         }
 

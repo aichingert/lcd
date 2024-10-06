@@ -8,7 +8,7 @@ impl Solution {
             let j = (nums[i].abs() - 1) as usize;
             nums[j] = -nums[j];
 
-            if nums[j]>0 {
+            if nums[j] > 0 {
                 ans.push(nums[i].abs());
             }
         }

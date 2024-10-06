@@ -8,7 +8,9 @@ impl Solution {
 }
 
 fn part(s: &[char], cur: Vec<String>) -> Vec<Vec<String>> {
-    if s.is_empty() { return vec![cur]; }
+    if s.is_empty() {
+        return vec![cur];
+    }
 
     let mut ans = Vec::new();
 

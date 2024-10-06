@@ -10,7 +10,11 @@ impl Solution {
         let (mut d, mut a) = (1, 0);
 
         for obs in obstacles {
-            l.entry(obs[0]).and_modify(|s| { s.insert(obs[1]); }).or_insert(HashSet::from_iter([obs[1]]));
+            l.entry(obs[0])
+                .and_modify(|s| {
+                    s.insert(obs[1]);
+                })
+                .or_insert(HashSet::from_iter([obs[1]]));
         }
 
         for command in commands {
@@ -30,17 +34,17 @@ impl Solution {
                         }
 
                         if l.contains_key(&x) && l[&x].contains(&y) {
-                            x = px; y = py;
+                            x = px;
+                            y = py;
                         }
                     }
-
                 }
             }
 
             //println!("{x} {y}");
             a = a.max(x * x + y * y);
         }
-        
+
         a
     }
 }

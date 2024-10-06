@@ -2,7 +2,6 @@ use crate::Solution;
 
 impl Solution {
     pub fn append_characters(s: String, t: String) -> i32 {
-
         let (s, t) = (s.chars().collect::<Vec<_>>(), t.chars().collect::<Vec<_>>());
         let (mut sp, mut tp) = (0, 0);
 

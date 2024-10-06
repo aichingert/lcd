@@ -7,7 +7,7 @@ use crate::TreeNode;
 //   pub left: Option<Rc<RefCell<TreeNode>>>,
 //   pub right: Option<Rc<RefCell<TreeNode>>>,
 // }
-// 
+//
 // impl TreeNode {
 //   #[inline]
 //   pub fn new(val: i32) -> Self {
@@ -18,8 +18,8 @@ use crate::TreeNode;
 //     }
 //   }
 // }
-use std::rc::Rc;
 use std::cell::RefCell;
+use std::rc::Rc;
 impl Solution {
     pub fn sum_numbers(root: Option<Rc<RefCell<TreeNode>>>) -> i32 {
         sum(&root, 0)

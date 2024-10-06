@@ -15,10 +15,12 @@ impl Solution {
                 1 => i += 1,
                 2 => {
                     nums.swap(t, i);
-                    if t == 0 { break; }
+                    if t == 0 {
+                        break;
+                    }
                     t -= 1;
                 }
-                _ => ()
+                _ => (),
             }
         }
     }

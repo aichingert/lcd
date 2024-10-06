@@ -9,8 +9,12 @@ impl Solution {
         let mut gy: HashMap<i32, Vec<i32>> = HashMap::new();
 
         for stone in &stones {
-            gy.entry(stone[0]).and_modify(|v| v.push(stone[1])).or_insert(vec![stone[1]]);
-            gx.entry(stone[1]).and_modify(|v| v.push(stone[0])).or_insert(vec![stone[0]]);
+            gy.entry(stone[0])
+                .and_modify(|v| v.push(stone[1]))
+                .or_insert(vec![stone[1]]);
+            gx.entry(stone[1])
+                .and_modify(|v| v.push(stone[0]))
+                .or_insert(vec![stone[0]]);
         }
 
         let mut v = HashSet::new();
@@ -21,7 +25,7 @@ impl Solution {
                 continue;
             }
 
-            let mut s = vec![(stone[0],stone[1])];
+            let mut s = vec![(stone[0], stone[1])];
             r += 1;
 
             while let Some((fy, fx)) = s.pop() {

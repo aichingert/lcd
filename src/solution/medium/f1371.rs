@@ -17,7 +17,6 @@ impl Solution {
             p.push(state);
         }
 
-
         for i in 0..p.len() {
             state = 0;
 

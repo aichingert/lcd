@@ -11,7 +11,7 @@ impl Solution {
         }
 
         for i in 1..grid[0].len() {
-            let mut c = [0;2];
+            let mut c = [0; 2];
 
             for j in 0..grid.len() {
                 c[1 - grid[j][i] as usize] += 1;
@@ -27,7 +27,9 @@ impl Solution {
         let mut ans = 0;
         for r in grid.iter_mut() {
             for i in 0..r.len() {
-                if r[i] == 0 { continue; }
+                if r[i] == 0 {
+                    continue;
+                }
                 ans += 2_i32.pow((r.len() - i - 1) as u32);
             }
         }

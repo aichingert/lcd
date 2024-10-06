@@ -1,6 +1,6 @@
-use std::rc::Rc;
 use std::cell::RefCell;
 use std::collections::HashMap;
+use std::rc::Rc;
 
 use crate::Solution;
 use crate::TreeNode;
@@ -34,7 +34,9 @@ impl Solution {
 fn sol(root: &Option<Rc<RefCell<TreeNode>>>, l: i32, ans: &mut HashMap<i32, Vec<i32>>) -> bool {
     if let Some(n) = root {
         let n = n.borrow();
-        ans.entry(l).and_modify(|v| v.push(n.val)).or_insert(vec![n.val]);
+        ans.entry(l)
+            .and_modify(|v| v.push(n.val))
+            .or_insert(vec![n.val]);
 
         if l & 1 == 1 && n.val & 1 == 1 || l & 1 == 0 && n.val & 1 == 0 {
             return false;

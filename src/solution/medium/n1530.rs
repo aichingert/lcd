@@ -8,7 +8,7 @@ use crate::TreeNode;
 //   pub left: Option<Rc<RefCell<TreeNode>>>,
 //   pub right: Option<Rc<RefCell<TreeNode>>>,
 // }
-// 
+//
 // impl TreeNode {
 //   #[inline]
 //   pub fn new(val: i32) -> Self {
@@ -19,8 +19,8 @@ use crate::TreeNode;
 //     }
 //   }
 // }
-use std::rc::Rc;
 use std::cell::RefCell;
+use std::rc::Rc;
 type Node = Option<Rc<RefCell<TreeNode>>>;
 
 impl Solution {
@@ -44,7 +44,11 @@ fn fnd(c: &Node, ans: &mut i32, dis: i32) -> Option<Vec<i32>> {
                 }
             }
 
-            l.into_iter().chain(r).map(|n| n + 1).filter(|&n| n < dis).collect()
+            l.into_iter()
+                .chain(r)
+                .map(|n| n + 1)
+                .filter(|&n| n < dis)
+                .collect()
         }
         (None, Some(r)) => r.into_iter().map(|n| n + 1).filter(|&n| n < dis).collect(),
         (Some(l), None) => l.into_iter().map(|n| n + 1).filter(|&n| n < dis).collect(),

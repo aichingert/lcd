@@ -9,7 +9,7 @@ impl Solution {
             ans.push('1');
         }
 
-        for _ in ns - 1..s.len() as u8 - 1{
+        for _ in ns - 1..s.len() as u8 - 1 {
             ans.push('0');
         }
         ans.push('1');

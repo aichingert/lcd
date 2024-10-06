@@ -8,7 +8,6 @@ impl Solution {
         f(&candidates, target, 0, Vec::new(), &mut ans);
         ans
     }
-
 }
 
 fn f(c: &[i32], t: i32, i: usize, p: Vec<i32>, ans: &mut Vec<Vec<i32>>) {

@@ -11,7 +11,7 @@ impl Solution {
 
         while start <= end {
             let mid = (start + end) / 2;
-            
+
             if Self::boquets(&bloom_day, mid, k) >= m {
                 ans = mid;
                 end = mid - 1;
@@ -42,4 +42,3 @@ impl Solution {
         bq
     }
 }
-

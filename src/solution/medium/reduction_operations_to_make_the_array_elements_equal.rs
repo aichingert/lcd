@@ -10,7 +10,7 @@ impl Solution {
         for i in (1..nums.len()).rev() {
             cur += 1;
 
-            if nums[i] != nums[i  - 1] {
+            if nums[i] != nums[i - 1] {
                 sum += cur;
                 ans += sum;
                 cur = 0;

@@ -31,7 +31,9 @@ fn get_islands(g: &[Vec<i32>]) -> (i32, HashSet<(i32, i32)>) {
 
     for i in 0..g.len() {
         for j in 0..g[i].len() {
-            if g[i][j] == 0 { continue; }
+            if g[i][j] == 0 {
+                continue;
+            }
 
             if !v.contains(&(i as i32, j as i32)) {
                 l += 1;
@@ -40,7 +42,7 @@ fn get_islands(g: &[Vec<i32>]) -> (i32, HashSet<(i32, i32)>) {
             s.push((i as i32, j as i32));
 
             while let Some((y, x)) = s.pop() {
-                if x < 0 || y < 0 || y >= g.len() as i32 || x >= g[i].len() as i32{
+                if x < 0 || y < 0 || y >= g.len() as i32 || x >= g[i].len() as i32 {
                     continue;
                 }
                 if g[y as usize][x as usize] == 0 {

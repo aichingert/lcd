@@ -5,9 +5,13 @@ impl Solution {
         let mut ans = Vec::with_capacity(s.len());
 
         for cur in s.bytes() {
-            if ans.last().map(|&prv| prv + 32 == cur || cur + 32 == prv).unwrap_or(false) {
+            if ans
+                .last()
+                .map(|&prv| prv + 32 == cur || cur + 32 == prv)
+                .unwrap_or(false)
+            {
                 ans.pop();
-            } else{
+            } else {
                 ans.push(cur);
             }
         }

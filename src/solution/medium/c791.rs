@@ -9,7 +9,7 @@ impl Solution {
         for c in s.chars() {
             m.entry(c).and_modify(|n| *n += 1).or_insert(1);
         }
-        
+
         let mut ans = String::new();
 
         let mut i = 0;

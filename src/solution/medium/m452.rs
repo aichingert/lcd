@@ -2,7 +2,7 @@ use crate::Solution;
 
 impl Solution {
     pub fn find_min_arrow_shots(mut points: Vec<Vec<i32>>) -> i32 {
-        points.sort_by(|a,b| a[0].cmp(&b[0]));
+        points.sort_by(|a, b| a[0].cmp(&b[0]));
         let mut ans = Vec::new();
 
         for point in points.into_iter() {

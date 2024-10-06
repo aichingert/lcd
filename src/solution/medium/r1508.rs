@@ -18,6 +18,8 @@ impl Solution {
         }
 
         arr.sort_unstable();
-        arr[left as usize - 1..right as usize].iter().fold(0, |xs, x| (xs + x) % MOD)
+        arr[left as usize - 1..right as usize]
+            .iter()
+            .fold(0, |xs, x| (xs + x) % MOD)
     }
 }

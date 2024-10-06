@@ -3,7 +3,7 @@ use crate::Solution;
 impl Solution {
     pub fn spiral_matrix_iii(rows: i32, cols: i32, r_start: i32, c_start: i32) -> Vec<Vec<i32>> {
         let mut ans = Vec::new();
-        
+
         let mut y = r_start;
         let mut x = c_start;
         let mut n = 1;
