@@ -30,6 +30,7 @@ pub mod m1614;
 pub mod m2037;
 pub mod m2220;
 pub mod m2540;
+pub mod m2696;
 pub mod m2864;
 pub mod n1137;
 pub mod n1700;
@@ -60,6 +61,16 @@ mod test {
 
     use crate::Solution;
     use crate::TreeNode;
+
+    #[test]
+    fn nr_2696_ex_01() {
+        assert_eq!(2, Solution::min_length("ABFCACDB".to_string()));
+    }
+
+    #[test]
+    fn nr_2696_ex_02() {
+        assert_eq!(5, Solution::min_length("ACBBD".to_string()));
+    }
 
     #[test]
     fn nr_2491_ex_01() {
