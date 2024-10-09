@@ -122,6 +122,7 @@ pub mod w79;
 pub mod w874;
 pub mod x1310;
 pub mod m1963;
+pub mod m921;
 
 #[cfg(test)]
 mod test {
@@ -131,6 +132,16 @@ mod test {
     use crate::ListNode;
     use crate::Solution;
     use crate::TreeNode;
+
+    #[test]
+    fn nr_921_ex_01() {
+        assert_eq!(1, Solution::min_add_to_make_valid("())".to_string()));
+    }
+
+    #[test]
+    fn nr_921_ex_02() {
+        assert_eq!(3, Solution::min_add_to_make_valid("(((".to_string()));
+    }
 
     #[test]
     fn nr_1963_ex_01() {
