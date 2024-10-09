@@ -40,6 +40,7 @@ pub mod find_unique_binary_string;
 pub mod g1052;
 pub mod g1208;
 pub mod h198;
+pub mod h213;
 pub mod h846;
 pub mod i380;
 pub mod i57;
@@ -63,6 +64,7 @@ pub mod m1509;
 pub mod m1552;
 pub mod m1717;
 pub mod m1750;
+pub mod m1963;
 pub mod m2134;
 pub mod m2285;
 pub mod m2870;
@@ -76,6 +78,7 @@ pub mod m729;
 pub mod m731;
 pub mod m826;
 pub mod m840;
+pub mod m921;
 pub mod m931;
 pub mod m945;
 pub mod m947;
@@ -121,8 +124,6 @@ pub mod v678;
 pub mod w79;
 pub mod w874;
 pub mod x1310;
-pub mod m1963;
-pub mod m921;
 
 #[cfg(test)]
 mod test {
@@ -132,6 +133,21 @@ mod test {
     use crate::ListNode;
     use crate::Solution;
     use crate::TreeNode;
+
+    #[test]
+    fn nr_213_ex_01() {
+        assert_eq!(3, Solution::rob_lc_01(vec![2, 3, 2]));
+    }
+
+    #[test]
+    fn nr_213_ex_02() {
+        assert_eq!(4, Solution::rob_lc_01(vec![1,2,3,1]));
+    }
+
+    #[test]
+    fn nr_213_ex_03() {
+        assert_eq!(3, Solution::rob_lc_01(vec![1,2,3]));
+    }
 
     #[test]
     fn nr_921_ex_01() {
@@ -152,7 +168,7 @@ mod test {
     fn nr_1963_ex_02() {
         assert_eq!(2, Solution::min_swaps_lc_01("]]][[[".to_string()));
     }
-    
+
     #[test]
     fn nr_1963_ex_03() {
         assert_eq!(0, Solution::min_swaps_lc_01("[]".to_string()));
