@@ -82,6 +82,7 @@ pub mod m921;
 pub mod m931;
 pub mod m945;
 pub mod m947;
+pub mod m962;
 pub mod maximum_element_after_decreasing_and_rearranging;
 pub mod maximum_number_of_coins_you_can_get;
 pub mod minimize_maximum_pair_sum_in_array;
@@ -135,18 +136,31 @@ mod test {
     use crate::TreeNode;
 
     #[test]
+    fn nr_962_ex_01() {
+        assert_eq!(4, Solution::max_width_ramp(vec![6, 0, 8, 2, 1, 5]));
+    }
+
+    #[test]
+    fn nr_962_ex_02() {
+        assert_eq!(
+            7,
+            Solution::max_width_ramp(vec![9, 8, 1, 0, 1, 9, 4, 0, 4, 1])
+        );
+    }
+
+    #[test]
     fn nr_213_ex_01() {
         assert_eq!(3, Solution::rob_lc_01(vec![2, 3, 2]));
     }
 
     #[test]
     fn nr_213_ex_02() {
-        assert_eq!(4, Solution::rob_lc_01(vec![1,2,3,1]));
+        assert_eq!(4, Solution::rob_lc_01(vec![1, 2, 3, 1]));
     }
 
     #[test]
     fn nr_213_ex_03() {
-        assert_eq!(3, Solution::rob_lc_01(vec![1,2,3]));
+        assert_eq!(3, Solution::rob_lc_01(vec![1, 2, 3]));
     }
 
     #[test]
