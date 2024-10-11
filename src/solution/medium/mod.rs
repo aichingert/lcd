@@ -125,6 +125,7 @@ pub mod v678;
 pub mod w79;
 pub mod w874;
 pub mod x1310;
+pub mod t1942;
 
 #[cfg(test)]
 mod test {
@@ -134,6 +135,16 @@ mod test {
     use crate::ListNode;
     use crate::Solution;
     use crate::TreeNode;
+
+    #[test]
+    fn nr_1942_ex_01() {
+        assert_eq!(1, Solution::smallest_chair(vec![vec![1,4], vec![2,3], vec![4,6]], 1));
+    }
+
+    #[test]
+    fn nr_1942_ex_02() {
+        assert_eq!(2, Solution::smallest_chair(vec![vec![3,10], vec![1,5], vec![2,6]], 0));
+    }
 
     #[test]
     fn nr_962_ex_01() {
