@@ -20,6 +20,7 @@ pub mod count_number_of_homogenous_substrings;
 pub mod d1110;
 pub mod d1381;
 pub mod d1657;
+pub mod d2406;
 pub mod determine_if_a_cell_is_reachable_at_a_given_time;
 pub mod e1609;
 pub mod eliminate_maximum_number_of_monsters;
@@ -118,6 +119,7 @@ pub mod s885;
 pub mod s912;
 pub mod s974;
 pub mod sort_vowels_in_a_string;
+pub mod t1942;
 pub mod t2597;
 pub mod t621;
 pub mod unique_length3_palindromic_subsequences;
@@ -125,7 +127,6 @@ pub mod v678;
 pub mod w79;
 pub mod w874;
 pub mod x1310;
-pub mod t1942;
 
 #[cfg(test)]
 mod test {
@@ -137,13 +138,41 @@ mod test {
     use crate::TreeNode;
 
     #[test]
+    fn nr_2406_ex_01() {
+        assert_eq!(
+            3,
+            Solution::min_groups(vec![
+                vec![5, 10],
+                vec![6, 8],
+                vec![1, 5],
+                vec![2, 3],
+                vec![1, 10]
+            ])
+        );
+    }
+
+    #[test]
+    fn nr_2406_ex_02() {
+        assert_eq!(
+            1,
+            Solution::min_groups(vec![vec![1, 3], vec![5, 6], vec![8, 10], vec![11, 13]])
+        );
+    }
+
+    #[test]
     fn nr_1942_ex_01() {
-        assert_eq!(1, Solution::smallest_chair(vec![vec![1,4], vec![2,3], vec![4,6]], 1));
+        assert_eq!(
+            1,
+            Solution::smallest_chair(vec![vec![1, 4], vec![2, 3], vec![4, 6]], 1)
+        );
     }
 
     #[test]
     fn nr_1942_ex_02() {
-        assert_eq!(2, Solution::smallest_chair(vec![vec![3,10], vec![1,5], vec![2,6]], 0));
+        assert_eq!(
+            2,
+            Solution::smallest_chair(vec![vec![3, 10], vec![1, 5], vec![2, 6]], 0)
+        );
     }
 
     #[test]

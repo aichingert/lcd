@@ -28,14 +28,18 @@ impl PartialEq for Intv {
     }
 }
 
-impl Eq for Intv { }
+impl Eq for Intv {}
 
 impl Solution {
     pub fn smallest_chair(times: Vec<Vec<i32>>, target_friend: i32) -> i32 {
         let mut m = BTreeSet::new();
 
         for (i, time) in times.into_iter().enumerate() {
-            m.insert(Intv { start: time[0], end: time[1], friend: i });
+            m.insert(Intv {
+                start: time[0],
+                end: time[1],
+                friend: i,
+            });
         }
 
         let f = m.pop_first().unwrap();
@@ -66,7 +70,7 @@ impl Solution {
                 ls.push(c);
             }
         }
-        
+
         panic!()
     }
 }
