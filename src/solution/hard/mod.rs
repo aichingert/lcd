@@ -14,12 +14,33 @@ pub mod p330;
 pub mod poor_pigs;
 pub mod r2751;
 pub mod s552;
+pub mod s632;
 pub mod w140;
 
 #[cfg(test)]
 mod test {
     use crate::solution::hard::design_graph_with_shortest_path_calculator::Graph;
     use crate::Solution;
+
+    #[test]
+    fn nr_632_ex_01() {
+        assert_eq!(
+            vec![20, 24],
+            Solution::smallest_range(vec![
+                vec![4, 10, 15, 24, 26],
+                vec![0, 9, 12, 20],
+                vec![5, 18, 22, 30]
+            ])
+        );
+    }
+
+    #[test]
+    fn nr_632_ex_02() {
+        assert_eq!(
+            vec![1, 1],
+            Solution::smallest_range(vec![vec![1, 2, 3], vec![1, 2, 3], vec![1, 2, 3]])
+        );
+    }
 
     #[test]
     fn nr_719_ex_01() {
