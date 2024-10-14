@@ -68,6 +68,7 @@ pub mod m1750;
 pub mod m1963;
 pub mod m2134;
 pub mod m2285;
+pub mod m2530;
 pub mod m2870;
 pub mod m2997;
 pub mod m3016;
@@ -136,6 +137,16 @@ mod test {
     use crate::ListNode;
     use crate::Solution;
     use crate::TreeNode;
+
+    #[test]
+    fn nr_2530_ex_01() {
+        assert_eq!(50, Solution::max_kelements(vec![10, 10, 10, 10, 10], 5));
+    }
+
+    #[test]
+    fn nr_2530_ex_02() {
+        assert_eq!(17, Solution::max_kelements(vec![1, 10, 3, 3, 3], 3));
+    }
 
     #[test]
     fn nr_2406_ex_01() {
