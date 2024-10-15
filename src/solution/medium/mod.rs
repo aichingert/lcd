@@ -110,6 +110,7 @@ pub mod s2096;
 pub mod s2191;
 pub mod s2326;
 pub mod s260;
+pub mod s2938;
 pub mod s451;
 pub mod s633;
 pub mod s713;
@@ -137,6 +138,21 @@ mod test {
     use crate::ListNode;
     use crate::Solution;
     use crate::TreeNode;
+
+    #[test]
+    fn nr_2938_ex_01() {
+        assert_eq!(1, Solution::minimum_steps("101".to_string()));
+    }
+
+    #[test]
+    fn nr_2938_ex_02() {
+        assert_eq!(2, Solution::minimum_steps("100".to_string()));
+    }
+
+    #[test]
+    fn nr_2938_ex_03() {
+        assert_eq!(0, Solution::minimum_steps("0111".to_string()));
+    }
 
     #[test]
     fn nr_2530_ex_01() {
