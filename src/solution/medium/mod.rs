@@ -48,6 +48,7 @@ pub mod i57;
 pub mod k650;
 pub mod k786;
 pub mod knight_dialer;
+pub mod l1405;
 pub mod l1438;
 pub mod l179;
 pub mod l2370;
@@ -138,6 +139,20 @@ mod test {
     use crate::ListNode;
     use crate::Solution;
     use crate::TreeNode;
+
+    #[test]
+    fn nr_1405_ex_01() {
+        let set = vec!["ccaccbcc".to_string(), "ccbccacc".to_string()];
+        assert!(set.contains(&Solution::longest_diverse_string(1, 1, 7)));
+    }
+
+    #[test]
+    fn nr_1405_ex_02() {
+        assert_eq!(
+            "aabaa".to_string(),
+            Solution::longest_diverse_string(7, 1, 0)
+        );
+    }
 
     #[test]
     fn nr_2938_ex_01() {
