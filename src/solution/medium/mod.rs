@@ -10,6 +10,7 @@ pub mod c1442;
 pub mod c1497;
 pub mod c165;
 pub mod c1905;
+pub mod c2044;
 pub mod c2962;
 pub mod c40;
 pub mod c523;
@@ -140,6 +141,21 @@ mod test {
     use crate::ListNode;
     use crate::Solution;
     use crate::TreeNode;
+
+    #[test]
+    fn nr_2044_ex_01() {
+        assert_eq!(2, Solution::count_max_or_subsets(vec![3, 1]));
+    }
+
+    #[test]
+    fn nr_2044_ex_02() {
+        assert_eq!(7, Solution::count_max_or_subsets(vec![2, 2, 2]));
+    }
+
+    #[test]
+    fn nr_2044_ex_03() {
+        assert_eq!(6, Solution::count_max_or_subsets(vec![3, 2, 1, 5]));
+    }
 
     #[test]
     fn nr_670_ex_01() {
