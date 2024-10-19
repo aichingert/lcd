@@ -26,6 +26,7 @@ pub mod determine_if_a_cell_is_reachable_at_a_given_time;
 pub mod e1609;
 pub mod eliminate_maximum_number_of_monsters;
 pub mod f1371;
+pub mod f1545;
 pub mod f1605;
 pub mod f1823;
 pub mod f1894;
@@ -141,6 +142,16 @@ mod test {
     use crate::ListNode;
     use crate::Solution;
     use crate::TreeNode;
+
+    #[test]
+    fn nr_1545_ex_01() {
+        assert_eq!('0', Solution::find_kth_bit(3, 1));
+    }
+
+    #[test]
+    fn nr_1545_ex_02() {
+        assert_eq!('1', Solution::find_kth_bit(4, 11));
+    }
 
     #[test]
     fn nr_2044_ex_01() {
