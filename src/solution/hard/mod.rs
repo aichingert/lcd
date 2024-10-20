@@ -10,6 +10,7 @@ pub mod m1255;
 pub mod m1568;
 pub mod m995;
 pub mod n726;
+pub mod p1106;
 pub mod p330;
 pub mod poor_pigs;
 pub mod r2751;
@@ -21,6 +22,21 @@ pub mod w140;
 mod test {
     use crate::solution::hard::design_graph_with_shortest_path_calculator::Graph;
     use crate::Solution;
+
+    #[test]
+    fn nr_1106_ex_01() {
+        assert_eq!(false, Solution::parse_bool_expr("&(|(f))".to_string()));
+    }
+
+    #[test]
+    fn nr_1106_ex_02() {
+        assert_eq!(true, Solution::parse_bool_expr("|(f,f,f,t)".to_string()));
+    }
+
+    #[test]
+    fn nr_1106_ex_03() {
+        assert_eq!(true, Solution::parse_bool_expr("!(&(f,t))".to_string()));
+    }
 
     #[test]
     fn nr_632_ex_01() {
