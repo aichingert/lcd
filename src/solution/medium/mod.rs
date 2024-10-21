@@ -109,6 +109,7 @@ pub mod r950;
 pub mod r959;
 pub mod reduction_operations_to_make_the_array_elements_equal;
 pub mod s129;
+pub mod s1593;
 pub mod s1813;
 pub mod s2096;
 pub mod s2191;
@@ -142,6 +143,21 @@ mod test {
     use crate::ListNode;
     use crate::Solution;
     use crate::TreeNode;
+
+    #[test]
+    fn nr_1593_ex_01() {
+        assert_eq!(5, Solution::max_unique_split("ababccc".to_string()));
+    }
+
+    #[test]
+    fn nr_1593_ex_02() {
+        assert_eq!(2, Solution::max_unique_split("aba".to_string()));
+    }
+
+    #[test]
+    fn nr_1593_ex_03() {
+        assert_eq!(1, Solution::max_unique_split("aa".to_string()));
+    }
 
     #[test]
     fn nr_1545_ex_01() {
