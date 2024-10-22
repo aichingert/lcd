@@ -47,6 +47,7 @@ pub mod h213;
 pub mod h846;
 pub mod i380;
 pub mod i57;
+pub mod k2583;
 pub mod k650;
 pub mod k786;
 pub mod knight_dialer;
@@ -143,6 +144,44 @@ mod test {
     use crate::ListNode;
     use crate::Solution;
     use crate::TreeNode;
+
+    #[test]
+    fn nr_2583_ex_01() {
+        let root = Some(Rc::new(RefCell::new(TreeNode {
+            val: 5,
+            left: Some(Rc::new(RefCell::new(TreeNode {
+                val: 8,
+                left: Some(Rc::new(RefCell::new(TreeNode {
+                    val: 2,
+                    left: Some(Rc::new(RefCell::new(TreeNode::new(4)))),
+                    right: Some(Rc::new(RefCell::new(TreeNode::new(6)))),
+                }))),
+                right: Some(Rc::new(RefCell::new(TreeNode::new(1)))),
+            }))),
+            right: Some(Rc::new(RefCell::new(TreeNode {
+                val: 9,
+                left: Some(Rc::new(RefCell::new(TreeNode::new(3)))),
+                right: Some(Rc::new(RefCell::new(TreeNode::new(7)))),
+            }))),
+        })));
+
+        assert_eq!(13, Solution::kth_largest_level_sum(root, 2));
+    }
+
+    #[test]
+    fn nr_2583_ex_02() {
+        let root = Some(Rc::new(RefCell::new(TreeNode {
+            val: 1,
+            left: Some(Rc::new(RefCell::new(TreeNode {
+                val: 2,
+                left: Some(Rc::new(RefCell::new(TreeNode::new(3)))),
+                right: None,
+            }))),
+            right: None,
+        })));
+
+        assert_eq!(3, Solution::kth_largest_level_sum(root, 1));
+    }
 
     #[test]
     fn nr_1593_ex_01() {
