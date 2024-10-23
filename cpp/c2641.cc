@@ -19,33 +19,21 @@ public:
 
         q.push({root, 0});
         s.push({root, nullptr, 0});
-        TreeNode* node;
-        int dep;
+        TreeNode* node, *l, *r;
+        int dep, d;
 
         for (; !q.empty(); q.pop()) {
             tie(node, dep) = q.front();
 
             if (prv != dep) {
                 while (true) {
-                    TreeNode *l, *r;
-                    int d;
                     tie(l, r, d) = s.front();
-
-                    if (d != prv) {
-                        break;
-                    }
-
+                    if (d != prv) break;
 
                     int diff = (l == nullptr ? 0 : l->val) + (r == nullptr ? 0 : r->val);
 
-                    if (l != nullptr) {
-                        cout << l->val << endl;
-                        l->val = sum - diff;
-                    }
-                    if (r != nullptr) {
-                        cout << r->val << endl;
-                        r->val = sum - diff;
-                    }
+                    if (l != nullptr) l->val = sum - diff;
+                    if (r != nullptr) r->val = sum - diff;
                     s.pop();
                 }
 
@@ -53,20 +41,14 @@ public:
                 prv = dep;
             }
 
-            if (node->left != nullptr) {
-                q.push({node->left, dep + 1});
-            }
-            if (node->right != nullptr) {
-                q.push({node->right, dep + 1});
-            }
+            if (node->left != nullptr) q.push({node->left, dep + 1});
+            if (node->right != nullptr) q.push({node->right, dep + 1});
 
             s.push({node->left, node->right, dep + 1});
             sum += node->val;
         }
 
         for (; !s.empty(); s.pop()) {
-            TreeNode *l, *r;
-            int d;
             tie(l, r, d) = s.front();
 
             int diff = (l == nullptr ? 0 : l->val) + (r == nullptr ? 0 : r->val);
