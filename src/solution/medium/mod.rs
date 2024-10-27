@@ -6,6 +6,7 @@ pub mod b881;
 pub mod b930;
 pub mod build_an_array_with_stack_operations;
 pub mod c1248;
+pub mod c1277;
 pub mod c1442;
 pub mod c1497;
 pub mod c165;
@@ -144,6 +145,22 @@ mod test {
     use crate::ListNode;
     use crate::Solution;
     use crate::TreeNode;
+
+    #[test]
+    fn nr_1277_ex_01() {
+        assert_eq!(
+            15,
+            Solution::count_squares(vec![vec![0, 1, 1, 1], vec![1, 1, 1, 1], vec![0, 1, 1, 1]])
+        );
+    }
+
+    #[test]
+    fn nr_1277_ex_02() {
+        assert_eq!(
+            7,
+            Solution::count_squares(vec![vec![1, 0, 1], vec![1, 1, 0], vec![1, 1, 0]])
+        );
+    }
 
     #[test]
     fn nr_2583_ex_01() {
