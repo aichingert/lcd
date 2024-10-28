@@ -57,6 +57,7 @@ pub mod l1438;
 pub mod l179;
 pub mod l2370;
 pub mod l2419;
+pub mod l2501;
 pub mod l2958;
 pub mod l300;
 pub mod l386;
@@ -145,6 +146,16 @@ mod test {
     use crate::ListNode;
     use crate::Solution;
     use crate::TreeNode;
+
+    #[test]
+    fn nr_2501_ex_01() {
+        assert_eq!(3, Solution::longest_square_streak(vec![4, 3, 6, 16, 8, 2]));
+    }
+
+    #[test]
+    fn nr_2501_ex_02() {
+        assert_eq!(-1, Solution::longest_square_streak(vec![2, 3, 5, 6, 7]));
+    }
 
     #[test]
     fn nr_1277_ex_01() {
