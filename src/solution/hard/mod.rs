@@ -8,6 +8,7 @@ pub mod i273;
 pub mod i502;
 pub mod m1255;
 pub mod m1568;
+pub mod m1671;
 pub mod m995;
 pub mod n726;
 pub mod p1106;
@@ -24,8 +25,16 @@ mod test {
     use crate::Solution;
 
     #[test]
-    fn nr_1106_ex_01() {
-        assert_eq!(false, Solution::parse_bool_expr("&(|(f))".to_string()));
+    fn nr_1671_ex_01() {
+        assert_eq!(0, Solution::minimum_mountain_removals(vec![1, 3, 1]));
+    }
+
+    #[test]
+    fn nr_1671_ex_02() {
+        assert_eq!(
+            3,
+            Solution::minimum_mountain_removals(vec![2, 1, 1, 5, 6, 2, 3, 1])
+        );
     }
 
     #[test]
