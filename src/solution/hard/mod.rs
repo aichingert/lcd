@@ -9,6 +9,7 @@ pub mod i502;
 pub mod m1255;
 pub mod m1568;
 pub mod m1671;
+pub mod m2463;
 pub mod m995;
 pub mod n726;
 pub mod p1106;
@@ -23,6 +24,22 @@ pub mod w140;
 mod test {
     use crate::solution::hard::design_graph_with_shortest_path_calculator::Graph;
     use crate::Solution;
+
+    #[test]
+    fn nr_2463_ex_01() {
+        assert_eq!(
+            4,
+            Solution::minimum_total_distance(vec![0, 4, 6], vec![vec![2, 2], vec![6, 2]])
+        );
+    }
+
+    #[test]
+    fn nr_2463_ex_02() {
+        assert_eq!(
+            2,
+            Solution::minimum_total_distance(vec![1, -1], vec![vec![-2, 1], vec![2, 1]])
+        );
+    }
 
     #[test]
     fn nr_1671_ex_01() {
