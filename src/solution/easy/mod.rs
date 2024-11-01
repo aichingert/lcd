@@ -5,6 +5,7 @@ pub mod c3005;
 pub mod c70;
 pub mod calculate_money_in_leetcode_bank;
 pub mod count_of_matches_in_tournament;
+pub mod d1957;
 pub mod d2491;
 pub mod e2331;
 pub mod f1002;
@@ -61,6 +62,30 @@ mod test {
 
     use crate::Solution;
     use crate::TreeNode;
+
+    #[test]
+    fn nr_1957_ex_01() {
+        assert_eq!(
+            "leetcode".to_string(),
+            Solution::make_fancy_string("leeetcode".to_string())
+        );
+    }
+
+    #[test]
+    fn nr_1957_ex_02() {
+        assert_eq!(
+            "aabaa".to_string(),
+            Solution::make_fancy_string("aaabaaa".to_string())
+        );
+    }
+
+    #[test]
+    fn nr_1957_ex_03() {
+        assert_eq!(
+            "aab".to_string(),
+            Solution::make_fancy_string("aab".to_string())
+        );
+    }
 
     #[test]
     fn nr_2696_ex_01() {
