@@ -1,6 +1,7 @@
 pub mod c1598;
 pub mod c1684;
 pub mod c2022;
+pub mod c2490;
 pub mod c3005;
 pub mod c70;
 pub mod calculate_money_in_leetcode_bank;
@@ -62,6 +63,27 @@ mod test {
 
     use crate::Solution;
     use crate::TreeNode;
+
+    #[test]
+    fn nr_2490_ex_01() {
+        assert_eq!(
+            true,
+            Solution::is_circular_sentence("leetcode exercises sound delightful".to_string())
+        );
+    }
+
+    #[test]
+    fn nr_2490_ex_02() {
+        assert_eq!(true, Solution::is_circular_sentence("eetcode".to_string()));
+    }
+
+    #[test]
+    fn nr_2490_ex_03() {
+        assert_eq!(
+            false,
+            Solution::is_circular_sentence("Leetcode is cool".to_string())
+        );
+    }
 
     #[test]
     fn nr_1957_ex_01() {
