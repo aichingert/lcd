@@ -45,6 +45,7 @@ pub mod r1331;
 pub mod r2000;
 pub mod r344;
 pub mod r506;
+pub mod r796;
 pub mod s1608;
 pub mod s1636;
 pub mod s1863;
@@ -63,6 +64,22 @@ mod test {
 
     use crate::Solution;
     use crate::TreeNode;
+
+    #[test]
+    fn nr_769_ex_01() {
+        assert_eq!(
+            true,
+            Solution::rotate_string("abcde".to_string(), "cdeab".to_string())
+        );
+    }
+
+    #[test]
+    fn nr_769_ex_02() {
+        assert_eq!(
+            false,
+            Solution::rotate_string("abcde".to_string(), "abced".to_string())
+        );
+    }
 
     #[test]
     fn nr_2490_ex_01() {
