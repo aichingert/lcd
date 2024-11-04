@@ -138,6 +138,7 @@ pub mod v678;
 pub mod w79;
 pub mod w874;
 pub mod x1310;
+pub mod s3163;
 
 #[cfg(test)]
 mod test {
@@ -147,6 +148,22 @@ mod test {
     use crate::ListNode;
     use crate::Solution;
     use crate::TreeNode;
+
+    #[test]
+    fn nr_3163_ex_01() {
+        assert_eq!(
+            "1a1b1c1d1e".to_string(),
+            Solution::compressed_string("abcde".to_string())
+        );
+    }
+
+    #[test]
+    fn nr_3163_ex_02() {
+        assert_eq!(
+            "9a5a2b".to_string(),
+            Solution::compressed_string("aaaaaaaaaaaaaabb".to_string())
+        );
+    }
 
     #[test]
     fn nr_2684_ex_01() {
