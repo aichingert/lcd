@@ -77,6 +77,7 @@ pub mod m2285;
 pub mod m2530;
 pub mod m2684;
 pub mod m2870;
+pub mod m2914;
 pub mod m2997;
 pub mod m3016;
 pub mod m3075;
@@ -120,6 +121,7 @@ pub mod s2191;
 pub mod s2326;
 pub mod s260;
 pub mod s2938;
+pub mod s3163;
 pub mod s451;
 pub mod s633;
 pub mod s713;
@@ -138,7 +140,6 @@ pub mod v678;
 pub mod w79;
 pub mod w874;
 pub mod x1310;
-pub mod s3163;
 
 #[cfg(test)]
 mod test {
@@ -148,6 +149,21 @@ mod test {
     use crate::ListNode;
     use crate::Solution;
     use crate::TreeNode;
+
+    #[test]
+    fn nr_2914_ex_01() {
+        assert_eq!(2, Solution::min_changes("1001".to_string()));
+    }
+
+    #[test]
+    fn nr_2914_ex_02() {
+        assert_eq!(1, Solution::min_changes("10".to_string()));
+    }
+
+    #[test]
+    fn nr_2914_ex_03() {
+        assert_eq!(0, Solution::min_changes("0000".to_string()));
+    }
 
     #[test]
     fn nr_3163_ex_01() {
