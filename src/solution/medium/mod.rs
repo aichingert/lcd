@@ -35,6 +35,7 @@ pub mod f1992;
 pub mod f2028;
 pub mod f2225;
 pub mod f287;
+pub mod f3011;
 pub mod f442;
 pub mod f513;
 pub mod f592;
@@ -149,6 +150,21 @@ mod test {
     use crate::ListNode;
     use crate::Solution;
     use crate::TreeNode;
+
+    #[test]
+    fn nr_3011_ex_01() {
+        assert_eq!(true, Solution::can_sort_array(vec![8, 4, 2, 30, 15]));
+    }
+
+    #[test]
+    fn nr_3011_ex_02() {
+        assert_eq!(true, Solution::can_sort_array(vec![1, 2, 3, 4, 5]));
+    }
+
+    #[test]
+    fn nr_3011_ex_03() {
+        assert_eq!(false, Solution::can_sort_array(vec![3, 16, 8, 4, 2]));
+    }
 
     #[test]
     fn nr_2914_ex_01() {
