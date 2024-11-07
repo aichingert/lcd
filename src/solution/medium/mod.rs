@@ -56,6 +56,7 @@ pub mod knight_dialer;
 pub mod l1405;
 pub mod l1438;
 pub mod l179;
+pub mod l2275;
 pub mod l2370;
 pub mod l2419;
 pub mod l2501;
@@ -150,6 +151,19 @@ mod test {
     use crate::ListNode;
     use crate::Solution;
     use crate::TreeNode;
+
+    #[test]
+    fn nr_2275_ex_01() {
+        assert_eq!(
+            4,
+            Solution::largest_combination(vec![16, 17, 71, 62, 12, 24, 14])
+        );
+    }
+
+    #[test]
+    fn nr_2275_ex_02() {
+        assert_eq!(2, Solution::largest_combination(vec![8, 8]));
+    }
 
     #[test]
     fn nr_3011_ex_01() {
