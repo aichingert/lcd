@@ -73,6 +73,7 @@ pub mod m1509;
 pub mod m1552;
 pub mod m1717;
 pub mod m1750;
+pub mod m1829;
 pub mod m1963;
 pub mod m2134;
 pub mod m2285;
@@ -151,6 +152,30 @@ mod test {
     use crate::ListNode;
     use crate::Solution;
     use crate::TreeNode;
+
+    #[test]
+    fn nr_1829_ex_01() {
+        assert_eq!(
+            vec![0, 3, 2, 3],
+            Solution::get_maximum_xor(vec![0, 1, 1, 3], 2)
+        );
+    }
+
+    #[test]
+    fn nr_1829_ex_02() {
+        assert_eq!(
+            vec![5, 2, 6, 5],
+            Solution::get_maximum_xor(vec![2, 3, 4, 7], 3)
+        );
+    }
+
+    #[test]
+    fn nr_1829_ex_03() {
+        assert_eq!(
+            vec![4, 3, 6, 4, 6, 7],
+            Solution::get_maximum_xor(vec![0, 1, 2, 2, 5, 7], 3)
+        );
+    }
 
     #[test]
     fn nr_2275_ex_01() {
