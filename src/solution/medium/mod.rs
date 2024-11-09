@@ -85,6 +85,7 @@ pub mod m2997;
 pub mod m3016;
 pub mod m3075;
 pub mod m310;
+pub mod m3133;
 pub mod m452;
 pub mod m624;
 pub mod m670;
@@ -152,6 +153,16 @@ mod test {
     use crate::ListNode;
     use crate::Solution;
     use crate::TreeNode;
+
+    #[test]
+    fn nr_3133_01() {
+        assert_eq!(6, Solution::min_end(3, 4));
+    }
+
+    #[test]
+    fn nr_3133_02() {
+        assert_eq!(15, Solution::min_end(2, 7));
+    }
 
     #[test]
     fn nr_1829_ex_01() {
