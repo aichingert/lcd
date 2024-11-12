@@ -75,6 +75,7 @@ pub mod m1717;
 pub mod m1750;
 pub mod m1829;
 pub mod m1963;
+pub mod m2070;
 pub mod m2134;
 pub mod m2285;
 pub mod m2530;
@@ -155,12 +156,42 @@ mod test {
     use crate::TreeNode;
 
     #[test]
-    fn nr_3133_01() {
+    fn nr_2070_ex_01() {
+        assert_eq!(
+            vec![2, 4, 5, 5, 6, 6],
+            Solution::maximum_beauty(
+                vec![vec![1, 2], vec![3, 2], vec![2, 4], vec![5, 6], vec![3, 5]],
+                vec![1, 2, 3, 4, 5, 6]
+            )
+        );
+    }
+
+    #[test]
+    fn nr_2070_ex_02() {
+        assert_eq!(
+            vec![4],
+            Solution::maximum_beauty(
+                vec![vec![1, 2], vec![1, 2], vec![1, 3], vec![1, 4]],
+                vec![1]
+            )
+        );
+    }
+
+    #[test]
+    fn nr_2070_ex_03() {
+        assert_eq!(
+            vec![0],
+            Solution::maximum_beauty(vec![vec![10, 1000]], vec![5])
+        );
+    }
+
+    #[test]
+    fn nr_3133_ex_01() {
         assert_eq!(6, Solution::min_end(3, 4));
     }
 
     #[test]
-    fn nr_3133_02() {
+    fn nr_3133_ex_02() {
         assert_eq!(15, Solution::min_end(2, 7));
     }
 
