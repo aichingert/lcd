@@ -36,6 +36,7 @@ pub mod f2028;
 pub mod f2225;
 pub mod f287;
 pub mod f3011;
+pub mod f3254;
 pub mod f442;
 pub mod f513;
 pub mod f592;
@@ -154,6 +155,30 @@ mod test {
     use crate::ListNode;
     use crate::Solution;
     use crate::TreeNode;
+
+    #[test]
+    fn nr_3254_ex_01() {
+        assert_eq!(
+            vec![3, 4, -1, -1, -1],
+            Solution::results_array(vec![1, 2, 3, 4, 3, 2, 5], 3)
+        );
+    }
+
+    #[test]
+    fn nr_3254_ex_02() {
+        assert_eq!(
+            vec![-1, -1],
+            Solution::results_array(vec![2, 2, 2, 2, 2], 4)
+        );
+    }
+
+    #[test]
+    fn nr_3254_ex_03() {
+        assert_eq!(
+            vec![-1, 3, -1, 3, -1],
+            Solution::results_array(vec![3, 2, 3, 2, 3, 2], 2)
+        );
+    }
 
     #[test]
     fn nr_2070_ex_01() {
