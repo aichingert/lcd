@@ -79,6 +79,7 @@ pub mod m1963;
 pub mod m2070;
 pub mod m2134;
 pub mod m2285;
+pub mod m2461;
 pub mod m2530;
 pub mod m2684;
 pub mod m2870;
@@ -155,6 +156,19 @@ mod test {
     use crate::ListNode;
     use crate::Solution;
     use crate::TreeNode;
+
+    #[test]
+    fn nr_2461_ex_01() {
+        assert_eq!(
+            15,
+            Solution::maximum_subarray_sum(vec![1, 5, 4, 2, 9, 9, 9], 3)
+        );
+    }
+
+    #[test]
+    fn nr_2461_ex_02() {
+        assert_eq!(0, Solution::maximum_subarray_sum(vec![4, 4, 4], 3));
+    }
 
     #[test]
     fn nr_3254_ex_01() {
