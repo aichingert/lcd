@@ -116,6 +116,7 @@ pub mod p279;
 pub mod p567;
 pub mod r1190;
 pub mod r1508;
+pub mod r1861;
 pub mod r648;
 pub mod r950;
 pub mod r959;
@@ -156,6 +157,46 @@ mod test {
     use crate::ListNode;
     use crate::Solution;
     use crate::TreeNode;
+
+    #[test]
+    fn nr_1861_ex_01() {
+        assert_eq!(
+            vec![vec!['.'], vec!['#'], vec!['#']],
+            Solution::rotate_the_box(vec![vec!['#', '.', '#']])
+        );
+    }
+
+    #[test]
+    fn nr_1861_ex_02() {
+        assert_eq!(
+            vec![
+                vec!['#', '.'],
+                vec!['#', '#'],
+                vec!['*', '*'],
+                vec!['.', '.']
+            ],
+            Solution::rotate_the_box(vec![vec!['#', '.', '*', '.'], vec!['#', '#', '*', '.']])
+        );
+    }
+
+    #[test]
+    fn nr_1861_ex_03() {
+        assert_eq!(
+            vec![
+                vec!['.', '#', '#'],
+                vec!['.', '#', '#'],
+                vec!['#', '#', '*'],
+                vec!['#', '*', '.'],
+                vec!['#', '.', '*'],
+                vec!['#', '.', '.']
+            ],
+            Solution::rotate_the_box(vec![
+                vec!['#', '#', '*', '.', '*', '.'],
+                vec!['#', '#', '#', '*', '.', '.'],
+                vec!['#', '#', '#', '.', '#', '.']
+            ])
+        );
+    }
 
     #[test]
     fn nr_2461_ex_01() {
