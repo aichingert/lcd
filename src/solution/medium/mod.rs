@@ -76,6 +76,7 @@ pub mod m1717;
 pub mod m1750;
 pub mod m1829;
 pub mod m1963;
+pub mod m1975;
 pub mod m2070;
 pub mod m2134;
 pub mod m2285;
@@ -157,6 +158,19 @@ mod test {
     use crate::ListNode;
     use crate::Solution;
     use crate::TreeNode;
+
+    #[test]
+    fn nr_1975_ex_01() {
+        assert_eq!(4, Solution::max_matrix_sum(vec![vec![1, -1], vec![-1, 1]]));
+    }
+
+    #[test]
+    fn nr_1975_ex_02() {
+        assert_eq!(
+            16,
+            Solution::max_matrix_sum(vec![vec![1, 2, 3], vec![-1, -2, -3], vec![1, 2, 3]])
+        );
+    }
 
     #[test]
     fn nr_1861_ex_01() {
