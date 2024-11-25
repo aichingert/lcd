@@ -18,12 +18,37 @@ pub mod poor_pigs;
 pub mod r2751;
 pub mod s552;
 pub mod s632;
+pub mod s773;
 pub mod w140;
 
 #[cfg(test)]
 mod test {
     use crate::solution::hard::design_graph_with_shortest_path_calculator::Graph;
     use crate::Solution;
+
+    #[test]
+    fn nr_773_ex_01() {
+        assert_eq!(
+            1,
+            Solution::sliding_puzzle(vec![vec![1, 2, 3], vec![4, 0, 5]])
+        );
+    }
+
+    #[test]
+    fn nr_773_ex_02() {
+        assert_eq!(
+            -1,
+            Solution::sliding_puzzle(vec![vec![1, 2, 3], vec![5, 4, 0]])
+        );
+    }
+
+    #[test]
+    fn nr_773_ex_03() {
+        assert_eq!(
+            5,
+            Solution::sliding_puzzle(vec![vec![4, 1, 2], vec![5, 0, 3]])
+        );
+    }
 
     #[test]
     fn nr_2463_ex_01() {
