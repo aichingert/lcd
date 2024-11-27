@@ -132,6 +132,7 @@ pub mod s2326;
 pub mod s260;
 pub mod s2938;
 pub mod s3163;
+pub mod s3243;
 pub mod s451;
 pub mod s633;
 pub mod s713;
@@ -159,6 +160,22 @@ mod test {
     use crate::ListNode;
     use crate::Solution;
     use crate::TreeNode;
+
+    #[test]
+    fn nr_3243_ex_01() {
+        assert_eq!(
+            vec![3, 2, 1],
+            Solution::shortest_distance_after_queries(5, vec![vec![2, 4], vec![0, 2], vec![0, 4]])
+        );
+    }
+
+    #[test]
+    fn nr_3243_ex_02() {
+        assert_eq!(
+            vec![1, 1],
+            Solution::shortest_distance_after_queries(4, vec![vec![0, 3], vec![0, 2]])
+        );
+    }
 
     #[test]
     fn nr_2924_ex_01() {
