@@ -1,3 +1,4 @@
+pub mod c1346;
 pub mod c1598;
 pub mod c1684;
 pub mod c2022;
@@ -65,6 +66,16 @@ mod test {
 
     use crate::Solution;
     use crate::TreeNode;
+
+    #[test]
+    fn nr_1346_ex_01() {
+        assert_eq!(true, Solution::check_if_exist(vec![10, 2, 5, 3]));
+    }
+
+    #[test]
+    fn nr_1346_ex_02() {
+        assert_eq!(false, Solution::check_if_exist(vec![3, 1, 7, 11]));
+    }
 
     #[test]
     fn nr_1652_ex_01() {
