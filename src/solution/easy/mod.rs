@@ -1,4 +1,5 @@
 pub mod c1346;
+pub mod c1455;
 pub mod c1598;
 pub mod c1684;
 pub mod c2022;
@@ -66,6 +67,33 @@ mod test {
 
     use crate::Solution;
     use crate::TreeNode;
+
+    #[test]
+    fn nr_1455_ex_01() {
+        assert_eq!(
+            4,
+            Solution::is_prefix_of_word("i love eating burger".to_string(), "burg".to_string())
+        );
+    }
+
+    #[test]
+    fn nr_1455_ex_02() {
+        assert_eq!(
+            2,
+            Solution::is_prefix_of_word(
+                "this problem is an easy problem".to_string(),
+                "pro".to_string()
+            )
+        );
+    }
+
+    #[test]
+    fn nr_1455_ex_03() {
+        assert_eq!(
+            -1,
+            Solution::is_prefix_of_word("i am tired".to_string(), "you".to_string())
+        );
+    }
 
     #[test]
     fn nr_1346_ex_01() {
