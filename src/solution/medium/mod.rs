@@ -1,4 +1,5 @@
 pub mod a1701;
+pub mod a2109;
 pub mod a2192;
 pub mod a2486;
 pub mod b1382;
@@ -160,6 +161,30 @@ mod test {
     use crate::ListNode;
     use crate::Solution;
     use crate::TreeNode;
+
+    #[test]
+    fn nr_2109_ex_01() {
+        assert_eq!(
+            "Leetcode Helps Me Learn".to_string(),
+            Solution::add_spaces("LeetcodeHelpsMeLearn".to_string(), vec![8, 13, 15])
+        );
+    }
+
+    #[test]
+    fn nr_2109_ex_02() {
+        assert_eq!(
+            "i code in py thon".to_string(),
+            Solution::add_spaces("icodeinpython".to_string(), vec![1, 5, 7, 9])
+        );
+    }
+
+    #[test]
+    fn nr_2109_ex_03() {
+        assert_eq!(
+            " s p a c i n g".to_string(),
+            Solution::add_spaces("spacing".to_string(), vec![0, 1, 2, 3, 4, 5, 6])
+        );
+    }
 
     #[test]
     fn nr_3243_ex_01() {
