@@ -85,6 +85,7 @@ pub mod m2285;
 pub mod m2461;
 pub mod m2530;
 pub mod m2684;
+pub mod m2825;
 pub mod m2870;
 pub mod m2914;
 pub mod m2997;
@@ -161,6 +162,30 @@ mod test {
     use crate::ListNode;
     use crate::Solution;
     use crate::TreeNode;
+
+    #[test]
+    fn nr_2825_ex_01() {
+        assert_eq!(
+            true,
+            Solution::can_make_subsequence("abc".to_string(), "ad".to_string())
+        );
+    }
+
+    #[test]
+    fn nr_2825_ex_02() {
+        assert_eq!(
+            true,
+            Solution::can_make_subsequence("zc".to_string(), "ad".to_string())
+        );
+    }
+
+    #[test]
+    fn nr_2825_ex_03() {
+        assert_eq!(
+            false,
+            Solution::can_make_subsequence("ab".to_string(), "d".to_string())
+        );
+    }
 
     #[test]
     fn nr_2109_ex_01() {
