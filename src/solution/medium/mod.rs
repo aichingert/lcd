@@ -82,6 +82,7 @@ pub mod m1975;
 pub mod m2070;
 pub mod m2134;
 pub mod m2285;
+pub mod m2337;
 pub mod m2461;
 pub mod m2530;
 pub mod m2684;
@@ -162,6 +163,30 @@ mod test {
     use crate::ListNode;
     use crate::Solution;
     use crate::TreeNode;
+
+    #[test]
+    fn nr_2337_ex_01() {
+        assert_eq!(
+            true,
+            Solution::can_change("_L__R__R_".to_string(), "L______RR".to_string())
+        );
+    }
+
+    #[test]
+    fn nr_2337_ex_02() {
+        assert_eq!(
+            false,
+            Solution::can_change("R_L_".to_string(), "__LR".to_string())
+        );
+    }
+
+    #[test]
+    fn nr_2337_ex_03() {
+        assert_eq!(
+            false,
+            Solution::can_change("_R".to_string(), "R_".to_string())
+        );
+    }
 
     #[test]
     fn nr_2825_ex_01() {
