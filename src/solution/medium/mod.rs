@@ -85,6 +85,7 @@ pub mod m2285;
 pub mod m2337;
 pub mod m2461;
 pub mod m2530;
+pub mod m2554;
 pub mod m2684;
 pub mod m2825;
 pub mod m2870;
@@ -163,6 +164,21 @@ mod test {
     use crate::ListNode;
     use crate::Solution;
     use crate::TreeNode;
+
+    #[test]
+    fn nr_2554_ex_01() {
+        assert_eq!(2, Solution::max_count(vec![1, 6, 5], 5, 6));
+    }
+
+    #[test]
+    fn nr_2554_ex_02() {
+        assert_eq!(0, Solution::max_count(vec![1, 2, 3, 4, 5, 6, 7], 8, 1));
+    }
+
+    #[test]
+    fn nr_2554_ex_03() {
+        assert_eq!(7, Solution::max_count(vec![11], 7, 50));
+    }
 
     #[test]
     fn nr_2337_ex_01() {
