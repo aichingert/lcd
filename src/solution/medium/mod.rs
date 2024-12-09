@@ -135,6 +135,7 @@ pub mod s2191;
 pub mod s2326;
 pub mod s260;
 pub mod s2938;
+pub mod s3152;
 pub mod s3163;
 pub mod s3243;
 pub mod s451;
@@ -164,6 +165,22 @@ mod test {
     use crate::ListNode;
     use crate::Solution;
     use crate::TreeNode;
+
+    #[test]
+    fn nr_3152_ex_01() {
+        assert_eq!(
+            vec![false],
+            Solution::is_array_special(vec![3, 4, 1, 2, 6], vec![vec![0, 4]])
+        );
+    }
+
+    #[test]
+    fn nr_3152_ex_02() {
+        assert_eq!(
+            vec![false, true],
+            Solution::is_array_special(vec![4, 3, 1, 6], vec![vec![0, 2], vec![2, 3]])
+        );
+    }
 
     #[test]
     fn nr_2554_ex_01() {
