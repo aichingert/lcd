@@ -37,6 +37,7 @@ pub mod f2028;
 pub mod f2225;
 pub mod f287;
 pub mod f2924;
+pub mod f2981;
 pub mod f3011;
 pub mod f3254;
 pub mod f442;
@@ -165,6 +166,21 @@ mod test {
     use crate::ListNode;
     use crate::Solution;
     use crate::TreeNode;
+
+    #[test]
+    fn nr_2981_ex_01() {
+        assert_eq!(2, Solution::maximum_length("aaaa".to_string()));
+    }
+
+    #[test]
+    fn nr_2981_ex_02() {
+        assert_eq!(-1, Solution::maximum_length("abcdef".to_string()));
+    }
+
+    #[test]
+    fn nr_2981_ex_03() {
+        assert_eq!(1, Solution::maximum_length("abcaba".to_string()))
+    }
 
     #[test]
     fn nr_3152_ex_01() {
