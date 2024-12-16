@@ -16,6 +16,7 @@ pub mod f1002;
 pub mod f1791;
 pub mod f1971;
 pub mod f2485;
+pub mod f3264;
 pub mod find_mode_in_binary_search_tree;
 pub mod h1051;
 pub mod i205;
@@ -67,6 +68,22 @@ mod test {
 
     use crate::Solution;
     use crate::TreeNode;
+
+    #[test]
+    fn nr_3264_ex_01() {
+        assert_eq!(
+            vec![8, 4, 6, 5, 6],
+            Solution::get_final_state(vec![2, 1, 3, 5, 6], 5, 2)
+        );
+    }
+
+    #[test]
+    fn nr_3264_ex_02() {
+        assert_eq!(
+            vec![8, 4, 6, 5, 6],
+            Solution::get_final_state(vec![2, 1, 3, 5, 6], 5, 2)
+        )
+    }
 
     #[test]
     fn nr_1455_ex_01() {
